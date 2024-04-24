@@ -1,0 +1,45 @@
+---
+layout: text-page
+style: projects
+title: Projects
+---
+
+<p>
+  Below is a list of {{ collections.projects.length }} possible projects in case
+  you are out of ideas of what to work on. (And there are more on the way.) For
+  each project I have written a basic description, noted some possible features
+  that you might consider implementing, and in some cases provided linkes to
+  relavent information.
+</p>
+
+<p>
+  Note, however, that most of these projects are fairly open ended. It's up to
+  you to decide how sophisticated and elaborate you want to make your program.
+  The thing I care about is that you are writing code and solving problems.
+</p>
+
+<p>
+  You are also not limited to these projects. The absolute best way to learn to
+  program to have a goal that you actually care about that you can achieve with
+  the help of a computer program. That goal might be to recreate a favorite
+  computer game or write a brand new game that you've always wished existed. Or
+  maybe you have some information you want to organize or manipulate in some way
+  that is tedious to deal with on paper. Or maybe you want to experiment with
+  computer generated graphics. So if there's something you want to work on that's not on
+  this list, let's talk about it so I can give you some pointers about how you
+  might get started.
+</p>
+
+{%- for t in collections.projectTypes %}
+
+<h2>{{ t }}</h2>
+
+<ul>
+  {%- set posts = collections[t] -%}
+  {% for post in posts %}
+  <li><a href="{{post.url}}">{{ post.data.title }}</a></li>
+  {% endfor %}
+</ul>
+
+
+{%- endfor -%}

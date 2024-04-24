@@ -1,0 +1,22 @@
+.logo {
+  font-size: 40px;
+  font-family: 'Alfa Slab One', cursive;
+  font-weight: 300;
+}
+
+.logo a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo i.bi {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+p.logo {
+  line-height: 1em;
+  margin: 0;
+  margin-bottom: 0.5em;
+}

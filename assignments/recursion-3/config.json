@@ -1,0 +1,10 @@
+{
+  "language": "javascript",
+  "repl": "repl",
+  "files": ["code.js"],
+  "extraFiles": ["testcases.js", "/assignments/run-tests.js"],
+  "testing": {
+    "id": "#testing",
+    "casesId": "#testcases"
+  }
+}

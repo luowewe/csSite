@@ -1,0 +1,92 @@
+---
+title: Java unit test assignment
+---
+{% extends 'jobe-testcases.njk' %}
+
+<p>
+  This is a demo of a jobe-based Java unit test assignment. The tests are
+  specified in a JSON config file and with a file containing a Java reference
+  implementation of the methods to be tested. The student code is submitted to
+  the jobe server which then runs the test cases specified in the config files
+  against both the student code and the reference implementation and returns
+  results based on whether they agree.
+</p>
+
+{% block testcases %}
+
+<div data-name="add">
+  <p>
+    A function that takes two numbers and returns their sum.
+  </p>
+</div>
+
+<div data-name="subtract">
+  <p>
+    A function that takes two numbers and returns their difference.
+  </p>
+</div>
+
+<div data-name="multiply">
+  <p>
+    A function that takes two numbers and returns their product.
+  </p>
+</div>
+
+<div data-name="divide">
+  <p>
+    A function that takes two numbers and returns their quotient.
+  </p>
+  <p>
+    You can assume the second argument (the divisor) is not 0.
+  </p>
+</div>
+
+<div data-name="mod">
+  <p>
+    A function that takes two numbers and returns the remainder after dividing
+    the first by the second.
+  </p>
+  <p>
+    You can assume the second argument (the divisor) is not 0.
+  </p>
+</div>
+
+<div data-name="averageOfTwo">
+  <p>
+    A function that takes two numbers and returns their average.
+  </p>
+</div>
+
+<div data-name="averageOfThree">
+  <p>
+    A function that takes three numbers and returns their average.
+  </p>
+</div>
+
+<div data-name="distance">
+  <p>
+    A function that takes two numbers and returns how far apart they are on the
+    number line.
+  </p>
+</div>
+
+<div data-name="manhattanDistance">
+  <p>
+    A function that takes four numbers representing two points in the X/Y plane
+    (x1, y1, x2, y2) and returns how far apart they are according to Manhattan
+    distance (i.e. the sum of their distance on the x-axis and their distance on
+    the y-axis.
+  </p>
+</div>
+
+<div data-name="euclideanDistance">
+  <p>
+    A function that takes four numbers representing two points in the X/Y plane
+    (x1, y1, x2, y2) and returns how far apart they are according to Euclidian
+    distance (i.e. the square root of the sum of their squares of both the
+    distance on the x-axis and the y-axis.
+  </p>
+</div>
+
+
+{% endblock %}

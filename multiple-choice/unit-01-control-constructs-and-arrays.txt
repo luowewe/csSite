@@ -1,0 +1,496 @@
+-*- mode: markup; -*-
+
+* Unit 1 control constructs and arrays
+
+## instructions
+
+For a change of pace, this assessment does not require you to write code.
+Instead you will need to read some code and answer questions about it. It is a
+\b{closed book} assessment and you should keep your eyes on your own screen and
+not talk with your neighbors while you take it. You do \b{not} need to submit a
+pull request this time; your answers are saved automatically when you select
+from a multiple choice answer or hit enter on a free-form answer.
+
+##.
+
+** Simple if
+
+When this code runs, does it call the `foo` function?
+
+   let x = 10;
+   if (x % 2 === 0) {
+     foo();
+   }
+
+## choices
+
+Yes
+
+No
+
+##.
+
+** If / else
+
+When this code runs, which functions are called?
+
+   let x = 37;
+   if (x < 37) {
+     foo(x);
+   } else {
+     bar(x);
+   }
+
+## choices
+
+Just `foo`
+
+Just `bar`
+
+Both `foo` and `bar`
+
+Neither `foo` nor `bar`.
+
+##.
+
+** If / else
+
+When this code runs, which functions are called?
+
+   let x = 37;
+   if (x * -1 < 37) {
+     foo(x);
+   }
+   bar(x);
+
+## choices
+
+Just `foo`
+
+Just `bar`
+
+Both `foo` and `bar`
+
+Neither `foo` nor `bar`.
+
+##.
+
+** Condtion part of for loop
+
+In this code:
+
+   let x = 0;
+   for (let i = 0; i < 10; i++) {
+     x = x + i * 10;
+   }
+
+what part is the “condition” of the `for` loop.
+
+## choices
+
+`let x = 0`
+
+`let i = 0`
+
+`i < 10`
+
+`i++`
+
+`x = x + i * 10`
+
+##.
+
+** Canonical for loop
+
+Given this definition:
+
+   const N = 100;
+
+How many times does the body of this loop execute?
+
+   for (let i = 0; i < N; i++) {
+     // code here
+   }
+
+## choices
+
+99
+
+100
+
+101
+
+##.
+
+** Nested loop
+
+To fully understand this code you should know that `Math.random()` is a function
+that returns a random number between 0 and 1. With that in mind, after this code
+runs:
+
+   let randomNumbers = [];
+   for (let i = 0; i < 10; i++) {
+     randomNumbers.push(Math.random());
+   }
+
+What does the following expression evaluate to?
+
+   randomNumbers.length
+
+## choices
+
+We can’t know, it’s random.
+
+It’s random but definitely at least 10.
+
+It’s random but definitely less than 10.
+
+It’s random but definitely a multiple of 10.
+
+10
+
+Less than 10
+
+##.
+
+** Simple nested
+
+How many times is the `foo` function called when this code runs:
+
+   for (let i = 0; i < 5; i++) {
+     for (let j = 0; j < 4; j++) {
+       foo(i, j);
+     }
+   }
+
+## choices
+
+4
+
+30
+
+5
+
+20
+
+12
+
+##.
+
+** Pyramid nested
+
+Given this code:
+
+   let c = 0;
+   for (let i = 0; i < 4; i++) {
+     for (let j = 0; j < i; j++) {
+       c++;
+     }
+   }
+
+what is the value of `c` after the loop finishes?
+
+## choices
+
+4
+
+3
+
+6
+
+10
+
+##.
+
+** Summing
+
+Given this code:
+
+   let x = 0;
+   for (let i = 0; i < 10; i++) {
+     x = x + i;
+   }
+
+What is the best description of the value of `x` after the loop has completed?
+
+## choices
+
+The sum of the numbers from 0 to 10
+
+The sum of the numbers from 0 to 9
+
+The number of elements in the array `x`
+
+11
+
+##.
+
+** While loop
+
+What is the best description of when this loop will stop?
+
+   let done = false;
+
+   while (!done) {
+     const r = Math.random();
+     done = r < 0.01;
+   }
+
+## choices
+
+Never, it’s an infinite loop
+
+Immediately, the loop body never executes
+
+When `Math.random()` returns a number less that 0.01
+
+When `Math.random()` returns a number greater than 0.01
+
+When `done` is less than 0.01
+
+##.
+
+** Early return
+
+In the following code, assume `isPrime` is a function that says whether the
+number it is passed is a prime number.
+
+   const foo = (limit, max) => {
+     let primes = 0;
+     for (let n = 0; n < max; n++) {
+       if (isPrime(n)) {
+         primes++;
+       }
+       if (primes > limit) {
+         return true;
+       }
+     }
+     return false;
+   }
+
+Which of the following best describes what this function does?
+
+## choices
+
+It tests whether `limit` is a prime number.
+
+It tests whether there are at most `max` prime numbers below `limit`.
+
+It tests whether there are more than `limit` prime numbers below `max`.
+
+It tests whether `limit` and `max` are both prime numbers.
+
+##.
+
+** Indexing
+
+Given this code:
+
+   const xs = [10, 11, 71];
+
+What does the following expression evaluate to?
+
+   xs[0]
+
+## choices
+
+10
+
+71
+
+3
+
+11
+
+0
+
+##.
+
+** Last element
+
+Given this code:
+
+   const xs = [10, 11, 71];
+
+Which of the following expressions evaluate to `71`?
+
+## choices
+
+`xs[-1]`
+
+`xs[xs.length]`
+
+`xs[xs.length + 1]`
+
+`xs[xs.length - 1]`
+
+##.
+
+** Simple length
+
+What does the following expression evaluate to?
+
+   [4, 5, 6].length
+
+## choices
+
+`0`
+
+`6`
+
+`4`
+
+`3`
+
+`2`
+
+##.
+
+** Length of empty
+
+What does the following expression evaluate to?
+
+   [ ].length
+
+## choices
+
+`0`
+
+Nothing, it’s a syntax error.
+
+`undefined`
+
+##.
+
+** 2-d indexing
+
+Given this array:
+
+   const xs = [
+     ['foo', 'bar', 'baz'],
+     ['quux'],
+     ['fred', 'barney', 'wilma', 'betty']
+   ];
+
+which of the following expressions evaluates to `'barney'`?
+
+## choices
+
+`xs[2]`
+
+`xs[5]`
+
+`xs[2][1]`
+
+`xs[1][2]`
+
+##.
+
+** Array assignment
+
+After this code executes what is the value of the first element of `xs`?
+
+   const xs = [10, 20, 30];
+
+   xs[0] = xs[2] * 10
+
+## choices
+
+10
+
+100
+
+3
+
+200
+
+300
+
+Nothing, this code won’t run because `xs` was declared with `const`.
+
+##.
+
+** Silly array expression
+
+Given the following definition:
+
+   const foo = [10, 20, false]
+
+What does this expression evaluate to:
+
+   (foo[0] * foo[1]) < 200 === foo[2]
+
+## choices
+
+`true`
+
+`false`
+
+##.
+
+** Summing array
+
+Assuming `numbers` is an array of numbers and given this code:
+
+   let x = 0;
+   for (let i = 0; i < numbers.length; i++) {
+     x = x + numbers[i];
+   }
+
+What is the best description of the value of `x` after the loop has completed?
+
+## choices
+
+The sum of the numbers from 0 to `numbers.length - 1`.
+
+The sum of the numbers from 0 to `numbers.length`.
+
+The sum of the elements of the array.
+
+The sum of all but the last number in the array.
+
+The sum of the even numbers in `numbers`.
+
+##.
+
+** Collecting upper case
+
+What does this function do:
+
+   const foo = (words) => {
+     let result = [];
+     for (let i = 0; i < words.length; i++) {
+       result.push(words[i].toUpperCase());
+     }
+     return result;
+   }
+
+## choices
+
+Changes all the words in the `words` array to uppercase.
+
+Produces a new array containing the words in `words` that are all uppercase.
+
+Produces a new array containing all the words in `words` in uppercase.
+
+##.
+
+** Reversing
+
+Consider this function:
+
+   const foo = (xs) => {
+     let result = [];
+     for (let i = 0; i < xs.length; i++) {
+       result.push(xs[xs.length - i]);
+     }
+     return result;
+   }
+
+For up to 5 points, describe what it does:
+
+## freeanswer
+
+Hit enter to save answer.
+
+##.

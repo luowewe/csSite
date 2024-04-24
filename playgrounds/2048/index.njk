@@ -1,0 +1,20 @@
+---
+title: 2048
+---
+
+{% extends 'generic-frame.njk' %}
+
+{% block instructions %}
+<p>
+  Similar environment as <a href="/assignments/chess-board">Chess board</a>
+  and <a href="/assignments/tic-tac-toe">Tic-Tac-Toe</a>,
+  and <a href="/assignments/sudoku">Sudoku</a> with both <code>drawText(text, x,
+  y, color, size)</code> and <code>registerOnclick</code> but also adds
+  a <code>registerOnKeyDown</code> that works like <code>registerOnclick</code>
+  but registers a function that is called with the name of any key pressed while
+  the drawing canvas has the focus. Of particular use for this game you can look
+  for the key
+  values <code>'ArrowRight'</code>, <code>'ArrowLeft'</code>, <code>'ArrowUp'</code>,
+  and <code>'ArrowDown'</code> indicating the arrow keys have been pressed.
+</p>
+{% endblock %}

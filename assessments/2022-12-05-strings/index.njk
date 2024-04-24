@@ -1,0 +1,141 @@
+---
+title: 2022-12-05 strings
+---
+
+{% extends 'code-assessment.njk' %}
+
+{% block instructions %}
+<p>
+  <svg id="close"
+       class="bi"><use xlink:href="/img/bootstrap-icons.svg#caret-down-fill"/></svg>
+  This assessment consists of <b><span id="num-questions"></span>
+    functions</b> you need to write involving primarily string expressions. It
+  is a <b>closed book assessment</b>. You should stay on this tab until you
+  are done and there should be no talking. This assessment is about how
+  much <i>you</i> understand. There are no automatic tests but you can use
+  the REPL to test things yourself.
+</p>
+
+<p>
+  You can move through the questions with the arrows at the upper right next
+  to the <b>1 of <span class="of"></span></b> indicator so if you're not
+  sure how to write one function move on to another one and come back if you
+  have time at the end. I want to see how much you do know. <b>Note</b>: you
+  can also click on <code>thingsLikeThis</code> in these instructions and
+  the questions to copy them to the clipboard to avoid spelling mistakes.
+  (I.e. click to copy and then ⌘-v to paste wherever you want.)
+</p>
+
+<p><b>A useful method</b> you might want to use in some of these questions:</p>
+
+<ul>
+  <li>
+    <code>indexOf()</code> which takes a single argument and returns the
+    index of the first occurrence of argument in the string on which the
+    method is called or -1 if the argument is not found. For
+    instance, <code>'foobar'.indexOf('o')</code> returns <code>1</code>
+    while <code>'foobar'.indexOf('z')</code> returns <code>-1</code>.
+  </li>
+</ul>
+
+<p>
+  <b>When you are done</b>, please click on your Github username above and
+  submit a GitHub pull request of the branch <code id="branch-name"></code>
+  and request me as a reviewer. Doing this correctly is part of the
+  assessment. <b>If you are unsure how to request a review, please ask for
+    help!</b>
+</p>
+{% endblock %}
+
+
+{% block questions %}
+
+<div>
+  <p>
+    Write a function named <code>upToX</code> that takes a single string
+    argument and returns a string consisting of the characters of the
+    original string up to but not including the first <code>'x'</code>.
+    For instance <code>upToX('quixotic')</code> should
+    return <code>'qui'</code>.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>charactersAround</code> that takes two
+    arguments, a string and an index into the string and returns a
+    string consisting of two characters, the one immediately before the
+    character at the given index and one and the one immediately after
+    the character at the given index. You can assume that those
+    characters exist, i.e. the index is not at the beginning or end of
+    the string. For instance <code>charactersAround('programming',
+      4)</code> should return <code>'ga'</code>.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>middle</code> that takes a single
+    string argument and returns a sting consisting of the the middle of
+    the argument, defined as the original string with the first and last
+    quarter removed. You can assume the number of characters in the
+    string is a multiple of four. For
+    instance <code>middle('abcdefgh')</code> should
+    return <code>'cdef'</code>.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>pair</code> that takes two string
+    arguments and returns a single string consisting of the two
+    arguments separated by the word <code>and</code>. For
+    instance <code>pair('peanut butter', 'jelly')</code> should
+    return <code>peanut butter and jelly</code>.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>containsX</code> that takes a single
+    string argument and returns <code>true</code> if it contains
+    an <code>'x'</code> and <code>false</code> if it does not. For
+    instance <code>containsX('flexible')</code> should
+    return <code>true</code> and <code>containsX('smooth')</code> should
+    return <code>false</code>.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>slug</code> that takes three string
+    arguments and returns a “slug” consisting of the three strings
+    joined together with hyphens and all in lower case. For
+    instance <code>slug('Foo', 'Bar', 'BAZ')</code> would
+    return <code>'foo-bar-baz'</code>.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>capitalize</code> that takes a single
+    string argument and returns a string with the same characters but
+    with the first character in upper case and all remaining characters
+    in lower case. For instance <code>capitalize('programming')</code>
+    should return <code>'Programming'</code>.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>capitalizeName</code> that takes a
+    single string consisting of a first and last name separated by a
+    space and returns a string with the first and last name separated by
+    a space but capitalized using the <code>capitalize</code> function
+    you just wrote. For instance <code>capitalizeName('fred
+      flintstone')</code> should return <code>'Fred Flintstone'</code>.
+    Note: you must use <code>capitalize</code> in this function to get
+    full credit.
+  </p>
+</div>
+{% endblock %}

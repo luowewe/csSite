@@ -1,0 +1,53 @@
+---
+layout: project
+title: Chess
+tags:
+  - projects
+  - Games
+topics:
+  - HTML UI
+  - Canvas
+  - Game search
+---
+
+<p>
+  <img class="float" src="chess.png">
+  As with other two-person board games, there are a number of aspects you could implement.
+</p>
+
+<ul>
+  <li>
+    Making a board that allows humans to move pieces around and capture other pieces.
+  </li>
+  <li>
+    Enforce the rules so illegal moves aren't allowed.
+  </li>
+  <li>
+    Add something to the UI to show legal moves, e.g. when the user clicks on
+    a piece to move, highlight or mark the squares the piece can legally move
+    to.
+  </li>
+</ul>
+
+<p>
+  Rendering the chess board can be done with a Canvas (similar to the Chess
+  board playground) or with HTML. Using Canvas will give you more control but
+  also requires you to do more work to draw things exactly.
+</p>
+
+<p>
+  You can render the pieces with the Unicode chess characters like in the Chess
+  board playground or you could figure out how to use images or even write code
+  to draw them yourself.
+</p>
+
+<p>
+  Independent of drawing the board and letting players play, you could also
+  experiment with writing a computer player. While chess is much more complex
+  than, say, tic tac toe, the same basic principles of game search apply. The
+  trick with chess is you need a way to evaluate how good an arbitrary position
+  is since you can't search all the way to the end of the game the way you can
+  with tic tac toe. Writing a good chess player is a major project but coming up
+  with something that at least plays some kind of not terrible chess might be a
+  doable but ambitious project.
+</p>

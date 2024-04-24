@@ -1,0 +1,29 @@
+---
+title: 2023-02-24 refactoring
+label: Keep it working!
+---
+
+{% extends 'frame-assessment.njk' %}
+
+{% block instructions %}
+<p>
+  <svg id="close"
+  class="bi"><use xlink:href="/img/bootstrap-icons.svg#caret-down-fill"/></svg>
+  The goal here is to refactor the single function in this
+  code, <code>drawPicture</code>, into several smaller functions. For the most
+  part this will just be a matter of extracting chunks of code and wrapping them
+  in functions that take appropriate arguments and making variables in the new
+  functions into local variables as appropriate. <b>Note: the comments in the
+  code are landmarks to finding good chunks of code to extract.</b> As a point
+  of reference, in the original code, before I mushed everything into one
+  functions I had 15 separate functions. Make sure all the new functions you
+  define are top-level functions, not nested within other functions, and do not
+  introduce any new global variables. Finally, remember to move in small steps,
+  keeping the code working at all times.
+</p>
+
+<p>
+  When you are done submit a GitHub pull request of the
+  branch <code id="branch-name"></code> and request me as a reviewer.
+</p>
+{% endblock %}

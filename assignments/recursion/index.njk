@@ -1,0 +1,86 @@
+---
+title: Recursion
+---
+{% extends 'js-testcases.njk' %}
+
+{% block instructions %}
+<p>
+  For all the functions in this assignment I want you to write a recursive
+  function. For functions the recurse on arrays, you may want to use the fact
+  that <code>xs.slice(1)</code> returns an array consisting of all but the first
+  element of <code>xs</code>. E.g. <code>[2, 3, 5, 7, 11].slice(1)</code>
+  evaluates to a new array <code>[3, 5, 7, 11]</code>
+</p>
+{% endblock %}
+
+{% block testcases %}
+
+<div data-name="factorial">
+  <p>
+    Compute the nth factorial number which is defined as the product of the
+    integers from 0 to N, inclusive except that the 0th factorial is 1.
+  </p>
+</div>
+<div data-name="triangular">
+  <p>
+    Compute the nth triangular number which is defined as the sum of the
+    integers from 0 to N, inclusive.
+  </p>
+</div>
+<div data-name="fibonacci">
+  <p>
+    Compute the nth element of the Fibonacci sequence, 0, 1, 1, 2, 3, 5, 8, etc.
+    After the first two items, 0 and 1, each item in the sequence is the sum of
+    the two previous items.
+  </p>
+</div>
+<div data-name="gcd">
+  <p>
+    Compute the greatest common divisor (GCD) of A and B using the fact that the
+    GCD of A and B, is A if B is 0 and otherwise is the GCD of B and A % B
+  </p>
+</div>
+<div data-name="sum">
+  <p>Given an array of numbers, return the sum of the numbers.</p>
+</div>
+<div data-name="search">
+  <p>
+    Takes two arguments, an array, and a value and returns true if the value is
+    in the array.
+  </p>
+</div>
+<div data-name="reverseString">
+  <p>
+    A function that takes a string argument and returns the string reversed.
+  </p>
+</div>
+<div data-name="treeMap">
+  <p>
+    ["A function of two arguments, a tree and a function. Trees are made up of
+    objects with <code>left</code> and <code>right</code> properties and leaf
+    values that can be anything. The function <code>isLeaf</code>, which is
+    already defined for you, will tell you whether a given object is the leaf of
+    a tree.","Return a new tree with the same structure as the original but with
+    each leaf replaced with the result of calling the passed in function with
+    the old leaf value as an argument. For instance","<code
+      >treeMap({left: 10, right: 20}, (x) => x * 2)</code
+    >","should return","<code>{ left: 20, right: 40}</code>."]
+  </p>
+</div>
+<div data-name="change">
+  <p>
+    ["A function of two arguments, a number specifying an amount of money in
+    cents, and an array listing the value in cents of different coins. For
+    instance the amount might be <code>100</code> and the coins
+    <code>[1, 5, 10, 25, 50]</code> representing the US coins up to the
+    half-dollar.","Returns the number of ways of making the given amount using
+    any number of the given kinds of coins. For instance, for the amount
+    <code>10</code> it should return <code>4</code> because we can make ten
+    cents with either ten pennies, five penies and a nickle, two nickles, or a
+    dime. Note that order doesn't matter so five penies and a nickle is the same
+    as a nickle and five pennies.","This is an extra challenging problem. If you
+    want a hint ask me; I have a few."]
+  </p>
+</div>
+
+{% endblock %}

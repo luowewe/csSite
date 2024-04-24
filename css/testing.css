@@ -1,0 +1,125 @@
+/*
+ * Mixin for test results. Like repl.css might benefit from some
+ * shadowDOM/webcomponent magic.
+ */
+
+#testing {
+  border: 1px solid #ccc;
+  display: block;
+  flex: 5 0 0;
+  overflow-y: scroll;
+}
+
+#testing .pills {
+  padding: 10px 0;
+  text-align: center;
+}
+
+#testing .pills button {
+  margin: 4px 8px;
+  padding: 6px 12px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.2);
+  position: relative;
+  color: black;
+}
+
+#testing .pills button .marker {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  display: inline-block;
+  font-size: 12px;
+  width: 1em;
+  height: 1em;
+}
+
+#testing .pills button.all_passing {
+  background: rgba(100, 255, 100, 0.5);
+}
+
+#testing .pills button.some_failing {
+  background: rgba(255, 100, 100, 0.5);
+}
+
+#testing .pills button.no_results {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+#testing .description {
+  padding: 0 20px 20px;
+  text-align: center;
+}
+
+#testing .description p {
+  padding-top: 0.75em;
+}
+
+#testing table.results {
+  width: 100%;
+  table-layout: fixed;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+#testing col.functionCall {
+  width: 40%;
+}
+
+#testing col.got,
+#testing col.expected
+{
+  width: 25%;
+}
+
+#testing col.result {
+  width: 10%;
+}
+
+#testing th {
+  font-weight: 300;
+  background: rgba(0, 64, 128, 0.05);
+  border-bottom: thin solid rgba(0, 0, 0, 0.2);
+}
+
+#testing td,
+#testing th
+{
+  padding: 10px;
+  text-align: left;
+}
+
+#testing td:first-child,
+#testing th:first-child
+{
+  text-align: left;
+}
+
+#testing td {
+  font-family: monospace;
+}
+
+#testing td pre {
+  white-space: pre-wrap;
+}
+
+#testing tr.pass {
+  background: rgba(100, 255, 100, 0.2);
+}
+
+#testing tr.fail {
+  background: rgba(255, 100, 100, 0.2);
+}
+
+#testing .no-results {
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 1em;
+}
+
+#testing .summary {
+  padding: 0 20px;
+  text-align: right;
+}
+

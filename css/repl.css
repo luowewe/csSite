@@ -1,0 +1,78 @@
+/*
+ * Mixin styles for the Javascript repl. This CSS assumes the reply is in the
+ * elemnt with id="repl". Probably the better way to do this would be with a
+ * shadow DOM/webcomponent kind of setup.
+ */
+
+#repl {
+  background: #fffffe;
+  overflow-y: scroll;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  flex: 2 0 0;
+}
+
+#repl:focus {
+  outline: none;
+}
+
+#repl:focus .cursor {
+  background: black;
+}
+
+#repl div {
+  padding-top: 0px;
+}
+
+span.prompt,
+span.output {
+  font-size: 1.3em;
+}
+
+#repl div.error {
+  color: #f44;
+}
+
+#repl div.message {
+  font-style: italic;
+}
+
+#repl div.value,
+#repl div.error,
+#repl div.message
+{
+  padding-bottom: 0.25em;
+}
+
+#repl div.log {
+  font-style: italic;
+  white-space: pre;
+}
+
+#repl
+{
+  /* Grabbed this font stack from down in the bowels of Monaco to try and make the REPL look like the editor. */
+  font-family: 'SF Mono', Monaco, Menlo, Consolas, 'Ubuntu Mono', 'Liberation Mono',
+    'DejaVu Sans Mono', 'Courier New', monospace;
+  font-size: 12px;
+}
+
+#repl .cursor {
+  background: transparent;
+  display: inline-block;
+  width: 1px;
+}
+
+#repl .prompt {
+  display: inline-block;
+  width: 1.2em;
+}
+
+#repl .highlight {
+  background: rgba(196, 128, 196, 0.7);
+  font-weight: 900;
+}
+
+#repl .wrong-bracket {
+  background: red;
+}

@@ -1,0 +1,187 @@
+---
+title: 2022-11-29 numeric
+---
+
+{% extends 'code-assessment.njk' %}
+
+{% block instructions %}
+<p>
+  <svg id="close"
+  class="bi"><use xlink:href="/img/bootstrap-icons.svg#caret-down-fill"/></svg>
+  This assessment consists of <b><span id="num-questions"></span> functions</b>
+  you need to write involving primarily numeric expressions. It is a <b>closed
+  book assessment</b>. You should stay on this tab until you are done and there
+  should be no talking. This assessment is about how much <i>you</i> understand.
+  There are no automatic tests but you can use the REPL to test things yourself.
+</p>
+
+<p>
+  You can move through the questions with the arrows at the upper right next to
+  the <b>1 of <span class="of"></span></b> indicator so if you’re not sure how
+  to write one function move on to another one and come back if you have time at
+  the end. I want to see how much you do know. <b>Note</b>: you can also click
+  on <code>thingsLikeThis</code> in these instructions and the questions to copy
+  them to the clipboard to avoid spelling mistakes. (I.e. click to copy and then
+  ⌘-v to paste wherever you want.)
+</p>
+
+<p><b>Two useful functions</b> you might want to use in some of these
+  questions:</p>
+<ul>
+  <li><code>Math.floor()</code> which takes a single argument and
+    returns the largest whole number less than the given value. For
+    instance, <code>Math.floor(1.3)</code> returns <code>1</code>.</li>
+  <li><code>Math.max()</code> which takes any number of numbers as
+    arguments and return the largest of them. For
+    instance, <code>Math.max(0, -3)</code> returns <code>0</code> since it is
+    larger than <code>-3</code></li>
+</ul>
+
+<p>
+  <b>When you are done</b>, please click on your Github username above and
+  submit a GitHub pull request of the branch <code id="branch-name"></code> and
+  request me as a reviewer. Doing this correctly is part of the
+  assessment. <b>If you are unsure how to request a review, please ask for
+  help!</b>
+</p>
+{% endblock %}
+
+
+{% block questions %}
+
+<div>
+  <p>
+    Write a function named <code>totalEggs</code> that takes two
+    arguments, a number of hard-boiled eggs and a number of soft-boiled
+    eggs you want to make and returns the total number of eggs you need.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>chocolatesPerPerson</code> that takes
+    two arguments, a number of chocolates and a number of people. Return
+    the largest whole number of chocolates you can give to each person
+    if everyone gets the same amount. For
+    instance, <code>chocolatesPerPerson(13, 5)</code> should
+    return <code>2</code>.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>extraChocolates</code> that takes two
+    arguments, a number of chocolates and a number of people. Return the
+    number of chocolates that are left over after distributing the
+    chocolates evenly to all the people. For instance, For
+    instance, <code>extraChocolates(13, 5)</code> should
+    return <code>3</code>.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>leftOut</code> that takes two
+    arguments, a number of chocolates and a number of people. Return the
+    number of people who won’t get a chocolate if you try to distribute
+    them evenly and there are more people than chocolates. However, if
+    there are enough chocolates for everyone to get at least one the
+    function should return 0. For example, <code>leftOut(10, 13)</code>
+    should return <code>3</code> but <code>leftOut(13, 10)</code> should
+    return <code>0</code>.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>probabilityAllHeads</code> that takes a
+    single argument specifying the number of times a coin will be
+    flipped and returns the probability (a number between 0 and 1,
+    inclusive) of getting all heads. For
+    instance <code>probabilityAllHeads(1)</code> should
+    return <code>0.5</code> since the chance of getting heads on one
+    toss is 1/2. And <code>probabilityAllHeads(2)</code> should
+    return <code>0.25</code> since the chance of two independent
+    outcomes—such as getting a head on each of two flips of a coin—both
+    occuring is the product of their probabilities, in this case 0.5 ×
+    0.5 = 0.25. For reference <code>probabilityAllHeads(10)</code>
+    should return <code>0.0009765625</code>.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>futureHour</code> that takes two
+    arguments, the current hour on a 24-hour clock, i.e. a number from
+    0-23 inclusive, and a positive number of hours in the the future
+    that an event will occur. Return the hour it will be when the event
+    occurs. For example, <code>futureHour(9, 4)</code> should
+    return <code>13</code> since four hours after 9 it will be hour 13.
+    Note that the number of hours can be arbitrarily
+    large: <code>futureHour(9, 28)</code> would also
+    return <code>13</code> since the event would occur at hour 13 the
+    next day.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>presentsBudget</code> that takes two
+    arguments, the number of friends you are buying presents for and the
+    average price of present you plan to buy, and returns the total
+    amount of money you expect to spend. For
+    instance <code>presentsBudget(6, 15)</code>, i.e. six friends on
+    whom you want to spend an average of fifteen dollars, should
+    return <code>90</code>.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>perPresent</code> that takes two
+    arguments, the total amount of money you have budgeted for buying
+    presents and the number of presents you need to buy, and returns the
+    average amount you can spend per present. Thus <code>perPresent(90,
+      6)</code> should return <code>15</code> since with a budget of
+    ninety dollars and six presents to buy, you can spend an average of
+    fifteen dollars per present.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>wrapingCombos</code> that takes three
+    arguments, the number of kinds of wrapping paper you have, the
+    number of kinds of ribbions you have, and the number of kinds of
+    decorative bows you have. Return the number of different
+    combinations of paper, ribbon, and bow you could produce, using one
+    kind of paper, one kind of ribbon, and one bow to wrap a present.
+    For example, with just two kinds of paper, three kinds of ribbon,
+    and five different bows there are thirty combinatons: for the two
+    kinds of paper you can choose any of the three ribbons, giving six
+    paper/ribbon combinations. And each of those combinations can be
+    topped with one of five different bows, giving thirty total
+    combinations. Thus <code>wrappingCombos(2, 3, 5)</code> should
+    return <code>30</code>.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>biggestNumber</code> that takes a
+    single argument representing a number of digits and returns the
+    largest number that can be written in our ordinary decimal (base-10)
+    number system using that many digits. For
+    instance:</p>
+  <ul>
+    <li><code>biggestNumber(1)</code> should return <code>9</code></li>
+    <li><code>biggestNumber(2)</code> should return <code>99</code></li>
+    <li><code>biggestNumber(3)</code> should return <code>999</code></li>
+  </ul>
+  <p>
+    Hint: As a starting point, you might want to think about the
+    numbers one bigger than these numbers and how you could express them
+    in terms of the desired number of digits.
+  </p>
+</div>
+{% endblock %}

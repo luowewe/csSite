@@ -1,0 +1,91 @@
+/* Base */
+@import url('base.css');
+
+/* Mixins */
+@import url('prism.css');      /* Code highlighting, maybe not used. */
+@import url('/js/index.css');  /* Monaco editor css.                 */
+@import url('login-flow.css'); /* Login flow hidden content.         */
+@import url('toolbar.css');    /* Toplevel toolbar.                  */
+@import url('repl.css');       /* Repl for Javascript                */
+@import url('inner-page.css'); /* Main container style               */
+
+html {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* We need this element because GoGuardian inserts divs into the body element
+   and the flex styling was messing up the layout. Grrrr. */
+div.pseudo-body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: rgba(196, 128, 196, 0.1);
+}
+
+div.pseudo-body > * {
+  flex: 1;
+}
+
+/* Not scoped to .editor-page so we can refer to it from elsewhere and have it styled properly */
+button.run-code {
+  background: transparent;
+  border: transparent;
+  padding: 0;
+  vertical-align: middle;
+}
+button.run-code svg,
+svg.run-code
+{
+  fill: blue;
+  vertical-align: middle;
+}
+button.run-code svg {
+  width: 2em;
+  height: 2em;
+}
+
+
+.editor-page h2 {
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.editor-page {
+  height: 100%;
+  flex: 1;
+  display: grid;
+  grid-template-rows: auto 1fr 32px;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5px;
+}
+
+.editor-page > .editor-toolbar {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  padding-left: 0;
+}
+
+.editor-page > .righthand-label {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  padding: 10px;
+  padding-left: 0;
+}
+
+.editor-page > .editor {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  border: 1px solid #ccc;
+}
+
+.editor-page > .minibuffer {
+  grid-column: 1 / 3;
+  grid-row: 3 / 4;
+}

@@ -1,0 +1,15 @@
+{
+  "language": "java",
+  "handler": "unit-test",
+  "graphic": true,
+  "stderr": "stderr",
+  "jobe": {
+    "parameters": {
+      "compileargs": ["-cp", ".:/usr/local/lib/java/bhs-cs.jar"],
+      "interpreterargs": ["-cp", ".:/usr/local/lib/java/bhs-cs.jar"],
+      "main_class": "com.gigamonkeys.bhs.ImageRunner"
+    },
+    "output": "text"
+  },
+  "files": ["MyImageGenerator.java"]
+}

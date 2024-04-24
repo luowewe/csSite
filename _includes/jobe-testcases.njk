@@ -1,0 +1,9 @@
+{% set name = 'jobe-testcases' %}
+{% extends 'testcases.njk' %}
+
+{% block underTestCases %}
+<div class="errors">
+  <h2>Compilation errors</h2>
+  <div id="stderr"></div>
+</div>
+{% endblock %}

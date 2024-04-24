@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <title>{{ title }}</title>
+  <link href="/css/expressions.css" media="all" rel="stylesheet" type="text/css">
+  <script src="/js/expressions-game.js" type="module"></script>
+</head>
+<body>
+
+  {% include 'login-flow.njk' %}
+  <div class="pseudo-body">
+    {% include 'toolbar.njk' %}
+
+    <div class="container">
+      <div class="questions">
+
+        {{ content | safe }}
+
+        <div class="input">
+          <input id="expression-input" type="text" placeholder="Type expression here">
+        </div>
+      </div>
+
+      <div class="done" hidden="true">
+        All done! Good job!
+        <div id="accuracy"></div>
+        <div><button id="reset">Reset problems and try again?</button></div>
+      </div>
+      <div class="marks"></div>
+      <div id="results" class="test-results"></div>
+      <div id="completed"></div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+---
+title: Image
+---
+
+{% extends 'jobe-graphic.njk' %}
+
+{% block instructions %}
+
+  <p>
+    Unlike the Java Canvas demo, this environment gives you access to the
+    full <code><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics.html">java.awt.Graphics</a></code>
+    API. Your code’s <code>draw</code> method will be called with
+    a <code>Graphic</code> object, a width, and a height and can use any of the
+    methods on the <code>Graphic</code> object to draw an image. The image will
+    be generated and returned to this webpage and displayed on the right. You
+    should use the width and height arguments to make your code resilliant in
+    the face of changing window sizes.
+  </p>
+
+{% endblock %}

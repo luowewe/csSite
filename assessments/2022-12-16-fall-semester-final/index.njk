@@ -1,0 +1,1485 @@
+---
+title: 2022-12-16 fall semester final
+---
+
+{% extends 'final.njk' %}
+
+{% block instructions %}
+<p>
+  This exam contains all the questions from past assessments. However
+  <b>you do <i>not</i> need to attempt all <span id="num-questions"></span>
+    of them!</b>
+</p>
+
+<p>
+  You should instead <b>answer whatever questions you think will best
+    demonstrate your understanding</b> of the standards on which you want to
+  improve your grade.<sup>*</sup>
+</p>
+
+<p>
+  Your exam grade for each standard will be based on the proportion of
+  attempted questions covering the standard that you answer correctly. While
+  your exam grades can only help your final semester grades, <b>you must
+    answer at least five questions covering a standard to get an exam grade
+    for that standard</b>.
+</p>
+
+<p>
+  The functions are grouped by standard and the buttons in the questions
+  navigation bar let you jump to different groups of questions.
+  Additionally, the standards covered by each question are indicated next to
+  the text of the question. Note that some questions cover multiple
+  standards.
+</p>
+
+<p>
+  Unlike recent assessments, it is a <b>completely closed book
+    assessment</b> meaning <b>no index cards</b> or other notes. Please close
+  all other browser tabs before starting the exam. There should be <b>no
+    talking</b> during the exam.
+</p>
+
+<p>
+  When you are done, please <b>submit a GitHub pull request</b> of the
+  branch <code id="branch-name"></code> and request me as a reviewer. You
+  may also use exam time to finish merging approved PRs after you are done
+  with the exam. This is your last chance to improve your Github grade.
+</p>
+
+<p>
+  You can show and hide these instructions after you begin by clicking the
+  <svg class="bi"
+       fill="#000"> <use xlink:href="/img/bootstrap-icons.svg#question-circle-fill"> </use></svg>
+  in the questions navigation bar.
+</p>
+
+<p>
+  <b>Good luck and happy hacking!</b>
+</p>
+
+<p class="fn">
+  <sup>*</sup> The questions are categorized into six of our eight
+  standards. The Functions standard is measured by all questions and your
+  Github grade is based on the state of all your pull requests at then end
+  of the final exam period.
+</p>
+
+<p class="ok-button"><button>Okay, let’s go!</button></p>
+{% endblock %}
+
+{% block questions %}
+        <div>
+          <ul class="categories">
+            <li>Numbers</li>
+          </ul>
+
+          <p>Write a function named <code class="function">totalEggs</code>
+          that takes two arguments, a number of hard-boiled eggs and a number
+          of soft-boiled eggs you want to make and returns the total number of
+          eggs you need.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Numbers</li>
+          </ul>
+
+          <p>Write a function named <code class=
+          "function">chocolatesPerPerson</code> that takes two arguments, a
+          number of chocolates and a number of people. Return the largest whole
+          number of chocolates you can give to each person if everyone gets the
+          same amount. For instance, <code>chocolatesPerPerson(13, 5)</code>
+          should return <code>2</code>.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Numbers</li>
+          </ul>
+
+          <p>Write a function named <code class=
+          "function">extraChocolates</code> that takes two arguments, a number
+          of chocolates and a number of people. Return the number of chocolates
+          that are left over after distributing the chocolates evenly to all
+          the people. For instance, For instance, <code>extraChocolates(13,
+          5)</code> should return <code>3</code>.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Numbers</li>
+          </ul>
+
+          <p>Write a function named <code class="function">leftOut</code> that
+          takes two arguments, a number of chocolates and a number of people.
+          Return the number of people who won’t get a chocolate if you try to
+          distribute them evenly and there are more people than chocolates.
+          However, if there are enough chocolates for everyone to get at least
+          one the function should return 0. For example, <code>leftOut(10,
+          13)</code> should return <code>3</code> but <code>leftOut(13,
+          10)</code> should return <code>0</code>.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Numbers</li>
+          </ul>
+
+          <p>Write a function named <code class=
+          "function">probabilityAllHeads</code> that takes a single argument
+          specifying the number of times a coin will be flipped and returns the
+          probability (a number between 0 and 1, inclusive) of getting all
+          heads. For instance <code>probabilityAllHeads(1)</code> should return
+          <code>0.5</code> since the chance of getting heads on one toss is
+          1/2. And <code>probabilityAllHeads(2)</code> should return
+          <code>0.25</code> since the chance of two independent outcomes—such
+          as getting a head on each of two flips of a coin—both occuring is the
+          product of their probabilities, in this case 0.5 × 0.5 = 0.25. For
+          reference <code>probabilityAllHeads(10)</code> should return
+          <code>0.0009765625</code>.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Numbers</li>
+          </ul>
+
+          <p>Write a function named <code class="function">futureHour</code>
+          that takes two arguments, the current hour on a 24-hour clock, i.e. a
+          number from 0-23 inclusive, and a positive number of hours in the the
+          future that an event will occur. Return the hour it will be when the
+          event occurs. For example, <code>futureHour(9, 4)</code> should
+          return <code>13</code> since four hours after 9 it will be hour 13.
+          Note that the number of hours can be arbitrarily large:
+          <code>futureHour(9, 28)</code> would also return <code>13</code>
+          since the event would occur at hour 13 the next day.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Numbers</li>
+          </ul>
+
+          <p>Write a function named <code class=
+          "function">presentsBudget</code> that takes two arguments, the number
+          of friends you are buying presents for and the average price of
+          present you plan to buy, and returns the total amount of money you
+          expect to spend. For instance <code>presentsBudget(6, 15)</code>,
+          i.e. six friends on whom you want to spend an average of fifteen
+          dollars, should return <code>90</code>.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Numbers</li>
+          </ul>
+
+          <p>Write a function named <code class="function">perPresent</code>
+          that takes two arguments, the total amount of money you have budgeted
+          for buying presents and the number of presents you need to buy, and
+          returns the average amount you can spend per present. Thus
+          <code>perPresent(90, 6)</code> should return <code>15</code> since
+          with a budget of ninety dollars and six presents to buy, you can
+          spend an average of fifteen dollars per present.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Numbers</li>
+          </ul>
+
+          <p>Write a function named <code class="function">wrapingCombos</code>
+          that takes three arguments, the number of kinds of wrapping paper you
+          have, the number of kinds of ribbions you have, and the number of
+          kinds of decorative bows you have. Return the number of different
+          combinations of paper, ribbon, and bow you could produce, using one
+          kind of paper, one kind of ribbon, and one bow to wrap a present. For
+          example, with just two kinds of paper, three kinds of ribbon, and
+          five different bows there are thirty combinatons: for the two kinds
+          of paper you can choose any of the three ribbons, giving six
+          paper/ribbon combinations. And each of those combinations can be
+          topped with one of five different bows, giving thirty total
+          combinations. Thus <code>wrappingCombos(2, 3, 5)</code> should return
+          <code>30</code>.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Numbers</li>
+          </ul>
+
+          <p>Write a function named <code class="function">biggestNumber</code>
+          that takes a single argument representing a number of digits and
+          returns the largest number that can be written in our ordinary
+          decimal (base-10) number system using that many digits. For
+          instance:</p>
+
+          <ul>
+            <li><code>biggestNumber(1)</code> should return <code>9</code></li>
+
+            <li><code>biggestNumber(2)</code> should return
+            <code>99</code></li>
+
+            <li><code>biggestNumber(3)</code> should return
+            <code>999</code></li>
+          </ul>
+
+          <p>Hint: As a starting point, you might want to think about the
+          numbers one bigger than these numbers and how you could express them
+          in terms of the desired number of digits.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Numbers</li>
+          </ul>
+
+          <p>Write a function named <code class="function">itemsLeftOver</code>
+          that takes two arguments, a number of people and a number of items,
+          and returns the number of items that will be left over after you give
+          each person the maximum number of items you can while giving everyone
+          the same number of items.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Numbers</li>
+          </ul>
+
+          <p>Write a function named <code class="function">areaOfCircle</code>
+          that takes one argument, the radius of a circle, and returns the area
+          of the circle. The formula for the area of a circle with radius
+          <i>r</i> is πr<sup>2</sup>. In Javascript you can use
+          <code>Math.PI</code> to get a good approximation of π.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Numbers</li>
+          </ul>
+
+          <p>Write a function named <code class="function">volumeOfCube</code>
+          that takes a single argument specifying the length of one edge of a
+          cube, and returns the volume of the cube.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Numbers</li>
+          </ul>
+
+          <p>Write a function named <code class=
+          "function">populationGrowth</code> that takes two numeric arguments,
+          the current size of a population and a growth rate expressed as a
+          fraction the population will grow in a day. The function should
+          return the amount by which the population will grow in one day. For
+          example, if the population was initially 100 and the growth rate was
+          0.25, it would grow by 25 members.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Numbers</li>
+          </ul>
+
+          <p>Write a function named <code class=
+          "function">earnedRunAverage</code> that takes two arguments, the
+          number of “earned runs” a baseball pitcher has given up and the
+          number of innings that pitcher has pitched. The function should
+          return the pitcher’s Earned Run Average (ERA) which is defined as the
+          average number of earned runs per inning pitched multiplied by 9.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Numbers</li>
+          </ul>
+
+          <p>Write a function named <code class="function">valueOfJewels</code>
+          that takes four arguments, a number of diamonds, a number of
+          emeralds, the value of one diamond in gold pieces, and the value of
+          one emerald in gold pieces. The function should return the value in
+          gold pieces of the given number of diamonds and emeralds. In other
+          words multiply the number of each type of jewel by the value of that
+          kind of jewel and sum the products.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Numbers</li>
+          </ul>
+
+          <p>Write a function named <code class=
+          "function">payWithOvertime</code> that takes three numeric arguments,
+          a number of hours someone worked, their normal hourly rate, and their
+          overtime rate. The function should return how much they are paid for
+          the hours worked assuming that they are paid their normal rate for
+          the first eight hours and their overtime rate for any hours beyond
+          that.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Numbers</li>
+          </ul>
+
+          <p>Write a function named <code class=
+          "function">firstClassPostage</code> that takes one argument, the
+          weight in ounces of a letter. It should return the postage needed, in
+          cents, to mail the letter given that anything up the first ounce
+          costs 60 cents and each additional ounce, or fractional ounce, costs
+          24 cents. A function that will be useful is <code>Math.ceil</code>
+          which returns the smallest integer greater than or equal to its
+          single argument. For instance, <code>Math.ceil(2.3)</code> is 3.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Numbers</li>
+          </ul>
+
+          <p>Write a function named <code class=
+          "function">weightOnJupiter</code> that takes a single argument, the
+          weight of a person in kilograms on Earth, and returns the weight of
+          that same person on Jupiter.</p>
+
+          <p>Note that weights on other planets are computed by multiplying the
+          Earth weight by the ratio of the other planet’s gravity to Earth’s
+          gravity. For instance, if there was a planet whose gravity was
+          exactly twice Earth’s, then someone would weight exactly twice as
+          much on that planet as on Earth. Two useful constants defined in the
+          starter code for you are <code>JUPITER_GRAVITY</code> and
+          <code>EARTH_GRAVITY</code></p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Numbers</li>
+          </ul>
+
+          <p>Write a function named <code class="function">gravity</code> that
+          takes three numeric arguments, the first two are the masses of two
+          bodies (such as planets) and the third is the distance between the
+          two objects. It should return the gravitational force attracting the
+          two bodies which is computed as the product of the bodies’ masses
+          divided by the square of the distance between them, all multiplied by
+          the universal gravitational constant which is defined for you in the
+          starter code as the constant <code>G</code>.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Numbers</li>
+          </ul>
+
+          <p>Write a function named <code class="function">averageWeight</code>
+          that takes two arguments, the total weight of a number of items and
+          the number of items, and returns the average weight of an item. E.g.
+          if the total weight is 1,000 and there are 20 items, the average
+          weight is 50.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Numbers</li>
+          </ul>
+
+          <p>Write a function named <code class="function">hypotenuse</code>
+          that takes two arguments representing the lengths of the two legs of
+          a right triangle and returns the length of the hypotenuse. Recall the
+          Pythagorean theorem that tells us that c<sup>2</sup> = a<sup>2</sup>
+          + b<sup>2</sup> where <i>a</i> and <i>b</i> are the lengths of the
+          two legs of a right triangle and <i>c</i> is the length of the
+          hypotenuse.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Numbers</li>
+          </ul>
+
+          <p>Write a function named <code class="function">maxRadius</code>
+          that takes two arguments, the first being the width and the second
+          being the height of a drawing area. It should return the radius of
+          the largest circle that can be drawn in the drawing area.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Numbers</li>
+          </ul>
+
+          <p>Write a function named <code class="function">numCircles</code>
+          that takes two arguments, the radius of a circle and the width of a
+          drawing area, and returns the largest integer number of
+          non-overlapping circles of the given radius that can be drawn in a
+          line across the drawing area..</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Numbers</li>
+          </ul>
+
+          <p>Write a function named <code class="function">offset</code> that
+          takes two arguments, the width, in pixels, of a drawing area and the
+          width of a figure (guaranteed to be less than the total width, also
+          in pixels) and which returns the number of pixels from the left side
+          of the drawing to shift the figure to be horizontally centered in the
+          drawing area.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Booleans</li>
+          </ul>
+
+          <p>The BHS fire alarms go off if a fire alarm is pulled, if smoke is
+          detected, or if there is a planned fire drill. Write a function named
+          <code class="function">fireAlarm</code> that takes three arguments
+          and returns a boolean value indicating whether the fire alarm should
+          go off.</p>
+
+          <p>The values of the arguments will be booleans indicating, in order,
+          whether a fire alarm was pulled, whether smoke was detected, and
+          whether there is a planned fire drill.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Booleans</li>
+          </ul>
+
+          <p>There are three criteria for a person to be eligible to be elected
+          president of the United States: they must be at least 35 years old,
+          they must be a natural born citizen, and they must have lived in the
+          US for at least fourteen years. A person must meet all these criteria
+          to be eligible.</p>
+
+          <p>Write a function named <code class=
+          "function">canBePresident</code> that takes three arguments, and
+          returns true if a person can be president. The first argument is the
+          persons age in years; the second, a boolean indicating whether or not
+          they are a natural born citizen; and the third, the number of years
+          they’ve lived in the US.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Booleans</li>
+          </ul>
+
+          <p>On Twitter, a user should see a tweet if they follow the person
+          who tweeted it or if they follow a person who retweeted it. However
+          they should never see a tweet from someone they have blocked.</p>
+
+          <p>Write a function named <code class="function">willSeeTweet</code>
+          that returns a boolean indicating whether a user should see a given
+          tweet according to the values of its three boolean arguments. The
+          first says whether they follow the tweeter; the second, whether they
+          follow someone who retweeted the tweet; and the third, whether they
+          have blocked the original tweeter.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Booleans</li>
+          </ul>
+
+          <p>Write a function named <code class="function">needHeavyCoat</code>
+          that takes two boolean arguments, one that is true if a person is
+          going outside and the other that is true if they are somewhere cold,
+          and returns a boolean indicating whether they need a heavy coat which
+          they only need if they are going outside somewhere cold.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Booleans</li>
+          </ul>
+
+          <p>Write a function named <code class="function">needSunscreen</code>
+          that takes two boolean arguments, one that is true if someone is
+          going to the beach and the other that is true if they are going
+          skiing, and returns a boolean indicating whether they need to wear
+          sunscreen which they need to do both at the beach and on the ski
+          slopes.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Booleans</li>
+          </ul>
+
+          <p>Write a function named <code class="function">needMittens</code>
+          that takes two boolean arguments, one which is true if a person is
+          going outside and the other which is true if they are somewhere warm,
+          and returns a boolean indicating whether they need to wear mittens
+          which they need if they are going outside somewhere that isn’t
+          warm.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Booleans</li>
+          </ul>
+
+          <p>Write a function named <code class="function">isVenomous</code>
+          that returns a boolean indicating whether a snake on the island of
+          Booleana is venomous based on two boolean arguments, one which is
+          true if the snake is striped and the other of which is true if the
+          snake has a blue head. All striped snakes on Booleana are venomous as
+          are all of the unstriped snakes on the island except the blue-headed
+          Blooby Snake.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Booleans</li>
+          </ul>
+
+          <p>Write a function named <code class="function">isMagicNumber</code>
+          that takes a single numeric argument and returns true if the number
+          is one of the two magic numbers, <code>42</code> or <code>17</code>.
+          (For 10,000,000 extra credit points, include a comment about why you
+          think 42 and 17 are magic numbers.)</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Booleans</li>
+          </ul>
+
+          <p>Write a function named <code class="function">canSleepIn</code>
+          that takes two boolean arguments, the first saying whether it's a
+          weekday and the second saying whether you're on vacation, and returns
+          <code>true</code> if you are allowed to sleep in and
+          <code>false</code> otherwise. The rules are you can always sleep in
+          when you're on vacation and you can also sleep in on weekends.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Booleans</li>
+          </ul>
+
+          <p>Write a function named <code class="function">canGoToProm</code>
+          which takes three boolean arguments describing a person. The first
+          specifies if they are a senior, the second specifies if they were
+          invited to prom by a senior, and the third specifies if they are on
+          the prom exclusion list. The function should return a boolean
+          indicating whether or not the person is eligible to go to prom. The
+          rules are seniors and people invited by seniors are eligible unless
+          they are on the exclusion list.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Booleans</li>
+          </ul>
+
+          <p>Write a function named <code class=
+          "function">getsSpeedingTicket</code> that takes two arguments, a
+          number indicating the speed in miles per hour that you were driving
+          and a boolean indicating whether the cop who pulled you over is
+          grouchy. Return a boolean value indicating whether you will get a
+          ticket given that a grouchy cop will give you a ticket if you are
+          going over 65 while a non-grouchy cop will only give you a ticket if
+          you're going over 70 mph.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Booleans</li>
+            <li>Numbers</li>
+          </ul>
+
+          <p>Write a function named <code class=
+          "function">evenGreaterThanZero</code> that takes a single numeric
+          argument and returns a boolean indicating whether the number is an
+          even number greater than zero.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Booleans</li>
+            <li>Numbers</li>
+          </ul>
+
+          <p>The rules for leap years are more complex than you may know. The
+          basic rule is that all years evenly divisible by 4 (i.e. <code>year %
+          4 === 0</code>) are leap years. However, years evenly divisible by
+          100 are <em>not</em> leap years <em>unless</em> they are evenly
+          divisible by 400. Thus 2004 was a leap year by the normal rule but
+          2100 will not be because it’s divisible by 100. But 2000 was because
+          although it was divisible by 100 it was also divisible by 400.</p>
+
+          <p>Write a function named <code class="function">isLeapYear</code>
+          that takes a single argument of a year number and returns a boolean
+          indicating whether or not it is a leap year.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Booleans</li>
+            <li>Numbers</li>
+          </ul>
+
+          <p>Write a function named <code class="function">okaySpeed</code>
+          that takes two numeric arguments, one indicating the posted speed
+          limit in miles per hour and the other the speed a car is going, also
+          in miles per hour. It should return true if and only if the speed is
+          no more than ten mph below the posted limit and no more than ten mph
+          above the posted limit.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Booleans</li>
+            <li>Numbers</li>
+          </ul>
+
+          <p>Write a function named <code class=
+          "function">twiceAsExpensive</code> that takes two numeric arguments,
+          each indicating the price of an item you are considering buying. The
+          function should return true if and only if the first item costs more
+          than twice as much as the second item.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Booleans</li>
+            <li>Numbers</li>
+          </ul>
+
+          <p>Write a function named <code class="function">winningRecord</code>
+          that takes three numeric arguments, a team’s number of wins, losses,
+          and ties. It should return true if the team has a winning record,
+          meaning it has won more than half of the games it has played.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Booleans</li>
+            <li>Numbers</li>
+          </ul>
+
+          <p>Write a function named <code class="function">aFartherThanB</code>
+          that takes three arguments, all numbers and returns a boolean
+          indicating whether the first argument is farther away (on the number
+          line) from the third argument than the second argument. I.e. if we
+          call the arguments a, b, and c, return <code>true</code> if a is
+          farther away from c than b is.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Strings</li>
+          </ul>
+
+          <p>Write a function named <code class=
+          "function">firstFewEveryOther</code> that takes a single string
+          argument that is at least five characters long and returns a string
+          consisting of just the first, third, and fifth characters of the
+          argument string. E.g. called with <code>'foobar'</code> it should
+          return <code>'foa'</code>.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Strings</li>
+          </ul>
+
+          <p>Write a function named <code class="function">firstHalf</code>
+          that takes a single string argument and returns the first half of the
+          string. (If the string has an odd number of characters it doesn't
+          matter whether or not you include the extra character.) For instance
+          the first half of <code>'foobar'</code> is <code>'foo'</code> but if
+          the argument was <code>'fooquux'</code> then either
+          <code>'foo'</code> or <code>'fooq'</code> would be acceptable return
+          values.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Strings</li>
+          </ul>
+
+          <p>Write a function named <code class="function">secondHalf</code>
+          that takes a single string argument and returns the second half of
+          the string. (If the string has an odd number of characters it doesn't
+          matter whether or not you include the extra character.) For instance
+          the second half of <code>'foobar'</code> is <code>'bar'</code> but if
+          the argument was <code>'fooquux'</code> then either
+          <code>'quux'</code> or <code>'uux'</code> would be acceptable return
+          values. For maximum style points write this function and
+          <code>firstHalf</code> so that <code>firstHalf(s) +
+          secondHalf(s)</code> gives you back <code>s</code>.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Strings</li>
+          </ul>
+
+          <p>Write a function named <code class=
+          "function">swapFrontAndBack</code> that takes a single string
+          argument and returns a string consisting of the second half of the
+          original string followed by the first half. If the string is an odd
+          number of characters it doesn’t matter whether the extra character
+          goes with the front or the back.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Strings</li>
+          </ul>
+
+          <p>Write a function named <code class="function">upDown</code> that
+          takes a single string argument and returns a string consisting of the
+          original string all in upper case concatenated (“smooshed together”)
+          with the string all in lower case. E.g. called with
+          <code>'foo'</code> it should return <code>'FOOfoo'</code>.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Strings</li>
+          </ul>
+
+          <p>Write a function named <code class=
+          "function">upDownLastCharacter</code> that takes a single string
+          argument that is at least one character long and returns a string
+          consisting of two characters, the uppercase version of the last
+          character of the argument string and the lowercase version of that
+          same character. E.g. called with <code>'foo'</code> it should return
+          <code>'Oo'</code>.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Strings</li>
+          </ul>
+
+          <p>Write a function named <code class="function">firstAndLast</code>
+          that takes a single string argument (which will be at least two
+          characters long) and returns a string consisting of just the first
+          and last characters of the string.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Strings</li>
+          </ul>
+
+          <p>As you should recall from the Pig Latin assignment, the rules of
+          simple Pig Latin say that a word is translated into Pig Latin by
+          taking everything up to (but not including) the first vowel and
+          moving it to the end of word and then adding “ay” to the end.</p>
+
+          <p>Write a function named <code class=
+          "function">simplePigLatin</code> that takes two arguments, a string
+          containing a single word and a number indicating the index of the
+          first vowel in the word, and returns the word translated into Pig
+          Latin.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Strings</li>
+          </ul>
+
+          <p>Write a function named <code class=
+          "function">randomCharacter</code> that takes a single string argument
+          and returns a random character from the string. For this function you
+          will need to use the <code>rand</code> function defined at the top of
+          the starter code.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Strings</li>
+          </ul>
+
+          <p>Write a function named <code class=
+          "function">randomCharacterUpDown</code> that takes a single string
+          argument and returns a string consisting of a single random character
+          repeated twice, once in upper case and then in lower case. For this
+          function you will need to use the <code>rand</code> function defined
+          at the top of the starter code.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Strings</li>
+          </ul>
+
+          <p>Write a function named <code class=
+          "function">isAllUpperCase</code> that takes a single string argument
+          and returns a boolean indicating whether the string is all upper
+          case.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Strings</li>
+          </ul>
+
+          <p>Write a function named <code class=
+          "function">sameIgnoringCase</code> that takes two string arguments
+          and returns a boolean indicating whether they are the same string if
+          you ignore case differences.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Strings</li>
+          </ul>
+
+          <p>Write a function named <code class="function">firstName</code>
+          that takes a single string argument which will consist of a full name
+          in the form first name, a space, and the last name and returns a
+          string containing just the first name. You will probably want to use
+          the <code>indexOf</code> method.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Strings</li>
+          </ul>
+
+          <p>Write a function named <code class="function">lastName</code> that
+          takes a single string argument which will consist of a full name in
+          the form first name, a space, and the last name and returns a string
+          containing just the last name. You will probably want to use the
+          <code>indexOf</code> method.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Strings</li>
+          </ul>
+
+          <p>Write a function named <code class="function">initials</code> that
+          takes a single string argument which will consist of a full name in
+          the form first name, a space, and the last name and returns a string
+          containing the person's initials, i.e. the first letter of their
+          first name followed by the first letter of their last name. You will
+          probably want to use the <code>indexOf</code> method.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Strings</li>
+          </ul>
+
+          <p>Write a function named <code class="function">upToX</code> that
+          takes a single string argument and returns a string consisting of the
+          characters of the original string up to but not including the first
+          <code>'x'</code>. For instance <code>upToX('quixotic')</code> should
+          return <code>'qui'</code>.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Strings</li>
+          </ul>
+
+          <p>Write a function named <code class=
+          "function">charactersAround</code> that takes two arguments, a string
+          and an index into the string and returns a string consisting of two
+          characters, the one immediately before the character at the given
+          index and one and the one immediately after the character at the
+          given index. You can assume that those characters exist, i.e. the
+          index is not at the beginning or end of the string. For instance
+          <code>charactersAround('programming', 4)</code> should return
+          <code>'ga'</code>.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Strings</li>
+          </ul>
+
+          <p>Write a function named <code class="function">middle</code> that
+          takes a single string argument and returns a sting consisting of the
+          the middle of the argument, defined as the original string with the
+          first and last quarter removed. You can assume the number of
+          characters in the string is a multiple of four. For instance
+          <code>middle('abcdefgh')</code> should return
+          <code>'cdef'</code>.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Strings</li>
+          </ul>
+
+          <p>Write a function named <code class="function">pair</code> that
+          takes two string arguments and returns a single string consisting of
+          the two arguments separated by the word <code>and</code>. For
+          instance <code>pair('peanut butter', 'jelly')</code> should return
+          <code>peanut butter and jelly</code>.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Strings</li>
+          </ul>
+
+          <p>Write a function named <code class="function">containsX</code>
+          that takes a single string argument and returns <code>true</code> if
+          it contains an <code>'x'</code> and <code>false</code> if it does
+          not. For instance <code>containsX('flexible')</code> should return
+          <code>true</code> and <code>containsX('smooth')</code> should return
+          <code>false</code>.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Strings</li>
+          </ul>
+
+          <p>Write a function named <code class="function">slug</code> that
+          takes three string arguments and returns a “slug” consisting of the
+          three strings joined together with hyphens and all in lower case. For
+          instance <code>slug('Foo', 'Bar', 'BAZ')</code> would return
+          <code>'foo-bar-baz'</code>.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Strings</li>
+          </ul>
+
+          <p>Write a function named <code class="function">capitalize</code>
+          that takes a single string argument and returns a string with the
+          same characters but with the first character in upper case and all
+          remaining characters in lower case. For instance
+          <code>capitalize('programming')</code> should return
+          <code>'Programming'</code>.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Strings</li>
+          </ul>
+
+          <p>Write a function named <code class=
+          "function">capitalizeName</code> that takes a single string
+          consisting of a first and last name separated by a space and returns
+          a string with the first and last name separated by a space but
+          capitalized using the <code>capitalize</code> function you just
+          wrote. For instance <code>capitalizeName('fred flintstone')</code>
+          should return <code>'Fred Flintstone'</code>. Note: you must use
+          <code>capitalize</code> in this function to get full credit.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Strings</li>
+            <li>Booleans</li>
+            <li>Numbers</li>
+          </ul>
+
+          <p>Write a function named <code class=
+          "function">moreThanTwiceAsLong</code> that takes two string arguments
+          and returns a boolean indicating whether the first string contains
+          more than twice as many characters as the second string.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Control constructs</li>
+          </ul>
+
+          <p>Write a function named <code class="function">yesIfEven</code>
+          that takes a single argument which will be a number and returns the
+          string <code>'yes'</code> if the argument is even and
+          <code>'no'</code> otherwise.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Control constructs</li>
+          </ul>
+
+          <p>Write a function named <code class="function">logIfOk</code> that
+          takes a single argument that can be passed to the function
+          <code>isOk</code> provided in the starter code to get a boolean
+          indicating whether the value is “okay”. If the value is okay
+          according to <code>isOk</code> you should call the provided
+          <code>log</code> function, passing the value so it can be logged.
+          Note: you do not need to write <code>isOk</code> or <code>log</code>
+          but you can adapt the simple implementations in the starter code if
+          you’d like, to test your code.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Control constructs</li>
+          </ul>
+
+          <p>Write a function named <code class="function">firstOk</code> that
+          takes a numeric argument and returns the first integer greater than
+          or equal to zero and less than the argument that is okay according to
+          the <code>isOk</code> function. If none of the numbers in the range
+          are okay, it should return <code>undefined</code>.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Control constructs</li>
+          </ul>
+
+          <p>Write a function named <code class="function">timeToLeet</code>
+          that repeatedly generates random numbers with the provided
+          <code>random10k()</code> function and returns the number of numbers
+          generated that were not leet, according to the provided
+          <code>isLeet</code> function, before a leet number was generated.
+          (Thus if the very first number generated is leet, it should return 0.
+          If the 101st number generated was leet, then it should return
+          100.)</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Control constructs</li>
+          </ul>
+
+          <p>Write a function named <code class="function">classify</code> that
+          takes an arbitrary value as its single argument and calls one of the
+          provided functions <code>recordOk</code> or <code>recordNotOk</code>
+          with the value, the former if the value is okay according
+          <code>isOk</code> and the latter otherwise.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Control constructs</li>
+          </ul>
+
+          <p>Write a function named <code class=
+          "function">threewayClassify</code> that takes an arbitrary value as
+          its single argument and calls one of the three provided functions
+          <code>recordOk</code>, <code>recordMeh</code>, or
+          <code>recordNotOk</code>with the value. It should call
+          <code>recordOk</code> if the value is okay according to
+          <code>isOk</code>, <code>recordMeh</code> if the value is meh
+          according to <code>isMeh</code>, and <code>recordNotOk</code>
+          otherwise.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Control constructs</li>
+          </ul>
+
+          <p>Write a function named <code class="function">sumOfSquares</code>
+          that takes a single numeric argument and returns the sum of the
+          squares of the positive integers less than the argument. For instance
+          <code>sumOfSquares(10)</code> should return <code>285</code>.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Control constructs</li>
+          </ul>
+
+          <p>Write a function named <code class="function">pairs</code> that
+          takes a single numeric argument and calls the provided
+          <code>pair</code> function with every possible pair of numbers made
+          up of two numbers each in the range from 1 to the argument. For
+          instance, <code>pairs(3)</code> would result in calls to
+          <code>pair</code> with the pairs <code>(1, 1)</code>, <code>(1,
+          2)</code>, <code>(2, 1)</code>, and <code>(2, 2)</code>. Note that
+          order matters so <code>(1, 2)</code> and <code>(2, 1)</code> are
+          different pairs. Also note: <code>pair</code> takes two arguments so
+          you just need to pass the two numbers; you do not need to do anything
+          else to create a pair.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Control constructs</li>
+            <li>Numbers</li>
+          </ul>
+
+          <p>Write a function named <code class="function">timesTable</code>
+          that takes a single number as its argument and emits a times table of
+          all the products from 1 × 1 to n × n. Use the <code>emit</code>
+          function defined in the starter code to actually emit the different
+          values. It takes three arguments, the two numbers being multiplied
+          and their product, and prints them out nicely; you just need to call
+          it once for each pair of arguments. N.B. that order matters so,
+          assuming you are emitting a times table that includes 2 × 3 you need
+          to call both <code>emit(2, 3, 6)</code> and <code>emit(3, 2,
+          6)</code>.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Control constructs</li>
+            <li>Numbers</li>
+          </ul>
+
+          <p>Write a function named <code class="function">sumSquares</code>
+          that takes a single number argument and returns the sum of the
+          squares of all the positive integers less than the argument. For
+          instance given the argument <code>4</code> it should return
+          <code>14</code>, i.e. 1<sup>2</sup> + 2<sup>2</sup> + 3<sup>2</sup>,
+          i.e. 1 + 4 + 9.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Control constructs</li>
+            <li>Strings</li>
+            <li>Booleans</li>
+            <li>Numbers</li>
+          </ul>
+
+          <p>Write a function named <code class="function">countXs</code> that
+          takes a single string argument and returns the number of
+          <code>'x'</code> characters that occur in the string.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Arrays</li>
+          </ul>
+
+          <p>Write a function named <code class="function">makeRow</code> that
+          takes no arguments and returns a new three-element array where each
+          element is the empty string, <code>''</code>.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Arrays</li>
+          </ul>
+
+          <p>Write a function named <code class="function">makeBoard</code>
+          that takes no arguments and returns a 3x3 array. That is, it should
+          return an array containing three elements, each of which is a new
+          array containing three elements. The elements of the inner arrays
+          should all be the empty string, <code>''</code>. In other words, the
+          inner arrays are rows such as are returned by the
+          <code>makeRow</code> function you just wrote, which you are free to
+          use here if you want.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Arrays</li>
+            <li>Booleans</li>
+          </ul>
+
+          <p>Write a function named <code class="function">allTheSame</code>
+          that takes an array of three elements and returns <code>true</code>
+          if all three elements are <code>===</code> to each other and
+          <code>false</code> otherwise. For instance, <code>allTheSame(['X',
+          'X', 'X'])</code> should return <code>true</code>.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Arrays</li>
+
+            <li>Control constructs</li>
+          </ul>
+
+          <p>Write a function named <code class="function">extractColumn</code>
+          that takes a 3x3 array like the ones returned by
+          <code>makeBoard</code> and an index from 0 to 2, inclusive, and
+          returns a three-element array containing the values in the column
+          specified by the index, assuming the inner arrays represent rows. For
+          instance if <code>board</code> is the array:</p>
+
+          <pre><code data-trim="" data-noescape="" class=
+          "language-javascript">   [
+     ['X', '', ''],
+     ['O', '', ''],
+     ['', 'X', '']
+   ]</code></pre>
+          <p>then <code>extractColumn(board, 0)</code> should return
+          <code>['X', 'O', '']</code></p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Arrays</li>
+            <li>Control constructs</li>
+            <li>Numbers</li>
+          </ul>
+
+          <p>Write a function named <code class=
+          "function">fillTimesTable</code> that takes a single
+          <i>n</i>-by-<i>n</i> 2D array as an argument. That is, the argument
+          will be an array with <i>n</i> elements each of which is an array of
+          <i>n</i> elements. The inner arrays will initially be filled with
+          zeros. The function should replace each zero with the products from 1
+          × 1 at <code>table[0][0]</code> and <i>n</i> × <i>n</i> at
+          <code>table[<i>n</i> - 1][<i>n</i> - 1]</code> and return
+          <code>undefined</code> (Note, <i>n</i> itself is not an argument to
+          the function.)</p>
+
+          <p>For instance, if called with the empty table:</p>
+
+          <p><code>[[0 , 0, 0], [0, 0, 0], [0, 0, 0]]</code>
+          </p>
+
+          <p>it should leave the table in this state:</p>
+
+          <p><code>[[1, 2, 3], [2, 4, 6], [3, 6, 9]]</code>
+          </p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Arrays</li>
+            <li>Control constructs</li>
+            <li>Numbers</li>
+          </ul>
+
+          <p>Write a function <code class="function">sums</code> that takes a
+          single number, <code>n</code> and returns an array with <code>n +
+          1</code> numbers in it such that each element of the array is the sum
+          of the index of that element and the preceeding indices. (The zeroth
+          element should have the value 0.) For example <code>sums(5)</code>
+          should return <code>[0, 1, 3, 6, 10, 15]</code>. The third item,
+          <code>3</code> is 3 because it's at index 2 + the preceeding value of
+          1.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Arrays</li>
+            <li>Control constructs</li>
+          </ul>
+
+          <p>Write a function <code class="function">rule110</code> that takes
+          an array of arbitrary length containing only 0s and 1s as its
+          argument and returns a new array of the same length filled according
+          to the following somewhat complicated rules:</p>
+
+          <p>For each index, <code>i</code>, the value at <code>i</code> in the
+          new array is determined by the three values in the original array at
+          <code>i - 1</code> (the left value), at <code>i</code> (the center
+          value), and at <code>i + 1</code> (the right value). When
+          <code>i</code> is 0 use 0 for the left value and when <code>i</code>
+          is the last index in the array, use 0 for the right value.</p>
+
+          <p>The <code>i</code>th value of the result array will be 0 in three
+          cases: when the left, center, and right values are all 0 or the two
+          cases when the left value is 1 and the center and right values are
+          the same, i.e. both 0s or both 1s. In all other cases, the
+          <code>i</code>th element in the result is 1.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Objects</li>
+          </ul>
+
+          <p>Write a function named <code class="function">isSamePoint</code>
+          that takes two point objects as arguments, each with <code>x</code>
+          and <code>y</code> properties, and returns a boolean indicating
+          whether the two objects represent the same x, y coordinate.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Objects</li>
+            <li>Numbers</li>
+          </ul>
+
+          <p>Write a function named <code class="function">area</code> that
+          takes a single argument which will be an object with
+          <code>width</code> and <code>height</code> properties representing
+          the dimensions of a rectangle and returns the area of the rectangle
+          as a number.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Objects</li>
+            <li>Numbers</li>
+          </ul>
+
+          <p>Write a function named <code class="function">totalWithTip</code>
+          that takes two arguments, an object with a property
+          <code>subtotal</code> and a number between 0 and 1.0 representing the
+          percentage tip, e.g. 20% tip would be 0.2. Return a new object that
+          has three properties, <code>subtotal</code> with the same value as
+          the argument object, <code>tip</code> which is the tip computed from
+          the subtotal and the given percentage, and <code>total</code> which
+          is the total with the tip.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Objects</li>
+
+            <li>Booleans</li>
+          </ul>
+
+          <p>Write a function named <code class="function">higherPaid</code>
+          that takes two arguments, each an object representing an employee.
+          The employee objects each have a <code>salary</code> property and the
+          function should return the object representing the employee with the
+          higher salary.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Objects</li>
+            <li>Booleans</li>
+          </ul>
+
+          <p>Write a function <code class="function">isWinner</code> that takes
+          an object with a <code>score</code> property and returns true if the
+          score is over 100 and false otherwise.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Objects</li>
+            <li>Arrays</li>
+            <li>Control constructs</li>
+          </ul>
+
+          <p>Write a function <code class="function">updateWins</code> that
+          takes an array of objects each with a <code>score</code> property and
+          a <code>wins</code> property and updates each object by incrementing
+          <code>wins</code> by one if the object is a winner according to the
+          <code>isWinner</code> function you just wrote. After updating the
+          objects, <code>updateWins</code> should return
+          <code>undefined</code>.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Objects</li>
+            <li>Arrays</li>
+            <li>Control constructs</li>
+            <li>Booleans</li>
+          </ul>
+
+          <p>Write a function <code class="function">bigWinners</code> that
+          takes an array of objects each with <code>score</code> and
+          <code>wins</code> properties and returns an array containing the
+          elements of the argument array whose <code>wins</code> property is
+          over 10.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Objects</li>
+          </ul>
+
+          <p>Write a function named <code class="function">makeMove</code> that
+          takes three arguments: a string, specifying a mark (either
+          <code>'X'</code> or <code>'O'</code>); a number specifying a row; and
+          a number specifying a column. It should return an object with three
+          properties, <code>mark</code>, <code>row</code>, and
+          <code>column</code>, each with the value of the corresponding
+          argument.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Objects</li>
+            <li>Arrays</li>
+          </ul>
+
+          <p>Write a function named <code class="function">placeMark</code>
+          that takes a 3x3 array like the ones returned by
+          <code>makeBoard</code> and an object like the ones returned by
+          <code>makeMove</code> and sets the element of the array at the row
+          and column specified in the move object to the move's mark.</p>
+
+          <p>The function does not need to return any specific value but after
+          calling it the array passed as the first argument should be modified.
+          For instance, after:</p>
+
+          <pre><code data-trim="" data-noescape="" class=
+          "language-javascript">  let board = makeBoard();
+  let move = makeMove('X', 1, 1);
+  placeMark(board, move);</code></pre>
+          <p>the expression <code>board[1][1]</code> should evaluate to
+          <code>'X'</code>.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Objects</li>
+            <li>Arrays</li>
+          </ul>
+
+          <p>Write a function named <code class="function">recordMove</code>
+          that takes two arguments: an array and a move object, like the ones
+          returned by <code>makeMove</code>. It should add the given move to
+          the end of the array.</p>
+
+          <p>The function does not need to return any specific value but after
+          it is called the array argument should be one longer than it was
+          before the call and the last element of the array should be the
+          object passed as the second argument.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Objects</li>
+
+            <li>Arrays</li>
+          </ul>
+
+          <p>Write a function named <code class="function">rowForMove</code>
+          that takes two arguments: an array of move objects like the ones
+          collected in <code>recordMove</code> and a number which is an index
+          into that array. It should return the row value (a number) of the
+          move at the given index.</p>
+
+          <p>For example after these two lines are executed:</p>
+
+          <pre><code data-trim="" data-noescape="" class=
+          "language-javascript">   let moves = [];
+   recordMove(moves, makeMove('X', 1, 2));</code></pre>
+          <p>the call <code>rowForMove(moves, 0)</code> should return
+          <code>1</code>.</p>
+        </div>
+
+        <div>
+          <ul class="categories">
+            <li>Objects</li>
+            <li>Arrays</li>
+            <li>Control constructs</li>
+          </ul>
+
+          <p>Write a function named <code class="function">placeMoves</code>
+          that takes two arguments: a 3x3 array like the ones returned by
+          <code>makeBoard</code> and an array of moves such as might be built
+          up by repeatedly calling <code>recordMove</code>. The function should
+          call <code>placeMark</code> to place the mark for each move in the
+          array of moves in the correct position on the board array.</p>
+
+          <p>The function does not need to return any specific value though
+          obviously all the calls to <code>placeMark</code> will have updated
+          the board array argument. For instance after these lines are
+          executed:</p>
+
+          <pre><code data-trim="" data-noescape="" class=
+          "language-javascript">   let moves = [];
+   let board = makeBoard();
+   recordMove(moves, makeMove('X', 1, 1));
+   recordMove(moves, makeMove('O', 0, 0));
+   recordMove(moves, makeMove('X', 0, 1));
+   placeMoves(board, moves);
+          </code></pre>
+          <p>then the <code>board</code> should be in this state: <code>[['O',
+          'X', ''], ['', 'X', ''], ['', '', '']]</code></p>
+        </div>
+
+{% endblock %}

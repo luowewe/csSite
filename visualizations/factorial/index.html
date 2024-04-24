@@ -1,0 +1,77 @@
+---
+title: Factorial
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <title>Recursion animation</title>
+    <link href="style.css" media="all" rel="stylesheet" type="text/css">
+    <script src="script.js" type="module"></script>
+  </head>
+  <body>
+
+    <template id="javascript">
+      <div class="code">
+        <code class="header">factorial(<span class="n"></span>)</code>
+        <code>
+          <pre>
+const factorial = (n) => {
+  if (<span class="condition"><span class="expression">n</span> === 0</span>) {
+    <span class="return">return 1</span>;
+  } else {
+    <span class="return">return <span class="returnvalue"><span class="expression">n</span> * <span class="call">factorial(<span class="expression">n - 1</span>)</span></span></span>;
+  }
+};
+          </pre>
+        </code>
+      </div>
+      <span class="true">true</span>
+      <span class="false">false</span>
+    </template>
+
+    <template id="java">
+      <div class="code">
+        <code class="header">factorial(<span class="n"></span>)</code>
+        <code>
+          <pre>
+public long factorial(long n) {
+  if (<span class="condition"><span class="expression">n</span> == 0</span>) {
+    <span class="return">return 1</span>;
+  } else {
+    <span class="return">return <span class="returnvalue"><span class="expression">n</span> * <span class="call">factorial(<span class="expression">n - 1</span>)</span></span></span>;
+  }
+}
+          </pre>
+        </code>
+      </div>
+      <span class="true">true</span>
+      <span class="false">false</span>
+    </template>
+
+    <template id="python">
+      <div class="code">
+        <code class="header">factorial(<span class="n"></span>)</code>
+        <code>
+          <pre>
+def factorial(n):
+  if <span class="condition"><span class="expression">n</span> == 0</span>:
+    <span class="return">return 1</span>
+  else:
+    <span class="return">return <span class="returnvalue"><span class="expression">n</span> * <span class="call">factorial(<span class="expression">n - 1</span>)</span></span></span>
+          </pre>
+        </code>
+      </div>
+      <span class="true">True</span>
+      <span class="false">False</span>
+    </template>
+
+    <p>Hit any key to advance through evaluation.</p>
+
+    <div id="start">
+      <code><span class="call" data-n="4">factorial(4)</span></code>
+    </div>
+
+  </body>
+</html>

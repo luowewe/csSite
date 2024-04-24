@@ -1,0 +1,113 @@
+---
+title: Boolean Venn Diagrams
+---
+<!doctype>
+<html>
+  <head>
+    <title>Boolean Venn Diagrams</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <style>
+      * { padding: 0; margin: 0}
+      body {
+        width: fit-content;
+        margin: 0.22in auto;
+      }
+      .label {
+        font-family: "Gill Sans";
+        font-size: 24px;
+      }
+      .ab {
+        font-family: "Gill Sans";
+        font-size: 18px;
+        font-weight: 300;
+        color: #aaa;
+      }
+
+    </style>
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="8in" height="10.5in" viewBox="0 0 8in 10.5in" xml:space="preserve">>
+
+      <g transform="translate(0, 0)">
+        <g transform="translate(50, 50) scale(0.6 0.6)">
+          <rect x="0" y="0" width="500" height="300" fill="rgba(0,0,0,0)" stroke="black"/>
+          <circle cx="200" cy="150" r="90" fill="rgba(0, 0, 0, 0.0)" stroke="black"/>
+          <circle cx="300" cy="150" r="90" fill="rgba(0, 0, 0, 0.0)" stroke="black"/>
+          <text x="220" y="285" class="label">A && B</text>
+          <text x="170" y="150" class="ab">A</text>
+          <text x="330" y="150" class="ab">B</text>
+        </g>
+
+        <g transform="translate(400, 50) scale(0.6 0.6)">
+          <rect x="0" y="0" width="500" height="300" fill="rgba(0,0,0,0)" stroke="black"/>
+          <circle cx="200" cy="150" r="90" fill="rgba(0, 0, 0, 0.0)" stroke="black"/>
+          <circle cx="300" cy="150" r="90" fill="rgba(0, 0, 0, 0.0)" stroke="black"/>
+          <text x="220" y="285" class="label">A && !B</text>
+          <text x="170" y="150" class="ab">A</text>
+          <text x="330" y="150" class="ab">B</text>
+        </g>
+      </g>
+
+      <g transform="translate(0, 250)">
+        <g transform="translate(50, 50) scale(0.6 0.6)">
+          <rect x="0" y="0" width="500" height="300" fill="rgba(0,0,0,0)" stroke="black"/>
+          <circle cx="200" cy="150" r="90" fill="rgba(0, 0, 0, 0.0)" stroke="black"/>
+          <circle cx="300" cy="150" r="90" fill="rgba(0, 0, 0, 0.0)" stroke="black"/>
+          <text x="220" y="285" class="label">!A && B</text>
+          <text x="170" y="150" class="ab">A</text>
+          <text x="330" y="150" class="ab">B</text>
+        </g>
+
+        <g transform="translate(400, 50) scale(0.6 0.6)">
+          <rect x="0" y="0" width="500" height="300" fill="rgba(0,0,0,0)" stroke="black"/>
+          <circle cx="200" cy="150" r="90" fill="rgba(0, 0, 0, 0.0)" stroke="black"/>
+          <circle cx="300" cy="150" r="90" fill="rgba(0, 0, 0, 0.0)" stroke="black"/>
+          <text x="220" y="285" class="label">!A && !B</text>
+          <text x="170" y="150" class="ab">A</text>
+          <text x="330" y="150" class="ab">B</text>
+        </g>
+      </g>
+
+      <g transform="translate(0, 500)">
+        <g transform="translate(50, 50) scale(0.6 0.6)">
+          <rect x="0" y="0" width="500" height="300" fill="rgba(0,0,0,0)" stroke="black"/>
+          <circle cx="200" cy="150" r="90" fill="rgba(0, 0, 0, 0.0)" stroke="black"/>
+          <circle cx="300" cy="150" r="90" fill="rgba(0, 0, 0, 0.0)" stroke="black"/>
+          <text x="220" y="285" class="label">A || B</text>
+          <text x="170" y="150" class="ab">A</text>
+          <text x="330" y="150" class="ab">B</text>
+        </g>
+
+        <g transform="translate(400, 50) scale(0.6 0.6)">
+          <rect x="0" y="0" width="500" height="300" fill="rgba(0,0,0,0)" stroke="black"/>
+          <circle cx="200" cy="150" r="90" fill="rgba(0, 0, 0, 0.0)" stroke="black"/>
+          <circle cx="300" cy="150" r="90" fill="rgba(0, 0, 0, 0.0)" stroke="black"/>
+          <text x="220" y="285" class="label">A || !B</text>
+          <text x="170" y="150" class="ab">A</text>
+          <text x="330" y="150" class="ab">B</text>
+        </g>
+      </g>
+
+      <g transform="translate(0, 750)">
+        <g transform="translate(50, 50) scale(0.6 0.6)">
+          <rect x="0" y="0" width="500" height="300" fill="rgba(0,0,0,0)" stroke="black"/>
+          <circle cx="200" cy="150" r="90" fill="rgba(0, 0, 0, 0.0)" stroke="black"/>
+          <circle cx="300" cy="150" r="90" fill="rgba(0, 0, 0, 0.0)" stroke="black"/>
+          <text x="220" y="285" class="label">!A || B</text>
+          <text x="170" y="150" class="ab">A</text>
+          <text x="330" y="150" class="ab">B</text>
+        </g>
+
+        <g transform="translate(400, 50) scale(0.6 0.6)">
+          <rect x="0" y="0" width="500" height="300" fill="rgba(0,0,0,0)" stroke="black"/>
+          <circle cx="200" cy="150" r="90" fill="rgba(0, 0, 0, 0.0)" stroke="black"/>
+          <circle cx="300" cy="150" r="90" fill="rgba(0, 0, 0, 0.0)" stroke="black"/>
+          <text x="220" y="285" class="label">!A || !B</text>
+          <text x="170" y="150" class="ab">A</text>
+          <text x="330" y="150" class="ab">B</text>
+        </g>
+      </g>
+    </svg>
+  </body>
+</html>

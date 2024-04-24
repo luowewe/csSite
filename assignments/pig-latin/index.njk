@@ -1,0 +1,48 @@
+---
+title: Pig Latin
+---
+
+{% extends 'js-testcases.njk' %}
+
+{% block instructions %}
+<p>
+  More functions. Just two in this case. As before, whenever you are ready to
+  run the tests, hit the <svg class="bi
+  run-code"><use xlink:href="/img/bootstrap-icons.svg#play-btn-fill"/></svg>
+  button above the editor. To see the specification for a function you are
+  supposed to write, click a button in the test panel.
+</p>
+{% endblock %}
+
+{% block testcases %}
+
+<div data-name="pigLatin">
+  <p>
+    A function that takes a single argument which will be a string containing
+    a single word. Should return the string translated to Pig Latin.
+  </p>
+  <p>
+    The rules of Pig Latin are a take the first consant sound (which you can
+    assume is everything up to the first vowel) and move it to the end of the
+    word with an 'ay' tacked on. For instance 'car' becomes 'arcay' and 'phone'
+    becomes 'onephay'.","You can assume there will be at least one vowel in the
+    word.
+  </p>
+</div>
+
+<div data-name="advancedPigLatin">
+  <p>
+    A function that takes a single argument which will be a string containing a
+    single word. Should return the string translated to Pig Latin according to
+    Advanced Pig Latin Rules.
+  </p>
+  <p>
+    The rules of Advanced Pig Latin are the same as the rules of normal Pig
+    Latin with one additional rule: if the original word starts with a vowel,
+    form the Pig Latin translation by just adding 'way' to the end.","You can
+    assume there will be at least one vowel in the word."]
+  </p>
+</div>
+
+
+{% endblock %}

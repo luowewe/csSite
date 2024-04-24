@@ -1,0 +1,212 @@
+-*- mode: markup; -*-
+
+* How to handle jobe files.
+
+Page config.json can list files. The names are names that can be `fetch`’d. Each
+file should be fetched and hashed (sha<mumeble>) and then checked on the jobe
+server. If it does not exist PUT it under the hash. Then in the spec for the job
+need a mapping from the fetchable name to the name we want to use in the jobe
+tmp directory. We use the mapping for fetchable name to hash and fetchable name
+to desired jobe name to make the `file_list` comporent of the jobe run spec
+which wants hash (id) to jobe name mappings.
+
+As an optimization we could possibly generate during the site build a json file
+containing the hashes of all the files that could possibly be used or a sidecar
+file with the hash of one file so we can fetch that and use the hash to check
+with jobe and only bother downloading and reuploading the file if it’s not
+already in jobe.
+
+
+* Evaluator/Page/Handler architecture
+
+\b{Evaluators} differ in what language they know how to evaluate (and over the
+covers how they do it) but ultimately they get handed some code from the editor
+and possibly some other files mentioned in the page’s config.json and they run
+or compile and run the code. Running the code may have effects direcly on the UI
+(in the case of running Javascript code) or it may produce a result (always in
+the case of the jobe evaluator and sometimes, such as in unit testing, in the
+javacript evaluator.)
+
+\b{Pages} have different UI elements on them as suits their purpose. Some are
+general such as the Javascript repl page or the Jobe i/o page. Others are more
+special purpose such as the unit test page. With the Javascript evaluator, most
+of the effects on the page may be due to the running user code calling functions
+that are defined in the page (e.g. the canvas based pages define functions for
+drawing graphics.) But some pages exist mostly to render the result returned by
+the evaluator. And some of those are language neutral: any evaluator that can
+spit out a blob of JSON describing a bunch of tests that ran and the results can
+have them displayed in the unit test pages. Pages also have UI elements that are
+used to display information about the evaluation process indpendent of what
+result the evaluation produces and especially in the case where it does not.
+That is maybe a separate interface (but should be defined as one) between the
+page and the evaluators. For instance the evaluator should have a way to report
+the start of evaluation, report how long it took, emit warnings, emit errors,
+etc. How exactly those pieces of information show up on the screen should be up
+to the page. So maybe this is an event model so the page can register event
+handlers for whatever events the evaluators can fire.
+
+\b{Handlers} sit between the evaluators and the pages. Maybe they only exist in
+the jobe evaluator? At any rate, the issue is that if the page is expecting a
+blob of test data in the form of a Javascript object and the jobe evaluator just
+gets back a string representing the stdout, somebody’s gotta know to parse that
+string into JSON.
+
+Ideally the evaluator doesn’t have to know what’s going to happen to the result
+it produces. But the page would like to not have to care too much about the
+details of the raw form of results from the evalautor. So that suggests that the
+page should provide an interface for updating the stuff it is designed to
+display and a handler can be written to accept the raw result from each kind of
+evaluator and to translate that into appropriate calls onto the page interface.
+Which is maybe as simple as calling page.update with the raw result translated
+into whatever shape the page needs.
+
+* Something to look at if we go down the web components path
+
+https://lit.dev/docs/getting-started/
+
+* Theory of unit tests
+
+Unit test pages should use a different evaluator that knows how to take the code
+in the editor and run it to get a set of results (such as by invoking each of
+the functions/methods) and then generating a set of expected results. In the ItP
+site I did this in two ways:
+
+  # Pre-generating the args and the expected results and then running the
+    student code and comparing the results.
+
+  # Writing a reference implementations of the functions and then at evaluation
+    time generating both the got and expected values by calling the student code
+    and the reference implementation. I’m not sure I ever took much advantage of
+    that but in theory that gives us the flexibility to generate random inputs
+    or even to go to a quickcheck style, property-based test case generation.
+
+The one advantage of pre-generating the expected results is that there is no way
+a clever student can find the reference implementations which otherwise (at
+least for Javascript) have to be shipped to the server.
+
+In the Java world both methods are equally opaque insofar as all the code runs
+in the Jobe server.
+
+* Wiring up Netfily Oauth with Github
+
+In js/modules/login.js set the siteId variable in connectToGithub to the value
+shown in the “Site information” tab of the “Site configuration” section of the
+site, e.g.
+https://app.netlify.com/sites/precious-gumption-22de97/configuration/general
+
+You’ll also need to generate a new client secret for the app we use for OAuth in
+github
+https://github.com/organizations/bhs-intro-to-programming/settings/applications/1946546
+
+  - Start at org page: https://github.com/bhs-intro-to-programming
+
+  - Click Settings gear ->
+    https://github.com/organizations/bhs-intro-to-programming/settings/profile
+
+  - Scroll to bottom of left menu and open up “Developer settings”.
+
+  - Choose “OAuth apps” ->
+    https://github.com/organizations/bhs-intro-to-programming/settings/applications
+
+  - Choose the “BHS Intro to Programming” app ->
+    https://github.com/organizations/bhs-intro-to-programming/settings/applications/1946546
+
+  - Generate a new client secret and copy it.
+
+Back on Netlify go to “Site Configuration -> Access control” and install the
+Github authentication provider with the clientId and new client secret.
+
+* Building directly on Netlify
+
+For the minimal site, I set up a new site on Netlify pointing directly at the
+minimal branch of this repo and am letting Netlify run eleventy. It works great!
+
+Probably I should rename this branch demo so the branch and the hostname match.
+And then make branches and sites for each course.
+
+
+* NOT running jobe in AWS! (June 28, 2023)
+
+Thanks to Andre from Fiasco figured out that it’s much easier to host o
+container on fly.io. So I did that. Super easy.
+
+* Running jobe in AWS (June 28, 2023)
+
+Seems like the basic deal is we need to build a container locally and do some
+aws command line foo to push it to ECR. From there I assume we can run it in
+Fargate. See
+https://docs.aws.amazon.com/AmazonECS/latest/developerguide/create-container-image.html
+for instructions on building the container.
+
+Gah. Need to convert the container to Amazon Linux if we want to run it in
+Fargate?
+
+Use ChatGPT to translate apt-get to yum.
+
+https://blog.codeasite.com/how-do-i-find-apache-http-server-log-files/
+
+Use this command to build the container image:
+
+   sudo docker build . -t my/jobeinabox --build-arg TZ="UTC"
+
+Run it in Terminal, not Emacs, because it spews a bunch of output updating
+progress.
+
+Hit this URL to get a sign that Jobe is alive:
+
+   http://localhost:4000/jobe/index.php/restapi/languages
+
+
+* Reformatting (June 28, 2023)
+
+  - https://stackoverflow.com/questions/66325637/how-to-format-format-a-piece-of-codes
+
+  - https://blog.expo.dev/building-a-code-editor-with-monaco-f84b3a06deaf
+
+    This looks promising:
+
+    monaco.languages.registerDocumentFormattingEditProvider('javascript', {
+      async provideDocumentFormattingEdits(model, options, token) {
+        const prettier = await import('prettier/standalone');
+        const babylon = await import('prettier/parser-babylon');
+        const text = prettier.format(model.getValue(), {
+          parser: 'babylon',
+          plugins: [babylon],
+          singleQuote: true,
+        });
+
+        return [
+          {
+            range: model.getFullModelRange(),
+            text,
+          },
+        ];
+      },
+    });
+
+
+  - https://prettier.io/docs/en/browser.html: How to run (vanilla) prettier in the browser.
+
+  - https://github.com/jhipster/prettier-java/issues/552
+
+    prettier-plugin-java issue about running in browser with code for esbuild
+
+Turns out the trick was to hack `_classes/esbuild.11ty.js` with some of the code
+from https://github.com/jhipster/prettier-java/issues/552 wired into to the
+place that builds the bundle of my own javascript since that's the code that
+needs to import prettier-plugin-java. That that plugin installed the code gets
+patched and can be imported into the browser. The rest was just a matter of
+adding this code do `editor.js`.
+
+   /*
+    * Install prettier-java as our code formatter for Java.
+    */
+   const javaPrettierOpts = { parser: "java", plugins: [prettierPluginJava]}
+
+   monaco.languages.registerDocumentFormattingEditProvider('java', {
+     async provideDocumentFormattingEdits(model, options, token) {
+       const text = prettier.format(model.getValue(), javaPrettierOpts);
+       const range = model.getFullModelRange();
+       return [ {range, text } ];
+     },
+   });

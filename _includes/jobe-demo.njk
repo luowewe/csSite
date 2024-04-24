@@ -1,0 +1,24 @@
+{% extends "demo.njk" %}
+
+{% block ioLabel %}
+<h2>I/O</h2>
+{% endblock %}
+
+{% block io %}
+<div class="io">
+  <div>
+    <h2>Output</h2>
+    <div id="stdout"></div>
+  </div>
+  <div>
+    <h2>Error</h2>
+    <div id="stderr"></div>
+  </div>
+  <div>
+    <h2>Input</h2>
+    <textarea id="stdin" class="io">You can put text here and it will be fed to your program via System.in.
+    </textarea>
+    <input type="file" id="inputfile" multiple />
+  </div>
+</div>
+{% endblock %}

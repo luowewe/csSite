@@ -1,0 +1,232 @@
+@import url('base.css');
+
+:root {
+  --gap: 1px;
+  --big-gap: 2em;
+  --cell-padding: 1em 0;
+}
+
+body {
+  margin-top: 50px;
+  text-align: center;
+}
+
+@media screen {
+  body {
+    background-image: url(../img/jac.png);
+    background-size: 33vw;
+    background-color: rgba(255, 0, 0, 0.1);
+  }
+}
+
+#calendar {
+  display: flex;
+  flex-direction: column;
+  width: 45em;
+  margin: 3em auto;
+  gap: var(--big-gap);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  border: thin solid grey;
+}
+
+.unit {
+  text-align: center;
+  padding: 0.5em;
+}
+
+/* Next two rules to make link target bigger. */
+.unit a.internal-link {
+  display: inline-block;
+}
+
+a.up {
+  text-decoration: none;
+  float: right;
+}
+
+.week,
+.days {
+  display: flex;
+  flex-direction: row;
+  gap: var(--gap);
+}
+
+.week > div:first-child {
+  flex: 1.5;
+  text-align: center;
+  padding: var(--cell-padding);
+}
+
+div.days {
+  flex: 5;
+}
+
+.days div {
+  text-align: center;
+  padding: var(--cell-padding);
+}
+
+.days > div > p {
+}
+
+.days div,
+.days div[data-days='1'] {
+  flex: 1;
+}
+.days div[data-days='2'] {
+  flex: 2;
+}
+.days div[data-days='3'] {
+  flex: 3;
+}
+.days div[data-days='4'] {
+  flex: 4;
+}
+.days div[data-days='5'] {
+  flex: 5;
+}
+
+#container {
+  display: inline-block;
+  background: rgba(255, 220, 255, 0.98);
+  border: thin solid black;
+  padding: 50px;
+}
+
+#toc {
+  margin: 30px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+#toc > a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  border: 1px solid grey;
+}
+
+.week > div:first-child {
+  background: rgba(128, 128, 255, 0.2);
+}
+
+.off,
+.scheduled.no-class {
+  background: grey;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.scheduled {
+  background: #408;
+  color: white;
+}
+
+.continuation {
+  font-size: 80%;
+}
+
+.continuation::after {
+  content: ' continued.';
+}
+
+.unscheduled {
+  background: #eeeeef;
+}
+
+.project {
+  background: #40b;
+}
+
+.assessment {
+  background: #b02;
+}
+
+.vacation {
+  text-align: center;
+  padding: 1em;
+  background: #eeccee;
+}
+
+.unit,
+#toc > a {
+  background: rgba(0, 0, 255, 0.25);
+  color: #00007f;
+}
+
+[data-days='1'],
+[data-days='2'],
+.off {
+  font-size: 80%;
+}
+
+.extra {
+  font-size: 60%;
+}
+
+#footer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+#footer div {
+  flex-grow: 1;
+  font-size: 12px;
+  margin-top: 1em;
+}
+
+#footer div * {
+  vertical-align: middle;
+}
+
+div.codeLink {
+  text-align: right;
+}
+
+#length {
+  text-align: left;
+}
+
+a.internal-link {
+  text-decoration: none;
+  color: inherit;
+  width: 80%;
+}
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -25px;
+  visibility: hidden;
+}
+
+#details {
+  display: none;
+  position: fixed;
+  top: 200px;
+  left: 25vw;
+  width: 50vw;
+  height: 50vh;
+  background: rgba(68, 0, 136, 0.95);
+  color: white;
+  padding: 50px;
+  border: 2px solid white;
+  text-align: left;
+  overflow: scroll;
+}
+
+.overflow-warning {
+  font-size: 120%;
+  font-weight: 900;
+  color: #ff0a0a;
+  background: white;
+  padding: 4px;
+}

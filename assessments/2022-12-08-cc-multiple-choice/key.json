@@ -1,0 +1,16 @@
+[
+  { "answer": "Yes", "categories": ["cc"] },
+  { "answer": "Just bar", "categories": ["cc"] },
+  { "answer": "Both foo and bar", "categories": ["cc"] },
+  { "answer": "i < 10", "categories": ["cc"] },
+  { "answer": "100", "categories": ["cc"] },
+  { "answer": "10", "categories": ["cc", "arrays"] },
+  { "answer": "20", "categories": ["cc"] },
+  { "answer": "6", "categories": ["cc"] },
+  { "answer": "The sum of the numbers from 0 to 9", "categories": ["cc"] },
+  { "answer": "When Math.random() returns a number less that 0.01", "categories": ["cc"] },
+  {
+    "answer": "It tests whether there are more than limit prime numbers below max.",
+    "categories": ["cc"]
+  }
+]

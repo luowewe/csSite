@@ -1,0 +1,15 @@
+{
+  "language": "java",
+  "handler": "unit-test",
+  "canvas": true,
+  "stderr": "stderr",
+  "jobe": {
+    "parameters": {
+      "compileargs": ["-cp", ".:/usr/local/lib/java/bhs-cs.jar"],
+      "interpreterargs": ["-cp", ".:/usr/local/lib/java/bhs-cs.jar"],
+      "main_class": "com.gigamonkeys.bhs.CanvasRunner"
+    },
+    "output": "text"
+  },
+  "files": ["MyPicture.java"]
+}

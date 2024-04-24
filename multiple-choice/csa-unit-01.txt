@@ -1,0 +1,349 @@
+-*- mode: markup; -*-
+
+* Unit 1
+
+## instructions
+
+Twenty questions. Mostly multiple choice. A few short answer. Move through the
+questions with the arrows next to \b{\i{n} of 20} in the question box.
+
+##.
+
+** System.out.println
+
+What does the \code{ln} in \code{System.out.println} stand for?
+
+## choices
+
+Lane
+
+Line
+
+Alone
+
+Natural log
+
+##.
+
+** Newlines
+
+How many lines does the following code print:
+
+   System.out.print("Hello");
+   System.out.println(", world!");
+   System.out.println("Goodbye!");
+
+## choices
+
+1
+
+2
+
+3
+
+4
+
+##.
+
+** Data types 1
+
+What’s a good data type type to represent a temperature in degrees Celsius?
+
+## choices
+
+\code{int}
+
+\code{double}
+
+\code{boolean}
+
+\code{String}
+
+None of the above.
+
+##.
+
+** Data types 2
+
+What’s a good data type type to represent the number of teachers at BHS?
+
+## choices
+
+\code{int}
+
+\code{double}
+
+\code{boolean}
+
+\code{String}
+
+None of the above.
+
+##.
+
+** Data types 3
+
+What’s a good data type type to represent the number of dollars in your bank
+account?
+
+## choices
+
+\code{int}
+
+\code{double}
+
+\code{boolean}
+
+\code{String}
+
+None of the above.
+
+##.
+
+** Data types 4
+
+What’s a good data type type to represent text in almost any characters used by
+different languages around the world?
+
+## choices
+
+\code{int}
+
+\code{double}
+
+\code{boolean}
+
+\code{String}
+
+None of the above.
+
+##.
+
+** Data types 5
+
+What’s a good data type type to represent whether a senior is allowed to go to
+the prom?
+
+## choices
+
+\code{int}
+
+\code{double}
+
+\code{boolean}
+
+\code{String}
+
+None of the above.
+
+##.
+
+** Data types 6
+
+What’s a good data type type to represent the number of atoms in the universe?
+
+## choices
+
+\code{int}
+
+\code{double}
+
+\code{boolean}
+
+\code{String}
+
+None of the above.
+
+##.
+
+** Expression components
+
+Which of these is not an expression?
+
+## choices
+
+`10`
+
+`x`
+
+`int y;`
+
+`10.5`
+
+`a + b * c`
+
+`(int) n`
+
+`"hello, world!"`
+
+##.
+
+** Casting
+
+Which of these is the correct way to compute the fraction of seniors in a
+section as a `double` given the \code{int} variables \code{numberOfSeniors} and
+\code{totalNumberOfStudents}?
+
+## choices
+
+\code{(double) numberOfSeniors / totalNumberOfStudents}
+
+\code{(double) (numberOfSeniors / totalNumberOfStudents)}
+
+##.
+
+** No casting
+
+Which of these is would also work to compute the fraction of seniors in a
+section as a `double` given the \code{int} variables \code{numberOfSeniors} and
+\code{totalNumberOfStudents}?
+
+## choices
+
+\code{1.0 * numberOfSeniors / totalNumberOfStudents}
+
+\code{numberOfSeniors / totalNumberOfStudents * 1.0}
+
+##.
+
+** Casting 2
+
+Which of these is the correct way to convert the `double` variable
+`fractionSeniors` to a percentage in the range 0 to 100 rounded to the nearest
+integer.
+
+## choices
+
+\code{(int) (fractionSeniors * 100)}
+
+\code{(int) fractionSeniors * 100}
+
+\code{(int) fractionSeniors + 0.5 * 100}
+
+\code{(int) (fractionSeniors + 0.5 * 100)}
+
+\code{(int) (fractionSeniors + 0.5) * 100}
+
+\code{(int) ((fractionSeniors + 0.5) * 100)}
+
+##.
+
+** Last digit.
+
+Which if these is the correct expression to get the value of the digit in the
+ones place test whether a positive int `n` is even?
+
+## choices
+
+`n / 10`
+
+`n % 10`
+
+`n * 10`
+
+`n / 10.0`
+
+##.
+
+** Expression 1
+
+What is the value of this expression:
+
+   6 - 12 / 3.0
+
+## freeanswer
+
+Hit enter to save answer.
+
+##.
+
+** Expression 2
+
+What is the value of this expression:
+
+   3 / 12 * 8.0
+
+## freeanswer
+
+Hit enter to save answer.
+
+##.
+
+** Expression 2
+
+What is the value of this expression:
+
+   7 - 2 % 3
+
+## freeanswer
+
+Hit enter to save answer.
+
+##.
+
+** True mod
+
+To compute the true mathematical mod of `a` and `b` (what `a % b` would be if
+`%` was true mod rather than remainder) you can compute the remainder of `a`
+divided by `b`, add `b` to that, and then and take the remainder of that whole
+thing when divided by `b`. Write an expression that implements that formula in
+Java using `a` and `b` as the two operands.
+
+## freeanswer
+
+Hit enter to save answer.
+
+##.
+
+** Mental evaluation
+
+What is \code{x} after the following code runs:
+
+   int x = 0;
+   x += 1;
+   x -= 10;
+   x *= -3;
+   x %= 5;
+   x = x * 2;
+   x—-;
+
+## freeanswer
+
+Hit enter to save answer.
+
+##.
+
+** Expansion
+
+Same code as before except we don’t know the initial value of \code{x}. This
+time write out a single expression that expresses the final result in terms of
+\code{x}.
+
+   x += 1;
+   x -= 10;
+   x *= -3;
+   x %= 5;
+   x = x * 2;
+   x—-;
+
+## freeanswer
+
+Hit enter to save answer.
+
+##.
+
+** Monsters
+
+Which kind of monster are `double` values like?
+
+## choices
+
+Giant spiders
+
+Orcs
+
+Zombies
+
+Poltergeists
+
+##.

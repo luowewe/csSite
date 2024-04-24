@@ -1,0 +1,92 @@
+---
+title: Object functions
+---
+{% extends 'js-testcases.njk' %}
+
+{% block instructions %}
+<p>
+  The goal of this exercise is to write functions in the editor to the left that
+  pass test cases for the functions shown below. Whenever you are ready to run
+  the tests, hit the <svg class="bi
+  run-code"><use xlink:href="/img/bootstrap-icons.svg#play-btn-fill"/></svg>
+  button above the editor. To see the specification for a function you are
+  supposed to write, click a button in the test panel. (You will need to click
+  the <svg class="bi
+  run-code"><use xlink:href="/img/bootstrap-icons.svg#play-btn-fill"/></svg>
+  once first.) Once you have written the function with the right name, the
+  button will indicate whether the test cases are all passing (green, with a ✅)
+  or some are failing (red, with an ❌) and clicking the button will show the
+  results of the individual test cases.
+</p>
+{% endblock %}
+
+
+{% block testcases %}
+
+<div data-name="getX">
+  <p>
+    A function that takes a single object as its argument and returns the value
+    of the object's x property.
+  </p>
+</div>
+
+<div data-name="point">
+  <p>
+    A function that takes two numeric arguments representing x and y coordinates
+    and returns an object with those values as x and y properties.
+  </p>
+</div>
+
+<div data-name="emptyObject">
+  <p>
+    A function that takes no arguments and returns an empty object, i.e. one
+    with no properties.
+  </p>
+</div>
+
+<div data-name="distance">
+  <p>
+    A function that takes two point objects like the ones returned by the point
+    function you just wrote and returns the Euclidean distance between the two
+    points, i.e. the square root of the sum of the square of the distance on the
+    x-axis and the square of the distance on the y-axis.
+  </p>
+</div>
+
+<div data-name="midpoint">
+  <p>
+    A function that takes two point objects and returns the point midway between
+    the two points. You can find this point by computing the x coordinate midway
+    between the two points' x coordinates and the y coordinate midway between
+    the two points' y coordinates.
+  </p>
+</div>
+
+<div data-name="sumSalaries">
+  <p>
+    A function that takes an array of objects, each of which has a property
+    salary, and returns the sum of all the objects' salaries.
+  </p>
+</div>
+
+<div data-name="newHighScore">
+  <p>
+    A function that takes two arguments, the current high score in a game and an
+    array of player objects, each of which has a <code>score</code> property,
+    and returns the new high score (which could be the old high score if none of
+    the players has a better score).
+  </p>
+</div>
+
+<div data-name="summarizeBooks">
+  <p>
+    A function that takes a single argument of an array of book objects. Each book object has
+    <code>title</code> and <code>pages</code> proprties. Return a single object
+    containing a <code>titles</code> property containing a list of all the
+    titles and a <code>pages</code> property containing total number of pages in
+    all the books.
+  </p>
+</div>
+
+
+{% endblock %}

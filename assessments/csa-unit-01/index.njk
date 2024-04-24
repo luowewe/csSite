@@ -1,0 +1,201 @@
+---
+title: Unit 1
+---
+
+{% extends 'form-assessment.njk' %}
+
+{% block instructions %}
+
+{{ super() }}Twenty questions. Mostly multiple choice. A few short answer. Move through the questions with the arrows next to <b><i>n</i> of 20</b> in the question box.{% endblock %}
+
+{% block questions %}
+
+<div>
+    <p>What does the <code>ln</code> in <code>System.out.println</code> stand for?</p>
+    <div class='choices'>
+        <p>Lane</p>
+        <p>Line</p>
+        <p>Alone</p>
+        <p>Natural log</p>
+    </div>
+</div>
+<div>
+    <p>How many lines does the following code print:</p>
+    <pre><code data-trim='' data-noescape='' class='language-javascript'>System.out.print("Hello");
+System.out.println(", world!");
+System.out.println("Goodbye!");</code></pre>
+    <div class='choices'>
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+    </div>
+</div>
+<div>
+    <p>What’s a good data type type to represent a temperature in degrees Celsius?</p>
+    <div class='choices'>
+        <p><code>int</code></p>
+        <p><code>double</code></p>
+        <p><code>boolean</code></p>
+        <p><code>String</code></p>
+        <p>None of the above.</p>
+    </div>
+</div>
+<div>
+    <p>What’s a good data type type to represent the number of teachers at BHS?</p>
+    <div class='choices'>
+        <p><code>int</code></p>
+        <p><code>double</code></p>
+        <p><code>boolean</code></p>
+        <p><code>String</code></p>
+        <p>None of the above.</p>
+    </div>
+</div>
+<div>
+    <p>What’s a good data type type to represent the number of dollars in your bank account?</p>
+    <div class='choices'>
+        <p><code>int</code></p>
+        <p><code>double</code></p>
+        <p><code>boolean</code></p>
+        <p><code>String</code></p>
+        <p>None of the above.</p>
+    </div>
+</div>
+<div>
+    <p>What’s a good data type type to represent text in almost any characters used by different languages around the world?</p>
+    <div class='choices'>
+        <p><code>int</code></p>
+        <p><code>double</code></p>
+        <p><code>boolean</code></p>
+        <p><code>String</code></p>
+        <p>None of the above.</p>
+    </div>
+</div>
+<div>
+    <p>What’s a good data type type to represent whether a senior is allowed to go to the prom?</p>
+    <div class='choices'>
+        <p><code>int</code></p>
+        <p><code>double</code></p>
+        <p><code>boolean</code></p>
+        <p><code>String</code></p>
+        <p>None of the above.</p>
+    </div>
+</div>
+<div>
+    <p>What’s a good data type type to represent the number of atoms in the universe?</p>
+    <div class='choices'>
+        <p><code>int</code></p>
+        <p><code>double</code></p>
+        <p><code>boolean</code></p>
+        <p><code>String</code></p>
+        <p>None of the above.</p>
+    </div>
+</div>
+<div>
+    <p>Which of these is not an expression?</p>
+    <div class='choices'>
+        <p><code>10</code></p>
+        <p><code>x</code></p>
+        <p><code>int y;</code></p>
+        <p><code>10.5</code></p>
+        <p><code>a + b * c</code></p>
+        <p><code>(int) n</code></p>
+        <p><code>"hello, world!"</code></p>
+    </div>
+</div>
+<div>
+    <p>Which of these is the correct way to compute the fraction of seniors in a section as a <code>double</code> given the <code>int</code> variables <code>numberOfSeniors</code> and <code>totalNumberOfStudents</code>?</p>
+    <div class='choices'>
+        <p><code>(double) numberOfSeniors / totalNumberOfStudents</code></p>
+        <p><code>(double) (numberOfSeniors / totalNumberOfStudents)</code></p>
+    </div>
+</div>
+<div>
+    <p>Which of these is would also work to compute the fraction of seniors in a section as a <code>double</code> given the <code>int</code> variables <code>numberOfSeniors</code> and <code>totalNumberOfStudents</code>?</p>
+    <div class='choices'>
+        <p><code>1.0 * numberOfSeniors / totalNumberOfStudents</code></p>
+        <p><code>numberOfSeniors / totalNumberOfStudents * 1.0</code></p>
+    </div>
+</div>
+<div>
+    <p>Which of these is the correct way to convert the <code>double</code> variable <code>fractionSeniors</code> to a percentage in the range 0 to 100 rounded to the nearest integer.</p>
+    <div class='choices'>
+        <p><code>(int) (fractionSeniors * 100)</code></p>
+        <p><code>(int) fractionSeniors * 100</code></p>
+        <p><code>(int) fractionSeniors + 0.5 * 100</code></p>
+        <p><code>(int) (fractionSeniors + 0.5 * 100)</code></p>
+        <p><code>(int) (fractionSeniors + 0.5) * 100</code></p>
+        <p><code>(int) ((fractionSeniors + 0.5) * 100)</code></p>
+    </div>
+</div>
+<div>
+    <p>Which if these is the correct expression to get the value of the digit in the ones place test whether a positive int <code>n</code> is even?</p>
+    <div class='choices'>
+        <p><code>n / 10</code></p>
+        <p><code>n % 10</code></p>
+        <p><code>n * 10</code></p>
+        <p><code>n / 10.0</code></p>
+    </div>
+</div>
+<div>
+    <p>What is the value of this expression:</p>
+    <pre><code data-trim='' data-noescape='' class='language-javascript'>6 - 12 / 3.0</code></pre>
+    <div class='freeanswer'>
+        <p>Hit enter to save answer.</p>
+    </div>
+</div>
+<div>
+    <p>What is the value of this expression:</p>
+    <pre><code data-trim='' data-noescape='' class='language-javascript'>3 / 12 * 8.0</code></pre>
+    <div class='freeanswer'>
+        <p>Hit enter to save answer.</p>
+    </div>
+</div>
+<div>
+    <p>What is the value of this expression:</p>
+    <pre><code data-trim='' data-noescape='' class='language-javascript'>7 - 2 % 3</code></pre>
+    <div class='freeanswer'>
+        <p>Hit enter to save answer.</p>
+    </div>
+</div>
+<div>
+    <p>To compute the true mathematical mod of <code>a</code> and <code>b</code> (what <code>a % b</code> would be if <code>%</code> was true mod rather than remainder) you can compute the remainder of <code>a</code> divided by <code>b</code>, add <code>b</code> to that, and then and take the remainder of that whole thing when divided by <code>b</code>. Write an expression that implements that formula in Java using <code>a</code> and <code>b</code> as the two operands.</p>
+    <div class='freeanswer'>
+        <p>Hit enter to save answer.</p>
+    </div>
+</div>
+<div>
+    <p>What is <code>x</code> after the following code runs:</p>
+    <pre><code data-trim='' data-noescape='' class='language-javascript'>int x = 0;
+x += 1;
+x -= 10;
+x *= -3;
+x %= 5;
+x = x * 2;
+x—-;</code></pre>
+    <div class='freeanswer'>
+        <p>Hit enter to save answer.</p>
+    </div>
+</div>
+<div>
+    <p>Same code as before except we don’t know the initial value of <code>x</code>. This time write out a single expression that expresses the final result in terms of <code>x</code>.</p>
+    <pre><code data-trim='' data-noescape='' class='language-javascript'>x += 1;
+x -= 10;
+x *= -3;
+x %= 5;
+x = x * 2;
+x—-;</code></pre>
+    <div class='freeanswer'>
+        <p>Hit enter to save answer.</p>
+    </div>
+</div>
+<div>
+    <p>Which kind of monster are <code>double</code> values like?</p>
+    <div class='choices'>
+        <p>Giant spiders</p>
+        <p>Orcs</p>
+        <p>Zombies</p>
+        <p>Poltergeists</p>
+    </div>
+</div>
+{% endblock %}

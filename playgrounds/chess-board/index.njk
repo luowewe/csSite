@@ -1,0 +1,19 @@
+---
+title: Chess board
+---
+
+{% extends 'generic-frame.njk' %}
+
+{% block instructions %}
+<p>
+  Represent a chess board. This environment is the same
+  as <a href="/assignments/tic-tac-toe">Tic-Tac-Toe</a> with both
+  <code>drawText(text, x, y, color, size)</code>
+  and <code>registerOnclick</code> See if you can draw a chess board using the
+  constants defined in the starter code which are the Unicode characters for
+  chess pieces. Use a 2d array to represent the position of the pieces on a
+  board and then write a function to render the board with the pieces in the
+  right places. If you finish that, see if you can write functions to find legal
+  moves for pieces and display them on the board when someone clicks on a piece.
+</p>
+{% endblock %}

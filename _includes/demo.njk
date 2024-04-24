@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <title>{{ title }}</title>
+  <link href="/css/demo.css" rel="stylesheet" type="text/css">
+  <script src="/js/prism.js" defer></script>
+  <script src="/js/index.js" type="module"></script>
+  {% if script %}
+  <script src="/js/{{ script }}.js" type="module"></script>
+  {% endif %}
+</head>
+<body>
+
+  {% include 'login-flow.njk' %}
+  <div class="pseudo-body">
+    {% include 'toolbar.njk' %}
+
+    <div class="container">
+      {% block preamble %}
+      {% endblock %}
+
+      <div class="editor-page">
+        {% include 'editor.njk' %}
+
+        <div class="io-label">
+          {% block ioLabel %}
+          {% endblock %}
+        </div>
+
+        {% block io %}
+        {% endblock %}
+      </div>
+    </div>
+  </div>
+</body>
+</html>

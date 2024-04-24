@@ -1,0 +1,76 @@
+---
+layout: project
+title: Boggle
+tags:
+  - projects
+  - Games
+topics:
+  - HTML UI
+  - Data structures
+---
+
+<p>
+  <img class="float" src="boggle.jpg">
+  Boggle is a word finding game. In the real world it is played with dice with
+  letters on their faces set in a 4x4 grid. The goal is to find as many words as
+  possible in three minutes with more points awarded for longer words.
+</p>
+
+<p>
+  The dice used have a specific combination of letters so to make an authentic
+  Boggle game you need to use those combinations, not just pick letters at
+  random. See the References section below for a link to a description of the
+  dice.
+</p>
+
+<p>
+  A basic Boggle game will provide a way to randomize the dice and then give the
+  user three minutes to find as many words as they can. An obvious UI would be
+  to allow the player to click on the dice to build up a word an then check that
+  the word they built is in a list of legal words and keep score based on the
+  lengths of the words found. The game should also enforce the rules of Boggle
+  that require that each die picked be a neighbor of the previously picked die
+  and that each die can only be used once in a word.
+</p>
+
+<p>
+  <b>A challenge</b> if you get the game working with the user clicking on the
+  dice, which makes it fairly easy to tell whether they are following the rules
+  of only using neighboring dice, an extra challenge is to allow the user to
+  type words and for the program to figure out if it is possible to build that
+  word given the currently showing faces.
+</p>
+
+<p>
+  <b>Challenge, part 2</b> If you solve the typing challenge, it should be
+  possible to write a function that uses the word list to figure out how many
+  possible words can in fact be found given the current faces. Perhaps display
+  that in the UI to taunt the user with how much better they could be doing.
+</p>
+
+
+<h2>References</h2>
+<ul>
+  <li>
+    <a href="https://en.wikipedia.org/wiki/Boggle">Boggle - Wikipedia</a>
+  </li>
+
+  <li>
+    <a href="https://www.bananagrammer.com/2013/10/the-boggle-cube-redesign-and-its-effect.html">Description of Boggle dice</a>
+  </li>
+
+  <li>
+    <a href="https://raw.githubusercontent.com/benhoyt/boggle/master/word-list.txt">A Boggle word list.</a>
+  </li>
+  <li>
+    <a href="https://www.wordgamedictionary.com/twl06/download/twl06.txt">Another word list.</a>
+  </li>
+  <li>
+    <a href="https://www.luke-g.com/boggle/">And yet another.</a>
+  </li>
+
+  <li>
+    <a href="https://github.com/gigamonkey/boggle/blob/6e7223974811defaff61a0364abf84a0da1997ac/word-list.txt">A list I made by comining those three</a>
+  </li>
+
+</ul>

@@ -1,0 +1,21 @@
+/*
+ * Style for generic-frame.njk
+ */
+
+@import url('editor.css');
+@import url('collapsable-instructions.css');
+
+.editor-page > .iframe {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+iframe {
+  display: block;
+  flex: 5 0 0;
+  background: #eee;
+
+}

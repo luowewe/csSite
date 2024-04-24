@@ -1,0 +1,33 @@
+/*
+ * Style for homepage.njk.
+ */
+
+@import url('text-page.css');
+
+h1 {
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin: 1.5em 0 0.5em;
+}
+
+h2 {
+  font-size: 1.1rem;
+  padding: 1.5em 0 0.25em;
+}
+
+p.hash {
+  text-align: right;
+  margin-top: 50px;
+  color: grey;
+  font-size: 8px;
+}
+
+p.hash:hover {
+  font-size: 22px;
+  color: black;
+}
+
+.slides-date {
+  font-size: 80%;
+  color: #888;
+}

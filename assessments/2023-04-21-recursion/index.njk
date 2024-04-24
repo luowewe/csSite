@@ -1,0 +1,192 @@
+---
+title: 2023-04-21 recursion
+---
+
+{% extends 'code-assessment.njk' %}
+
+{% block instructions %}
+<p>
+  <svg id="close"
+       class="bi"><use xlink:href="/img/bootstrap-icons.svg#caret-down-fill"/></svg>
+  This assessment consists of <b><span id="num-questions"></span> recursive
+    functions</b> you need to write. This is an <b>closed book assessment</b>.
+</p>
+
+<p>
+  You can move through the questions with the arrows at the upper right next
+  to the <b>1 of <span class="of"></span></b> indicator so if you're not
+  sure how to write one function move on to another one and come back if you
+  have time at the end. I want to see how much you do know. <b>Note</b>: you
+  can also click on <code>thingsLikeThis</code> in these instructions and
+  the questions to copy them to the clipboard to avoid spelling mistakes.
+  (I.e. click to copy and then ⌘-v to paste wherever you want.)
+</p>
+
+<p>
+  <b>When you are done</b>, please click on your Github username above and
+  submit a GitHub pull request of the branch <code id="branch-name"></code>
+  and request me as a reviewer.
+</p>
+{% endblock %}
+
+
+{% block questions %}
+<div>
+  <p>
+    Write a recursive function named <code>factorial</code> that takes a
+    single non-negative integer argument and returns the nth factorial
+    number which is defined as the product of the integers from 0 to N,
+    inclusive except that the 0th factorial,
+    i.e. <code>factorial(0)</code>, is 1.
+  </p>
+</div>
+
+<div>
+  <p>Write a recursive function named <code>fibonacci</code> that
+    computes the nth element of the Fibonacci sequence, 0, 1, 1, 2, 3, 5,
+    8, etc. After the first two items, i.e. <code>fibonacci(0)</code>
+    which is 0 and <code>fibonacci(1)</code> which is 1, each item in the
+    sequence is the sum of the two previous items.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a recursive function named <code>sumSquares</code> that takes
+    a single non-negative integer argument, <i>n</i>, and returns the
+    sum of the squares of the numbers from 0 to <i>n</i>, inclusive.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a recursive function named <code>maximum</code> that takes an
+    array of numbers and returns the maximum value in the array. If the
+    array is empty, it should return the special
+    value <code>-Infinity</code>.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a recursive function named <code>treeMap</code> that takes two
+    arguments, a tree and a function. Trees are either objects
+    with <code>left</code> and <code>right</code> properties or leaf
+    values that can be anything. The function <code>isLeaf</code>, which
+    is already defined for you in the starter code, will tell you whether
+    a given value is a leaf. The function should return a new tree with
+    the same structure as the original but with each leaf replaced with
+    the result of calling the passed in function with the old leaf value
+    as an argument. For instance:
+  <p>
+  <p>
+    <code>treeMap({left: 10, right: { left: 2, right: 3 } }, (x) => x * 2)</code>
+  </p>
+
+  <p>
+    should return:
+  </p>
+
+  <p>
+    <code>{ left: 20, right: { left: 4, right: 6 } }</code>
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a recursive function named <code>sumPrimesBelow</code> that
+    takes a single integer argument greater than 1 and returns the sum
+    of the prime numbers less than or equal to that argument. For
+    instance <code>sumPrimesBelow(10)</code> should return 17. You
+    should use the function <code>isPrime</code>, which has been defined
+    for you in the starter code, to test if a given number is prime.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a recursive function named <code>nvwls</code> (short for
+    noVowels) that takes a string as an argument and returns a string
+    with all the same characters as the original but with all vowels (a,
+    e, i, o, and u) removed.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a recursive function named <code>caesar</code> that takes a
+    string and a key (which happens to be a number) and returns the
+    string encoded by rotating each character using
+    the <code>rotate</code> function, which has been defined for you in
+    the starter code and which rotates a character around the alphabet
+    based on the <code>key</code> argument. As simple test of whether
+    this is working applying <code>caesar</code> twice with the key 13
+    should get you back to where you started,
+    e.g.:
+  </p>
+
+  <p>
+    <code>caesar(caesar('any string', 13), 13) === 'any string'</code>
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a recursive function named <code>toList</code> that takes a
+    single array argument and returns an object representation of the
+    array in the following format, called a list. (Note: in this context
+    a “list” is <i>not</i> an array even though sometimes in Javascript
+    we’ll informally call an array a list.)
+  </p>
+
+  <ul>
+    <li>
+      An empty array is represented as a list by the
+      value <code>null</code>
+    </li>
+    <li>
+      A non-empty array is represented by as a list by an object with
+      two properties: <code>first</code> and <code>rest</code>.
+      <ul>
+        <li>The value of the <code>first</code> property is the first item
+          of the array.
+        </li>
+        <li>
+          The value of the <code>rest</code> property is a list containin
+          the remaining elements of the array.
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <p>
+    For instance, the array <code>[1, 2, 3]</code> would be represented as:
+  </p>
+
+  <p>
+    <code>{ first: 1, rest: { first: 2, rest: { first: 3, rest: null } } }</code>
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a recursive function named <code>map</code> that takes two
+    arguments, a list as returned by the <code>toList</code> function
+    from the previous question and a function, and returns a new list
+    represented in the same way with each <code>first</code> value
+    replaced with the result of passing the original <code>first</code>
+    value to the function argument.
+  </p>
+
+  <p>For instance:</p>
+  <p>
+    <code>map({ first: 1, rest: { first: 2, rest: { first: 3, rest: null } } }, (n) => n * 10)</code>
+  </p>
+
+  <p>should return:</p>
+
+  <p>
+    <code>{ first: 10, rest: { first: 20, rest: { first: 30, rest: null } } }</code>
+  </p>
+</div>
+{% endblock %}

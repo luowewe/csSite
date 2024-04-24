@@ -1,0 +1,76 @@
+* Numbers
+
+factorial
+triangular
+fibonacci
+gcd
+add
+multiply
+double
+triple
+power
+product
+sumSquares
+lucas
+
+** Arrays and strings
+
+sum
+search
+reverseString
+deleteXs
+countXs
+maximum
+every
+some
+isAscending
+isDescending
+
+** Tree
+
+change
+sumNested
+searchNested
+evaluate
+
+
+
+
+* Assessment
+
+** Old
+
+factorial
+sumSquares
+fibonacci
+maximum
+treeMap
+
+** New
+
+sumPrimesBelow (given isPrime)
+nvwls
+caesar (given rotate)
+totalCost { parts: [ { cost: 10 }, { cost: 20 }, { parts: [ { cost: 1 }, { cost: 5 } ] } ] }
+reduce
+
+
+
+
+const totalCost = (thing) => {
+  if ('cost' in thing) {
+    return thing.cost;
+  } else {
+    return totalCost(thing.parts[0]) + totalCost(thing.parts.slice(1));
+  }
+};
+
+const nvwls = (s) => {
+  if (s === '') return '';
+
+  if ("aeiou".indexOf(s[0]) !== -1) {
+    return nvwls(s.substring(1));
+  } else {
+    return s[0] + nvwls(s.substring(1));
+  }
+}

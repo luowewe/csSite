@@ -1,0 +1,63 @@
+---
+layout: project
+title: Traveling salesman
+tags:
+  - projects
+  - Genetic algorithms
+topics:
+  - Command line
+  - Data structures
+  - Genitic algorithms
+---
+
+<figure class='float'>
+  <img src="48StatesTSP.png">
+  <figcaption>
+    Image from <a href="https://optimization.cbe.cornell.edu/index.php?title=Traveling_salesman_problem">https://optimization.cbe.cornell.edu/index.php?title=Traveling_salesman_problem</a>
+  </figcaption>
+</figure>
+
+
+<p>
+  Unlike the problem in
+  the <a href="/projects/genetic-algorithm-phrase-matcher/">genetic algorithm
+  phrase matcher</a> the Traveling Salesman Problem (TSP) is a real problem that
+  you might really use a genetic algorithm to solve.
+</p>
+
+<p>
+  The problem is, given a list of cities and their distances from each other,
+  find the shortest path that passes through each city exactly once before
+  returning to the starting city. It is relatively easy to write a brute-force
+  algorithm to find a solution to the TSP. Unfortunately it only works for very
+  small problems—i.e. with a small number of cities. This is because the TSP is
+  an example of a class of problem where the size of the problem—in terms of the
+  number of solutions you have to explore—grows so much faster than the size of
+  the problem that no known algorithm can solve them in any reasonable amount of
+  time where “reasonable” means “less than the expected lifetime of the
+  universe”.
+</p>
+
+<p>
+  But while we cannot write a program that always finds the absolute best
+  solutions we can use techniques such as genetic algorithms to find pretty good
+  solutions. As in the genetic phrase matcher, you will need to figure out a way
+  to represent possible solutions for a given set of cities and then evolve
+  better and better solutions by crossing and mutating those potential
+  solutions.
+</p>
+
+<p>
+  If you want to try this project you should start
+  with <a href="/projects/genetic-algorithm-phrase-matcher/">genetic algorithm
+  phrase matcher</a> as a warmup. Some of the code you write for that can be
+  reused for this project while other bits while need to be specific to this
+  project.
+</p>
+
+<h2>References</h2>
+
+<ul>
+  <li><a href="https://en.wikipedia.org/wiki/Genetic_algorithm">Genetic algorithim - Wikipedia</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Travelling_salesman_problem">Traveling salesman problem - Wikipedia</a></li>
+</ul>

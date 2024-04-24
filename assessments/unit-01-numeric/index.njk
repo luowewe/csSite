@@ -1,0 +1,144 @@
+---
+title: Unit 1 numeric assessment
+---
+
+{% extends 'code-assessment.njk' %}
+
+{% block instructions %}
+<p>
+  <svg id="close"
+  class="bi"><use xlink:href="/img/bootstrap-icons.svg#caret-down-fill"/></svg>
+  This assessment consists of <b><span id="num-questions"></span> functions</b>
+  you need to write involving numeric expressions. It is a <b>closed book
+  assessment</b>. You should stay on this tab until you are done and there
+  should be no talking. This assessment is about how much <i>you</i> understand.
+  There are no automatic tests but you can use the REPL to test things yourself.
+</p>
+
+<p>
+  You can move through the questions with the arrows at the upper right next to
+  the <b>1 of <span class="of"></span></b> indicator so if you're not sure how
+  to write one function move on to another one and come back if you have time at
+  the end. I want to see how much you do know. <b>Note</b>: you can also click
+  on <code>thingsLikeThis</code> in these instructions and the questions to copy
+  them to the clipboard to avoid spelling mistakes.
+</p>
+
+<p>
+  <b>When you are done</b>, please submit a GitHub pull request of the
+  branch <code id="branch-name"></code> and request me as a reviewer. Doing
+  this correctly is part of the assessment.
+</p>
+{% endblock %}
+
+
+{% block questions %}
+<div>
+  <p>
+    Write a function named <code>itemsLeftOver</code> that takes two arguments,
+    a number of people and a number of items, and returns the number of items
+    that will be left over after you give each person the maximum number of
+    items you can while giving everyone the same number of items.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>areaOfCircle</code> that takes one argument,
+    the radius of a circle, and returns the area of the circle. The formula for
+    the area of a circle with radius <i>r</i> is πr<sup>2</sup>. In Javascript
+    you can use <code>Math.PI</code> to get a good approximation of π.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>volumeOfCube</code> that takes a single
+    argument specifying the length of one edge of a cube, and returns the volume
+    of the cube.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>populationGrowth</code> that takes two numeric
+    arguments, the current size of a population and a growth rate expressed as a
+    fraction the population will grow in a day. The function should return the
+    amount by which the population will grow in one day. For example, if the
+    population was initially 100 and the growth rate was 0.25, it would grow by
+    25 members.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>earnedRunAverage</code> that takes two
+    arguments, the number of “earned runs” a baseball pitcher has given up and
+    the number of innings that pitcher has pitched. The function should return
+    the pitcher’s Earned Run Average (ERA) which is defined as the average
+    number of earned runs per inning pitched multiplied by 9.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>valueOfJewels</code> that takes four arguments,
+    a number of diamonds, a number of emeralds, the value of one diamond in gold
+    pieces, and the value of one emerald in gold pieces. The function should
+    return the value in gold pieces of the given number of diamonds and
+    emeralds. In other words multiply the number of each type of jewel by the
+    value of that kind of jewel and sum the products.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>payWithOvertime</code> that takes three numeric
+    arguments, a number of hours someone worked, their normal hourly rate, and
+    their overtime rate. The function should return how much they are paid for
+    the hours worked assuming that they are paid their normal rate for the first
+    eight hours and their overtime rate for any hours beyond that.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>firstClassPostage</code> that takes one
+    argument, the weight in ounces of a letter. It should return the postage
+    needed, in cents, to mail the letter given that anything up the first ounce
+    costs 60 cents and each additional ounce, or fractional ounce, costs 24
+    cents. A function that will be useful is <code>Math.ceil</code> which
+    returns the smallest integer greater than or equal to its single argument.
+    For instance, <code>Math.ceil(2.3)</code> is 3.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>weightOnJupiter</code> that takes a single
+    argument, the weight of a person in kilograms on Earth, and returns the
+    weight of that same person on Jupiter.
+  </p>
+
+  <p>Note that weights on other planets are computed by multiplying the Earth
+    weight by the ratio of the other planet’s gravity to Earth’s gravity. For
+    instance, if there was a planet whose gravity was exactly twice Earth’s,
+    then someone would weight exactly twice as much on that planet as on Earth.
+    Two useful constants defined in the starter code for you
+    are <code>JUPITER_GRAVITY</code> and <code>EARTH_GRAVITY</code>
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>gravity</code> that takes three numeric
+    arguments, the first two are the masses of two bodies (such as planets) and
+    the third is the distance between the two objects. It should return the
+    gravitational force attracting the two bodies which is computed as the
+    product of the bodies’ masses divided by the square of the distance between
+    them, all multiplied by the universal gravitational constant which is
+    defined for you in the starter code as the constant <code>G</code>.
+  </p>
+</div>
+
+{% endblock %}

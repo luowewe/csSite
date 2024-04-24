@@ -1,0 +1,15 @@
+-*- mode: markup; -*-
+
+* Welcome
+
+** What is programming?
+
+## fragments
+
+A language.
+
+A form of problem solving.
+
+An exercise in picking problems to solve.
+
+##.

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <title>{{ title }}</title>
+  <link href="/css/generic-frame.css" media="all" rel="stylesheet" type="text/css">
+  <script src="/js/prism.js" defer></script>
+  <script src="/js/index.js" type="module"></script>
+  <script src="/js/collapse-instructions.js" defer></script>
+</head>
+<body>
+
+  {% include 'login-flow.njk' %}
+  <div class="pseudo-body">
+    {% include 'toolbar.njk' %}
+
+    <div class="container">
+      {% block instructions %}
+      {% endblock %}
+
+      <div class="editor-page">
+        {% include 'editor.njk' %}
+
+        <h2 class="righthand-label">
+          {{ title }}
+        </h2>
+
+        <div class="iframe">
+          <iframe></iframe>
+          <h2>REPL</h2>
+          <div id="repl"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

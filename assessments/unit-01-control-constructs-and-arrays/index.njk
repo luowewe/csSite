@@ -1,0 +1,308 @@
+---
+title: Unit 1 control constructs and arrays
+---
+
+{% extends 'form-assessment.njk' %}
+
+{% block instructions %}
+
+{{ super() }}For a change of pace, this assessment does not require you to write code. Instead you will need to read some code and answer questions about it. It is a <b>closed book</b> assessment and you should keep your eyes on your own screen and not talk with your neighbors while you take it. You do <b>not</b> need to submit a pull request this time; your answers are saved automatically when you select from a multiple choice answer or hit enter on a free-form answer.{% endblock %}
+
+{% block questions %}
+
+<div>
+    <p>When this code runs, does it call the <code>foo</code> function?</p>
+    <pre><code data-trim='' data-noescape='' class='language-javascript'>let x = 10;
+if (x % 2 === 0) {
+  foo();
+}</code></pre>
+    <div class='choices'>
+        <p>Yes</p>
+        <p>No</p>
+    </div>
+</div>
+<div>
+    <p>When this code runs, which functions are called?</p>
+    <pre><code data-trim='' data-noescape='' class='language-javascript'>let x = 37;
+if (x &lt; 37) {
+  foo(x);
+} else {
+  bar(x);
+}</code></pre>
+    <div class='choices'>
+        <p>Just <code>foo</code></p>
+        <p>Just <code>bar</code></p>
+        <p>Both <code>foo</code> and <code>bar</code></p>
+        <p>Neither <code>foo</code> nor <code>bar</code>.</p>
+    </div>
+</div>
+<div>
+    <p>When this code runs, which functions are called?</p>
+    <pre><code data-trim='' data-noescape='' class='language-javascript'>let x = 37;
+if (x * -1 &lt; 37) {
+  foo(x);
+}
+bar(x);</code></pre>
+    <div class='choices'>
+        <p>Just <code>foo</code></p>
+        <p>Just <code>bar</code></p>
+        <p>Both <code>foo</code> and <code>bar</code></p>
+        <p>Neither <code>foo</code> nor <code>bar</code>.</p>
+    </div>
+</div>
+<div>
+    <p>In this code:</p>
+    <pre><code data-trim='' data-noescape='' class='language-javascript'>let x = 0;
+for (let i = 0; i &lt; 10; i++) {
+  x = x + i * 10;
+}</code></pre>
+    <p>what part is the “condition” of the <code>for</code> loop.</p>
+    <div class='choices'>
+        <p><code>let x = 0</code></p>
+        <p><code>let i = 0</code></p>
+        <p><code>i &lt; 10</code></p>
+        <p><code>i++</code></p>
+        <p><code>x = x + i * 10</code></p>
+    </div>
+</div>
+<div>
+    <p>Given this definition:</p>
+    <pre><code data-trim='' data-noescape='' class='language-javascript'>const N = 100;</code></pre>
+    <p>How many times does the body of this loop execute?</p>
+    <pre><code data-trim='' data-noescape='' class='language-javascript'>for (let i = 0; i &lt; N; i++) {
+  // code here
+}</code></pre>
+    <div class='choices'>
+        <p>99</p>
+        <p>100</p>
+        <p>101</p>
+    </div>
+</div>
+<div>
+    <p>To fully understand this code you should know that <code>Math.random()</code> is a function that returns a random number between 0 and 1. With that in mind, after this code runs:</p>
+    <pre><code data-trim='' data-noescape='' class='language-javascript'>let randomNumbers = [];
+for (let i = 0; i &lt; 10; i++) {
+  randomNumbers.push(Math.random());
+}</code></pre>
+    <p>What does the following expression evaluate to?</p>
+    <pre><code data-trim='' data-noescape='' class='language-javascript'>randomNumbers.length</code></pre>
+    <div class='choices'>
+        <p>We can’t know, it’s random.</p>
+        <p>It’s random but definitely at least 10.</p>
+        <p>It’s random but definitely less than 10.</p>
+        <p>It’s random but definitely a multiple of 10.</p>
+        <p>10</p>
+        <p>Less than 10</p>
+    </div>
+</div>
+<div>
+    <p>How many times is the <code>foo</code> function called when this code runs:</p>
+    <pre><code data-trim='' data-noescape='' class='language-javascript'>for (let i = 0; i &lt; 5; i++) {
+  for (let j = 0; j &lt; 4; j++) {
+    foo(i, j);
+  }
+}</code></pre>
+    <div class='choices'>
+        <p>4</p>
+        <p>30</p>
+        <p>5</p>
+        <p>20</p>
+        <p>12</p>
+    </div>
+</div>
+<div>
+    <p>Given this code:</p>
+    <pre><code data-trim='' data-noescape='' class='language-javascript'>let c = 0;
+for (let i = 0; i &lt; 4; i++) {
+  for (let j = 0; j &lt; i; j++) {
+    c++;
+  }
+}</code></pre>
+    <p>what is the value of <code>c</code> after the loop finishes?</p>
+    <div class='choices'>
+        <p>4</p>
+        <p>3</p>
+        <p>6</p>
+        <p>10</p>
+    </div>
+</div>
+<div>
+    <p>Given this code:</p>
+    <pre><code data-trim='' data-noescape='' class='language-javascript'>let x = 0;
+for (let i = 0; i &lt; 10; i++) {
+  x = x + i;
+}</code></pre>
+    <p>What is the best description of the value of <code>x</code> after the loop has completed?</p>
+    <div class='choices'>
+        <p>The sum of the numbers from 0 to 10</p>
+        <p>The sum of the numbers from 0 to 9</p>
+        <p>The number of elements in the array <code>x</code></p>
+        <p>11</p>
+    </div>
+</div>
+<div>
+    <p>What is the best description of when this loop will stop?</p>
+    <pre><code data-trim='' data-noescape='' class='language-javascript'>let done = false;
+
+while (!done) {
+  const r = Math.random();
+  done = r &lt; 0.01;
+}</code></pre>
+    <div class='choices'>
+        <p>Never, it’s an infinite loop</p>
+        <p>Immediately, the loop body never executes</p>
+        <p>When <code>Math.random()</code> returns a number less that 0.01</p>
+        <p>When <code>Math.random()</code> returns a number greater than 0.01</p>
+        <p>When <code>done</code> is less than 0.01</p>
+    </div>
+</div>
+<div>
+    <p>In the following code, assume <code>isPrime</code> is a function that says whether the number it is passed is a prime number.</p>
+    <pre><code data-trim='' data-noescape='' class='language-javascript'>const foo = (limit, max) =&gt; {
+  let primes = 0;
+  for (let n = 0; n &lt; max; n++) {
+    if (isPrime(n)) {
+      primes++;
+    }
+    if (primes &gt; limit) {
+      return true;
+    }
+  }
+  return false;
+}</code></pre>
+    <p>Which of the following best describes what this function does?</p>
+    <div class='choices'>
+        <p>It tests whether <code>limit</code> is a prime number.</p>
+        <p>It tests whether there are at most <code>max</code> prime numbers below <code>limit</code>.</p>
+        <p>It tests whether there are more than <code>limit</code> prime numbers below <code>max</code>.</p>
+        <p>It tests whether <code>limit</code> and <code>max</code> are both prime numbers.</p>
+    </div>
+</div>
+<div>
+    <p>Given this code:</p>
+    <pre><code data-trim='' data-noescape='' class='language-javascript'>const xs = [10, 11, 71];</code></pre>
+    <p>What does the following expression evaluate to?</p>
+    <pre><code data-trim='' data-noescape='' class='language-javascript'>xs[0]</code></pre>
+    <div class='choices'>
+        <p>10</p>
+        <p>71</p>
+        <p>3</p>
+        <p>11</p>
+        <p>0</p>
+    </div>
+</div>
+<div>
+    <p>Given this code:</p>
+    <pre><code data-trim='' data-noescape='' class='language-javascript'>const xs = [10, 11, 71];</code></pre>
+    <p>Which of the following expressions evaluate to <code>71</code>?</p>
+    <div class='choices'>
+        <p><code>xs[-1]</code></p>
+        <p><code>xs[xs.length]</code></p>
+        <p><code>xs[xs.length + 1]</code></p>
+        <p><code>xs[xs.length - 1]</code></p>
+    </div>
+</div>
+<div>
+    <p>What does the following expression evaluate to?</p>
+    <pre><code data-trim='' data-noescape='' class='language-javascript'>[4, 5, 6].length</code></pre>
+    <div class='choices'>
+        <p><code>0</code></p>
+        <p><code>6</code></p>
+        <p><code>4</code></p>
+        <p><code>3</code></p>
+        <p><code>2</code></p>
+    </div>
+</div>
+<div>
+    <p>What does the following expression evaluate to?</p>
+    <pre><code data-trim='' data-noescape='' class='language-javascript'>[ ].length</code></pre>
+    <div class='choices'>
+        <p><code>0</code></p>
+        <p>Nothing, it’s a syntax error.</p>
+        <p><code>undefined</code></p>
+    </div>
+</div>
+<div>
+    <p>Given this array:</p>
+    <pre><code data-trim='' data-noescape='' class='language-javascript'>const xs = [
+  ['foo', 'bar', 'baz'],
+  ['quux'],
+  ['fred', 'barney', 'wilma', 'betty']
+];</code></pre>
+    <p>which of the following expressions evaluates to <code>'barney'</code>?</p>
+    <div class='choices'>
+        <p><code>xs[2]</code></p>
+        <p><code>xs[5]</code></p>
+        <p><code>xs[2][1]</code></p>
+        <p><code>xs[1][2]</code></p>
+    </div>
+</div>
+<div>
+    <p>After this code executes what is the value of the first element of <code>xs</code>?</p>
+    <pre><code data-trim='' data-noescape='' class='language-javascript'>const xs = [10, 20, 30];
+
+xs[0] = xs[2] * 10</code></pre>
+    <div class='choices'>
+        <p>10</p>
+        <p>100</p>
+        <p>3</p>
+        <p>200</p>
+        <p>300</p>
+        <p>Nothing, this code won’t run because <code>xs</code> was declared with <code>const</code>.</p>
+    </div>
+</div>
+<div>
+    <p>Given the following definition:</p>
+    <pre><code data-trim='' data-noescape='' class='language-javascript'>const foo = [10, 20, false]</code></pre>
+    <p>What does this expression evaluate to:</p>
+    <pre><code data-trim='' data-noescape='' class='language-javascript'>(foo[0] * foo[1]) &lt; 200 === foo[2]</code></pre>
+    <div class='choices'>
+        <p><code>true</code></p>
+        <p><code>false</code></p>
+    </div>
+</div>
+<div>
+    <p>Assuming <code>numbers</code> is an array of numbers and given this code:</p>
+    <pre><code data-trim='' data-noescape='' class='language-javascript'>let x = 0;
+for (let i = 0; i &lt; numbers.length; i++) {
+  x = x + numbers[i];
+}</code></pre>
+    <p>What is the best description of the value of <code>x</code> after the loop has completed?</p>
+    <div class='choices'>
+        <p>The sum of the numbers from 0 to <code>numbers.length - 1</code>.</p>
+        <p>The sum of the numbers from 0 to <code>numbers.length</code>.</p>
+        <p>The sum of the elements of the array.</p>
+        <p>The sum of all but the last number in the array.</p>
+        <p>The sum of the even numbers in <code>numbers</code>.</p>
+    </div>
+</div>
+<div>
+    <p>What does this function do:</p>
+    <pre><code data-trim='' data-noescape='' class='language-javascript'>const foo = (words) =&gt; {
+  let result = [];
+  for (let i = 0; i &lt; words.length; i++) {
+    result.push(words[i].toUpperCase());
+  }
+  return result;
+}</code></pre>
+    <div class='choices'>
+        <p>Changes all the words in the <code>words</code> array to uppercase.</p>
+        <p>Produces a new array containing the words in <code>words</code> that are all uppercase.</p>
+        <p>Produces a new array containing all the words in <code>words</code> in uppercase.</p>
+    </div>
+</div>
+<div>
+    <p>Consider this function:</p>
+    <pre><code data-trim='' data-noescape='' class='language-javascript'>const foo = (xs) =&gt; {
+  let result = [];
+  for (let i = 0; i &lt; xs.length; i++) {
+    result.push(xs[xs.length - i]);
+  }
+  return result;
+}</code></pre>
+    <p>For up to 5 points, describe what it does:</p>
+    <div class='freeanswer'>
+        <p>Hit enter to save answer.</p>
+    </div>
+</div>
+{% endblock %}

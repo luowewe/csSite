@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <title>{{ title }}</title>
+  <link href="/css/projects.css" media="all" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <div>
+
+    <p class="logo"><a href="/">Intro to Programming</a></p>
+
+    <h1>{{ title }}</h1>
+
+    <p class="back"><a href="/projects/">Back to projects list</a></p>
+
+    <p class="topics">
+      {%- for topic in topics | sort -%}
+      <span class="topic">{{ topic }}</span>
+      {%- endfor -%}
+    </p>
+
+    {{ content | safe }}
+  </div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+---
+layout: project
+title: Image matcher
+tags:
+  - projects
+  - Genetic algorithms
+topics:
+  - Canvas
+  - Genitic algorithms
+---
+
+<figure class='float'>
+  <img src="mona-lisa-reference.png">
+  <img src="mona-lisa-generated.png">
+  <figcaption>
+    Reference image and 2000-triangles version.
+  </figcaption>
+</figure>
+
+
+<p>
+  If you’ve written the <a href="/projects/phrase-matcher/">genetic phrase
+  matcher</a> you may be ready for this project. Unlike in the phrase matcher
+  where you actually know what the best solution looks like (it’s just the
+  string that’s exactly the same as the original string) in this program, the
+  goal is to create an image that as close as possible to a reference image but
+  rather than by drawing individual pixels (which would just be a larger version
+  of the phrase matcher problem) you can only draw a fixed number of
+  semi-transparent, colored triangles. (When semi-transparent shapes overlap it
+  produces colors that are a blend of the overlapping colors.
+</p>
+
+<p>
+  The structure of the algorithm should be the same as in the phrase matcher:
+  from individual “organisms” whose fitness can be measured make a population of
+  many members. Then loop making a new generation by producing offspring from
+  the fittest members of the current population.
+</p>
+
+<p>
+  In this case each organism is somehow an ordered list of triangles (probably
+  an array) with each triangle having a position and a color expressed as RGBA
+  (red, green, blue, and alpha which determines the level of transparency). The
+  fitness of each solution can be measured by drawing the triangles into a
+  Canvas and then getting the pixel data of the generated image and comparing
+  each pixel to the pixel in the reference image. The closer the generated image
+  is to the reference image, the higher the fitness. The triangles need to be
+  ordered because the the order semi-transparent colors overlap affects the
+  resulting color.
+</p>
+
+<p>
+  The original version of this project (see below) used a simple scheme of
+  asexual reproduction: starting from a single organism generate a child by
+  mutating the original. If the new organism is fitter than its parent it takes
+  over as the parent for the next child, otherwise the child dies and the
+  original parent tries again. It would be interesting to experiment with sexual
+  reproduction scheme similar to the phrase matcher to see if it can find better
+  solutions or find them more quickly. Other variants would be to allow the
+  number of triangles to change so some organisms would have more and some
+  fewer. (In that case you should probably include the size of the organism in
+  the fitness score with organism that use fewer triangles beeing more fit.)
+</p>
+
+<p>
+  Other possible variations are to use different shapes. The original actually
+  used arbitrary polygons which seems like a bit of a cheat to me because it
+  makes it a lot easier to create arbitrary shapes. But he achived better
+  results with just fifty polygons than I’ve been able to achieve with 2,000
+  triangles so if you actually want to produce good images you may want to play
+  with that. (I read about the original “Evolution of Mona Lisa” years ago and
+  have mis-remembered it as using triangles ever since, possibly because I was
+  thinking about GPUs which draw everything they draw with triangles.)
+</p>
+
+<p>
+  Note: there are some technical details you’ll need to dig into to build this
+  such as figuring out how to use the Canvas API (which I’ve mostly hidden from
+  you behind things like the Simple Draw environment) to get at raw pixel data.
+  Also you’ll probably want to understand the animation loop we’ve been using so
+  you can get better control over it. But none of that is all that complicated;
+  I’ll point you in the right direction and help you if you get stuck.
+</p>
+
+<h2>References</h2>
+
+<ul>
+  <li><a href="https://web.archive.org/web/20081216234014/http://rogeralsing.com/2008/12/07/genetic-programming-evolution-of-mona-lisa/">Genetic Programming: Evolution of Mona Lisa</a> (via Wayback Machine)</li>
+  <li><a href="https://en.wikipedia.org/wiki/Genetic_algorithm">Genetic algorithim - Wikipedia</a></li>
+</ul>

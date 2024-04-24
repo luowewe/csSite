@@ -1,0 +1,14 @@
+{
+  "language": "python",
+  "stdin": "stdin",
+  "stdout": "stdout",
+  "stderr": "stderr",
+  "jobe": {
+    "language": "python3",
+    "parameters": {
+      "compileargs": [],
+      "interpreterargs": []
+    }
+  },
+  "files": ["foo.py"]
+}

@@ -1,0 +1,24 @@
+---
+title: Tic-Tac-Toe
+---
+
+{% extends 'generic-frame.njk' %}
+
+{% block instructions %}
+<p>
+  Draw a Tic-Tac-Toe board and allow human players to play on it by clicking in
+  the squares of the board, drawing X's and O's as appropriate. You should
+  represent the state of the board using arrays so you can ignore clicks in
+  squares that have already been used. For bonus points, detect when a player
+  wins and draw a line through the three-in-a-row.
+</p>
+
+<p>
+  This environment augments the images challenge environment with a
+  a <code>drawText(text, x, y, color, size)</code> function that draws some text
+  at the given x,y position in the given color and size (in px). More
+  importantly it adds a function <code>registerOnclick</code> that you can call
+  with a function that will be called with the x,y coordinates within the canvas
+  of each mouse click. See the comment in the starter code for more details.
+</p>
+{% endblock %}

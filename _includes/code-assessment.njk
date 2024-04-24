@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <title>{{ title }}</title>
+  <link href="/css/code-assessment.css" rel="stylesheet" type="text/css">
+  <script src="/js/prism.js" defer></script>
+  <script src="/js/collapse-instructions.js" defer></script>
+  <script src="/js/index.js" type="module"></script>
+  <script src="/js/{{ script | default('questions') }}.js" type="module"></script>
+</head>
+<body>
+
+  {% include 'login-flow.njk' %}
+  <div class="pseudo-body">
+    {% include 'toolbar.njk' %}
+
+    <div class="container">
+      <p id="hidden">
+        <svg id="open" class="bi"><use xlink:href="/img/bootstrap-icons.svg#caret-right-fill"/></svg> <i>Click to reopen instructions.</i></p>
+      <div id="instructions">
+        {% block instructions %}
+        {% endblock %}
+      </div>
+
+      <div class="editor-page">
+        {% include 'editor.njk' %}
+
+        <h2 class="righthand-label questions">
+          <span>Questions</span>
+          <span>
+            <span id="previous-q">
+              <svg class="bi"><use xlink:href="/img/bootstrap-icons.svg#arrow-left"/></svg>
+              <span id="q"></span>
+            </span>
+            of
+            <span id="next-q">
+              <span class="of"></span>
+              <svg class="bi"><use xlink:href="/img/bootstrap-icons.svg#arrow-right"/></svg>
+            </span>
+          </span>
+        </h2>
+
+        <div class="righthand">
+          <div id="questions">
+            {% block questions %}
+            {% endblock %}
+          </div>
+          <h2>REPL</h2>
+          <div id="repl"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

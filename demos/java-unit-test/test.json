@@ -1,0 +1,416 @@
+{
+    "add": [
+        {
+            "args": [
+                34,
+                -44
+            ],
+            "expected": -10,
+            "got": -1496,
+            "exception": null,
+            "passed": false
+        },
+        {
+            "args": [
+                -84,
+                14
+            ],
+            "expected": -70,
+            "got": -1176,
+            "exception": null,
+            "passed": false
+        },
+        {
+            "args": [
+                49,
+                -54
+            ],
+            "expected": -5,
+            "got": -2646,
+            "exception": null,
+            "passed": false
+        },
+        {
+            "args": [
+                -21,
+                -81
+            ],
+            "expected": -102,
+            "got": 1701,
+            "exception": null,
+            "passed": false
+        },
+        {
+            "args": [
+                77,
+                -64
+            ],
+            "expected": 13,
+            "got": -4928,
+            "exception": null,
+            "passed": false
+        },
+        {
+            "args": [
+                -68,
+                16
+            ],
+            "expected": -52,
+            "got": -1088,
+            "exception": null,
+            "passed": false
+        },
+        {
+            "args": [
+                -71,
+                -27
+            ],
+            "expected": -98,
+            "got": 1917,
+            "exception": null,
+            "passed": false
+        },
+        {
+            "args": [
+                -53,
+                45
+            ],
+            "expected": -8,
+            "got": -2385,
+            "exception": null,
+            "passed": false
+        },
+        {
+            "args": [
+                61,
+                20
+            ],
+            "expected": 81,
+            "got": 1220,
+            "exception": null,
+            "passed": false
+        },
+        {
+            "args": [
+                -33,
+                88
+            ],
+            "expected": 55,
+            "got": -2904,
+            "exception": null,
+            "passed": false
+        }
+    ],
+    "subtract": [
+        {
+            "args": [
+                62,
+                -53
+            ],
+            "expected": 115,
+            "got": 115,
+            "exception": null,
+            "passed": true
+        },
+        {
+            "args": [
+                56,
+                18
+            ],
+            "expected": 38,
+            "got": 38,
+            "exception": null,
+            "passed": true
+        },
+        {
+            "args": [
+                -52,
+                70
+            ],
+            "expected": -122,
+            "got": -122,
+            "exception": null,
+            "passed": true
+        },
+        {
+            "args": [
+                -14,
+                -98
+            ],
+            "expected": 84,
+            "got": 84,
+            "exception": null,
+            "passed": true
+        },
+        {
+            "args": [
+                -95,
+                56
+            ],
+            "expected": -151,
+            "got": -151,
+            "exception": null,
+            "passed": true
+        },
+        {
+            "args": [
+                78,
+                81
+            ],
+            "expected": -3,
+            "got": -3,
+            "exception": null,
+            "passed": true
+        },
+        {
+            "args": [
+                42,
+                75
+            ],
+            "expected": -33,
+            "got": -33,
+            "exception": null,
+            "passed": true
+        },
+        {
+            "args": [
+                -95,
+                61
+            ],
+            "expected": -156,
+            "got": -156,
+            "exception": null,
+            "passed": true
+        },
+        {
+            "args": [
+                -55,
+                91
+            ],
+            "expected": -146,
+            "got": -146,
+            "exception": null,
+            "passed": true
+        },
+        {
+            "args": [
+                49,
+                2
+            ],
+            "expected": 47,
+            "got": 47,
+            "exception": null,
+            "passed": true
+        }
+    ],
+    "multiply": [
+        {
+            "args": [
+                -35,
+                95
+            ],
+            "expected": -3325,
+            "got": -3325,
+            "exception": null,
+            "passed": true
+        },
+        {
+            "args": [
+                -43,
+                15
+            ],
+            "expected": -645,
+            "got": -645,
+            "exception": null,
+            "passed": true
+        },
+        {
+            "args": [
+                62,
+                74
+            ],
+            "expected": 4588,
+            "got": 4588,
+            "exception": null,
+            "passed": true
+        },
+        {
+            "args": [
+                -8,
+                -67
+            ],
+            "expected": 536,
+            "got": 536,
+            "exception": null,
+            "passed": true
+        },
+        {
+            "args": [
+                -41,
+                86
+            ],
+            "expected": -3526,
+            "got": -3526,
+            "exception": null,
+            "passed": true
+        },
+        {
+            "args": [
+                42,
+                35
+            ],
+            "expected": 1470,
+            "got": 1470,
+            "exception": null,
+            "passed": true
+        },
+        {
+            "args": [
+                46,
+                -46
+            ],
+            "expected": -2116,
+            "got": -2116,
+            "exception": null,
+            "passed": true
+        },
+        {
+            "args": [
+                -63,
+                -75
+            ],
+            "expected": 4725,
+            "got": 4725,
+            "exception": null,
+            "passed": true
+        },
+        {
+            "args": [
+                75,
+                -26
+            ],
+            "expected": -1950,
+            "got": -1950,
+            "exception": null,
+            "passed": true
+        },
+        {
+            "args": [
+                79,
+                1
+            ],
+            "expected": 79,
+            "got": 79,
+            "exception": null,
+            "passed": true
+        }
+    ],
+    "divide": null,
+    "mod": null,
+    "averageOfTwo": null,
+    "averageOfThree": null,
+    "distance": [
+        {
+            "args": [
+                82.54217550200201,
+                36.452912980496365
+            ],
+            "expected": 46.089262521505646,
+            "got": 46.089262521505646,
+            "exception": null,
+            "passed": true
+        },
+        {
+            "args": [
+                70.03809499210388,
+                43.406051444445296
+            ],
+            "expected": 26.632043547658583,
+            "got": 26.632043547658583,
+            "exception": null,
+            "passed": true
+        },
+        {
+            "args": [
+                48.934479108607036,
+                19.86881645972818
+            ],
+            "expected": 29.065662648878856,
+            "got": 29.065662648878856,
+            "exception": null,
+            "passed": true
+        },
+        {
+            "args": [
+                31.184184565143255,
+                99.82377898511001
+            ],
+            "expected": 68.63959441996676,
+            "got": 68.63959441996676,
+            "exception": null,
+            "passed": true
+        },
+        {
+            "args": [
+                -57.366313157322054,
+                -64.24956577006613
+            ],
+            "expected": 6.883252612744073,
+            "got": 6.883252612744073,
+            "exception": null,
+            "passed": true
+        },
+        {
+            "args": [
+                40.2012504774346,
+                -77.1246548799995
+            ],
+            "expected": 117.3259053574341,
+            "got": 117.3259053574341,
+            "exception": null,
+            "passed": true
+        },
+        {
+            "args": [
+                -92.90104739899618,
+                54.20751135801788
+            ],
+            "expected": 147.10855875701407,
+            "got": 147.10855875701407,
+            "exception": null,
+            "passed": true
+        },
+        {
+            "args": [
+                55.93145004363711,
+                73.45311315155703
+            ],
+            "expected": 17.52166310791992,
+            "got": 17.52166310791992,
+            "exception": null,
+            "passed": true
+        },
+        {
+            "args": [
+                35.58251150866769,
+                -54.25676619500215
+            ],
+            "expected": 89.83927770366984,
+            "got": 89.83927770366984,
+            "exception": null,
+            "passed": true
+        },
+        {
+            "args": [
+                62.98890781143734,
+                -15.1795500203403
+            ],
+            "expected": 78.16845783177764,
+            "got": 78.16845783177764,
+            "exception": null,
+            "passed": true
+        }
+    ],
+    "manhattanDistance": null,
+    "euclideanDistance": null
+}

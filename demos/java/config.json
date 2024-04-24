@@ -1,0 +1,13 @@
+{
+  "language": "java",
+  "stdin": "stdin",
+  "stdout": "stdout",
+  "stderr": "stderr",
+  "jobe": {
+    "parameters": {
+      "compileargs": ["-cp", ".:/usr/local/lib/java/bhs-cs.jar"],
+      "interpreterargs": ["-cp", ".:/usr/local/lib/java/bhs-cs.jar"]
+    }
+  },
+  "files": ["Foo.java"]
+}

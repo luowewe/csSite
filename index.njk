@@ -1,0 +1,67 @@
+---
+layout: homepage.njk
+---
+
+<p>
+  Welcome to Berkeley High’s <i>{{ metadata.title }}</i> class.
+</p>
+
+<p>
+  This website is your main jumping off point for material related to this
+  class. I will usually also link to whatever we are working on in a given day
+  from Google Classroom but this site will grow over the course of the year with
+  new material so you should be familiar with what is here.
+</p>
+
+<h1>Table of contents</h1>
+
+<ul id="toc">
+</ul>
+
+<h1><a name="">Setup</a></h1>
+
+<p>
+  The first thing you need to do is get set up with GitHub. To do that, go to
+  the <a href="https://bhs-cs.gigamonkeys.com/">BHS CS</a> site and follow the
+  instructions there about creating a GitHub account and then getting set up on
+  that website. We'll be going over this in class in our first few days.
+</p>
+
+
+<h1><a name="">Class calendar</a></h1>
+
+<p>
+  For an overview of what we'll be covering this year take a look at
+  our <a href="calendar/">class calendar</a>. This is a rough guide; we will
+  make adjustments throughout the year as we see which topics need a bit more or
+  less time.
+</p>
+
+<h1><a name="">Grading</a></h1>
+
+<p>
+  I used standards based grading which is a <a href="/grading/">grading
+  system</a> where your grade is based entirely on your mastery of a number
+  of <a href="/standards/">standards</a>. You should read these standards to
+  understand what mastery of the material looks like. (Note, your grade at any
+  point in the year will only depend on the standards that we have covered so
+  far.)
+</p>
+
+<h1><a name="">Class policies</a></h1>
+
+<p>
+  Nothing too onerous but please read my <a href="/policies/">classroom
+  policies</a>.
+</p>
+
+<h1><a name="">Slides</a></h1>
+
+<ul>
+  {% for deck in collections.slides %}
+    <li>
+      <a href="{{ deck.url }}">{{ deck.data.title }}</a>
+      <span class="slides-date">{{ deck.data.date | date('yyyymmdd') }}</span>
+    </li>
+  {% endfor %}
+</ul>

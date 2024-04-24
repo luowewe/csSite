@@ -1,0 +1,23 @@
+@import url('secondary.css');
+
+h2 {
+  margin-top: 1em;
+}
+
+th,
+td {
+  padding: 0.5em 0.5em 0;
+}
+
+th {
+  text-align: left;
+}
+
+tr td:first-child {
+  text-align: center;
+  font-weight: 600;
+}
+
+tr td {
+  vertical-align: top;
+}

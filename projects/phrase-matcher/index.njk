@@ -1,0 +1,64 @@
+---
+layout: project
+title: Phrase matcher
+tags:
+  - projects
+  - Genetic algorithms
+topics:
+  - Command line
+  - Strings
+  - Genitic algorithms
+---
+
+<p>
+  <img class="float" src="phrase-ga.png">
+  This is the simplest genetic algorithm project and really serves as a starter
+  project to make sure you have the basic mechanics working before you move on
+  to more complicated uses of genetic algorithms.
+</p>
+
+<p>
+  A genetic algorithm is a form of computation that takes inspiration from
+  biological evolution. Rather than computing a particular result directly, a
+  genetic algorithm works by randomly generating many possible solutions and
+  then evaluating them and recombining the best solutions to make new solutions,
+  crossing and mutating them in a process analogous to the way parents' DNA is
+  crossed and mutated when making a baby.
+</p>
+
+<p>
+  Genetic algorithms only work if we have some way to measure the <i>fitness</i>
+  of various solutions and also to <i>combine</i> those solutions to produce new
+  solutions and are most applicable when the space of potential solutions is
+  very large and there are no efficient algorithms for finding an optimal
+  solution.
+</p>
+
+<p>
+  In this project you will tackle a problem that has a large solution space but
+  which has a trivial solution, namely: given a string, can we evolve our way to
+  the same string. Suppose our string is "To be, or not to be, that is the
+  question." To find that string with a genetic algorithm we'd generate tens of
+  thousands of random strings, rank them all by how close they are to the target
+  string, combine the ones that are closest to the desired string to make new
+  strings, and iterate until eventually we find a string with perfect fitness,
+  i.e. that exactly matches the target.
+</p>
+
+<p>
+  To see how big the solution space is, consider that if we assume an alphabet
+  of a-z in both upper and lower case plus a few punctuation characters, there
+  are over 5.5e73 strings of the same length as the phrase, "To be, or not to
+  be, that is the question." That is a big number. If we could check a billion
+  possibilities per second it would take us a time more than one hundred
+  twenty-eight quattuordecillion (1.28e47) times longer than the current age of
+  the universe to check all the possible strings.
+</p>
+
+<h2>References</h2>
+
+<ul>
+  <li><a href="https://en.wikipedia.org/wiki/Genetic_algorithm">Genetic algorithim - Wikipedia</a></li>
+  <li><a href="https://www.youtube.com/watch?v=9zfeTw-uFCw&list=PLRqwX-V7Uu6bJM3VgzjNV5YxVxUwzALHV">Nature
+  of Code video on Genetic Algorithms</a></li>
+</ul>

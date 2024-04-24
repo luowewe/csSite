@@ -1,0 +1,11 @@
+{
+  "language": "javascript",
+  "repl": "repl",
+  "files": ["code.js"],
+  "iframe": {
+    "src": "/frames/canvas",
+    "hidden": false,
+    "class": "canvas",
+    "scrolling": "no"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "title": "BHS Computer Science",
+  "githubOrganization": "berkeley-high-cs",
+  "jobeUrl": "https://jobe.fly.dev",
+  "templateRepo": "template",
+  "allowAnonymous": false,
+  "teacher": {
+    "name": "Mr. Seibel",
+    "pronoun": "he"
+  },
+  "signupFormURL": "https://forms.gle/mPJFB33u9WADy86r5"
+}

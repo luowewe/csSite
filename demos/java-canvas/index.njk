@@ -1,0 +1,18 @@
+---
+title: Java canvas
+---
+
+{% extends 'jobe-canvas.njk' %}
+
+{% block instructions %}
+<p>
+  This is a proof of concept of a Jobe-based Java drawing API. Basically the
+  Java code generates Javascript code which is then injected into an
+  &lt;iframe&gt; with a &lt;canvas&gt; element in it where it draws whatever.
+  Right now the <code>Canvas</code> API supports just a handful of methods but
+  it will be relatively easy to add new ones. (Currently supported
+  are: <code>drawLine</code>, <code>drawCircle</code>, <code>drawRect</code>, <code>drawFilledRect</code>,
+  and <code>drawFilledCircle</code>.)
+</p>
+
+{% endblock %}

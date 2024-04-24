@@ -1,0 +1,14 @@
+<div id="toolbar">
+  <span class="logo"><a href="/">{{ metadata.title }}</a></span>
+  {% if finalExam %}
+  <span class="logo final">Fall Semester Final Exam!</span>
+  {% endif %}
+  <span class="buttons">
+    <span class="github">
+      <button>
+        <svg id="github-icon" class="bi" fill="#000"><use xlink:href="/img/bootstrap-icons.svg#github"/></svg>
+        <span>Log in</span>
+      </button>
+    </span>
+  </span>
+</div>

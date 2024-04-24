@@ -1,0 +1,45 @@
+@import url('toolbar.css');
+@import url('collapsable-instructions.css');
+@import url('inner-page.css');
+
+body {
+  background: rgba(255, 64, 128, 0.2);
+}
+
+h2.questions {
+  font-size: 1em;
+  user-select: none;
+}
+
+#questions > div {
+  display: none;
+}
+
+#questions {
+  margin-bottom: 2em;
+}
+
+#questions div .num {
+  font-weight: 900;
+}
+
+#questions div ul {
+  padding-top: 1em;
+  padding-left: 2em;
+}
+
+#questions div ul li ul {
+  padding-top: 0;
+  padding-left: 2em;
+}
+
+#questions div ul li  {
+  padding-top: 0.5em;
+}
+
+#previous-q,
+#next-q,
+.choices input,
+.choices label {
+  cursor: pointer;
+}

@@ -1,0 +1,43 @@
+@import url('toolbar.css');
+@import url('text-page.css');
+
+.topics {
+  padding: 6px;
+}
+
+.topic {
+  font-size: 11px;
+  padding: 0.25em 0.5em;
+  margin: 3px;
+  border-radius: 6px;
+  background: rgba(196, 128, 196, 0.5);
+}
+
+.back {
+  font-size: 11px;
+}
+
+img.full {
+  width: 100%;
+}
+
+figure {
+  float: right;
+  width: 50%;
+  padding: 12px;
+}
+
+img.float {
+  float: right;
+  width: 50%;
+  padding: 12px;
+}
+
+figure img {
+  width: 100%;
+}
+
+figure.float figcaption {
+  font-size: 10px;
+  text-align: center;
+}

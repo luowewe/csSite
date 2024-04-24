@@ -1,0 +1,138 @@
+-*- mode: markup; -*-
+
+* Back to school
+
+** Goal of course
+
+## fragments
+
+Learning to program.
+
+More about what that means in a minute.
+
+Will touch a bit on some issues beyond the purely technical such as various
+ethical questions that come up in the field.
+
+Prepare kids for subsequent CS courses that BHS offers: AP CSP, AP CS A, and IB CS.
+
+##.
+
+** A bit about my background
+
+## fragments
+
+I worked in industry for almost three decades.
+
+I wrote a few books.
+
+I volunteered last year in almost all the CS classes except, ironically, this one.
+
+This is my first year teaching high school.
+
+##.
+
+* Programming
+
+These are from what I told the kids
+
+** What is programming?
+
+## fragments
+
+A language.
+
+A form of problem solving.
+
+An exercise in picking problems to solve.
+
+##.
+
+** Javascript
+
+## fragments
+
+The language of the web.
+
+It’s incredibly popular and widely used.
+
+It’s a real language. Thus it has warts and oddities.
+
+But it has a clean core.
+
+##.
+
+** Why is programming fun?
+
+## fragments
+
+If you like creating things.
+
+If you like solving puzzles.
+
+If you like understanding how things work.
+
+##.
+
+** Why is programming hard?
+
+## fragments
+
+There are a lot of details that you have to get right.
+
+It can be very abstract.
+
+Those two things are usually at the opposite end of the mental spectrum.
+
+##.
+
+** What can you do when you know how to program?
+
+## fragments
+
+Understand, at least a bit, how all this stuff around us works.
+
+Build tools to make your life better.
+
+##.
+
+* Finally
+
+** If you're not stuck, you're not programming.
+
+## fragments
+
+Expect to be stuck.
+
+When you get unstuck is when you learn the most.
+
+##.
+
+** How your kiddo can succeed in this class
+
+## fragments
+
+Program. Program. Program.
+
+The only way to learn programming is to do it.
+
+In some ways this is like an art class.
+
+Get stuck. Get unstuck. Repeat.
+
+##.
+
+** How you can support them
+
+## fragments
+
+Remind them that it’s normal to be stuck.
+
+Encourage them to ask for help.
+
+##.
+
+** The class website
+
+[Intro to Programming]
+
+[Intro to Programming] </>

@@ -1,0 +1,107 @@
+---
+title: Recursion 3
+---
+
+{% extends 'js-testcases.njk' %}
+
+{% block instructions %}
+<div>
+  <p>
+    For all the functions in this assignment I want you to write a recursive
+    function. As in the second problem set, some of these functions are not ones
+    that you'd naturally write recursively. Others, however, are.
+  </p>
+
+  <p>
+    As in the previous assignment, for functions the recurse on arrays, you may
+    want to use the fact that <code>s.slice(1)</code> returns an array
+    consisting of all but the first element of <code>xs</code>. E.g. <code>[2,
+    3, 5, 7, 11].slice(1)</code> evaluates to a new array <code>[3, 5, 7,
+    11]</code>. Similarly you can recurse on strings
+    using <code>s.substring(1)</code> to get the string containing all but the
+    first character of <code>s</code>.
+</p>
+
+  <p>
+    This problem set contains a couple problems that ask you to recurse on
+    arrays the represent trees. I.e. instead of building a tree out of objects
+    we build a tree out of nested arrays. In this kind of recursion, you'll
+    usually have a double recursion, one recursing on the 0th element of the
+    array and the other recurling on the rest (i.e. the <code>slice(1)</code>)
+    of the array.
+  </p>
+</div>
+{% endblock %}
+
+{% block testcases %}
+<div data-name="product">
+  <p>
+    A function that takes a list of numbers and returns the product obtained by
+    multiplying them all together. Note the product of no numbers is 1, a.k.a.
+    the “multiplicative identity”.
+  </p>
+</div>
+<div data-name="sumSquares">
+  <p>
+    A function that takes a single non-negative integer argument, n, and returns
+    the sum of the squares of the numbers from 0 to n.
+  </p>
+</div>
+<div data-name="lucas">
+  <p>
+    A function that takes a non-negative integer argument and returns the nth
+    Lucas number. A Lucas number is like a Fibonacci number except the sequence
+    starts with 2 and 1 rather than 0 and 1. (I.e. lucas(0) is 2). Subsequent
+    Lucas numbers are the sum of the two previous Lucas numbers.
+  </p>
+</div>
+<div data-name="isAscending">
+  <p>
+    A function that takes an array of numbers and return true if they are sorted
+    in ascending order and false otherwise. An array is in ascending order if
+    each element is less than or equal to the next element.
+  </p>
+</div>
+<div data-name="isDescending">
+  <p>
+    A function that takes an array of numbers and return true if they are sorted
+    in descending order and false otherwise. An array is in descending order if
+    each element is greater than or equal to the next element.
+  </p>
+</div>
+<div data-name="sumNested">
+  <p>
+    ["A function that takes a single argument that is either a number (which you
+    can test with the provided <code>isNumber</code> function) or an array
+    containing either other numbers or more arrays. Return the sum of all the
+    numbers.","Hint: while these are arrays, the recursion is more of a tree
+    recursion."]
+  </p>
+</div>
+<div data-name="searchNested">
+  <p>
+    A function that takes two arguments. The first is like the argument to
+    sumNested and the second is a number. Return true if the second argument
+    appears anywhere in the nested arrays in the first argument.
+  </p>
+</div>
+<div data-name="evaluate">
+  <p>
+    ["(<i>Note: this is an extra challenging problem.</i>) A function that takes
+    an argument representing a mathematical expression and returns its value. If
+    the argument is a number, the value is that number. Otherwise the argument
+    will be an object with three properties: <code>op</code>, <code>left</code>,
+    and <code>right</code>. The value of the <code>op</code> property will be
+    one of the strings <code>'+'</code>, <code>'-'</code>, <code>'*'</code>, or
+    <code>'/'</code>, indicating the mathematical operation. The
+    <code>left</code> and <code>right</code> properties will be expressions,
+    again either a number or an object representing an expression.","To evaluate
+    an expression object, evaluate its left and right sides and then apply the
+    indicated mathematical operation to the results. For example the expression
+    object:","<code
+      >{ op: '+', left: 10, right: { op: '*', left: 2, right: 3 } }</code
+    >","represents 10 + 2 * 3 and thus should evaluate to 16."]
+  </p>
+</div>
+
+{% endblock %}

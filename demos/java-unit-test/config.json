@@ -1,0 +1,22 @@
+{
+  "language": "java",
+  "handler": "unit-test",
+  "testing": {
+    "id": "#testing",
+    "casesId": "#testcases"
+  },
+  "stdin": "stdin",
+  "stdout": "stdout",
+  "stderr": "stderr",
+  "jobe": {
+    "parameters": {
+      "compileargs": ["-cp", ".:/usr/local/lib/java/bhs-cs.jar", "NumberMethodsReference.java"],
+      "interpreterargs": ["-cp", ".:/usr/local/lib/java/bhs-cs.jar"],
+      "runargs": ["Tests", "NumberMethodsReference", "testcases.json"],
+      "main_class": "com.gigamonkeys.bhs.TestRunner"
+    },
+    "output": "json"
+  },
+  "files": ["Tests.java"],
+  "extraFiles": ["NumberMethodsReference.java",  "testcases.json"]
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <title>{{ title }}</title>
+  <link href="/css/{{ name }}.css" media="all" rel="stylesheet" type="text/css">
+  <script src="/js/prism.js" defer></script>
+  <script src="/js/collapse-instructions.js" defer></script>
+  <script src="/js/index.js" type="module"></script>
+</head>
+<body>
+
+  {% include 'login-flow.njk' %}
+  <div class="pseudo-body">
+    {% include 'toolbar.njk' %}
+
+    <template id="testcases">
+      {% block testcases %}
+      {% endblock %}
+    </template>
+
+    <div class="container">
+      <p id="hidden">
+        <svg id="open" class="bi"><use xlink:href="/img/bootstrap-icons.svg#caret-right-fill"/></svg>
+        <i>Click to reopen instructions.</i>
+      </p>
+
+      <div id="instructions">
+          <svg id="close" class="bi"><use xlink:href="/img/bootstrap-icons.svg#caret-down-fill"/></svg>
+        {% block instructions %}
+        {% endblock %}
+      </div>
+
+      <div class="editor-page">
+        {% include 'editor.njk' %}
+
+        <h2 class="righthand-label">
+          Test results show up here.
+        </h2>
+
+        <div class="test-results">
+          <div id="testing"></div>
+          {% block underTestCases %}
+          {% endblock %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

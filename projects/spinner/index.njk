@@ -1,0 +1,39 @@
+---
+layout: project
+title: Spinner
+tags:
+  - projects
+  - Tools
+topics:
+  - HTML UI
+  - Canvas
+  - Animation
+---
+
+<p>
+  <img class="float" src="spinner.png">
+  This is maybe not the most useful tool but it's useful enough that there are
+  about a billion of them on the web. Basically it's a digital game spinner that
+  lets you pick from a number of choices.
+</p>
+
+<p>
+  The main challenge of this is figuring out how to animate the spinning of a
+  wheel (or, alternatively, an arrow in the middle of the spinner.) You should
+  look
+  at <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/rotate"><code>rotate()</code></a>
+  and related methods on the <code>CanvasRenderingContext2D</code> class.
+</p>
+
+<p>
+  This tool will probably use a combination of HTML and Canvas UI. Canvas for
+  drawing the spinner but HTML for configuring it. Ideally the user can specify
+  the categories they want and maybe, if you want to be fancy, how likely each
+  one is.
+</p>
+
+<h2>References</h2>
+
+<ul>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/rotate"><code>CanvasRenderingContext2D.rotate()</code></a></li>
+</ul>

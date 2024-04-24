@@ -1,0 +1,55 @@
+---
+layout: project
+title: Sudoku
+tags:
+  - projects
+  - Solvers
+topics:
+  - HTML UI
+  - Search
+  - Constraint propagation
+---
+
+<p>
+  <img class="float" src="sudoku.png">
+  Sudoku are the 9x9 number puzzles where you starting from a certain number of
+  filled in cells the player tries to fill all remaining cells with the numbers
+  from 1-9 under the constraint that no number appear more than once in any
+  given row, column, or any of the nine 3x3 sub-boxes of the 9x9 grid.
+</p>
+
+<p>
+  If you want, you can build a UI to let people play sudoku in which case you
+  might want to provide an easy way to set up the board and maybe some
+  ammenities like indications of what numbers are still available in each
+  square.
+</p>
+
+<p>
+  Another maybe more interesting project is to write a sudoku solver, that is a
+  program that takes a sudoku puzzle in some form and figures out the solution.
+  There are a number of ways to tackle this problem. A brute force search that
+  tries every possibility in a systematic way will, in theory, ultimately solve
+  any sudoku. And for easy puzzles may solve them quite quickly. But harder
+  puzzles can take quite a long time to solve with brute force so you may need
+  to be more clever. Peter Norvig, the Head of Research at Google has written an
+  <a href="https://norvig.com/sudoku.html">excellent essay</a> about solving
+  Sudoku. The code is in Python but the ideas can be implemented in Javascript.
+  He also provides several very hard puzzles to test out the efficiency of your
+  solver.
+</p>
+
+<p>
+  Note, if you want, you can write a solver without any UI that you will run
+  from the command line. I will need to teach you a few things about how to run
+  Javascript outside of the browser and accessing data from disk but none of it
+  is hard.
+</p>
+
+
+<h2>References</h2>
+
+<ul>
+  <li><a href="https://en.wikipedia.org/wiki/Sudoku">Sudoku - Wikipedia</a></li>
+  <li><a href="https://norvig.com/sudoku.html">Solving Every Sudoku Puzzle - Peter Norvig</a></li>
+</ul>

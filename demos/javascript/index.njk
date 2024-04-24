@@ -1,0 +1,15 @@
+---
+title: Javascript repl
+---
+{% extends 'js-repl.njk' %}
+
+{% block instructions %}
+<p>
+  This is a simple environment for experimenting with Javascript. The panel on
+  the left is a code editor where you can define functions and variables. The
+  panel on the right is called a REPL, which is an acronym for Read, Eval, Print
+  Loop. You can type Javascript expressions in the REPL and hit return and it
+  will evaluate them and print the resulting value. If you are logged in,
+  changes you make in the editor will be saved.
+</p>
+{% endblock %}

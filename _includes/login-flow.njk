@@ -1,0 +1,103 @@
+  <div hidden="true" id="login-flow">
+
+    <svg class="x" class="login-icon" class="bi" fill="#000"><use xlink:href="/img/bootstrap-icons.svg#x"/></svg>
+
+    <h1>{{ metadata.title }}</h1>
+
+    <div hidden="true" class="logged-out">
+      <p>
+        Welcome to <i>{{ metadata.title }}</i>. If you are a student in the
+        class, the first thing you need to do (and which we should have done in
+        class) is set up your GitHub account.
+      </p>
+
+      <p>
+        Once you have a GitHub account, click “Log in to GitHub” below to
+        proceed.
+
+        {% if metadata.allowAnonymous %}
+        Or you can click “Use anonymously” to play with the environment but
+        you will not be able to save your work or submit assignments. (You can
+        always log in later by clicking the <svg class="bi" fill="#000"><use
+        xlink:href="/img/bootstrap-icons.svg#github"/></svg> at the top of the
+        page.)
+        {% endif %}
+
+      </p>
+
+      <div class="login-buttons">
+
+        <button id="login" class="login-button">
+          <svg class="bi" fill="#fff"><use xlink:href="/img/bootstrap-icons.svg#github"/></svg>
+          <span>Log in to GitHub</span>
+        </button>
+
+        {% if metadata.allowAnonymous %}
+        <button id="anonymous" class="login-button">
+          <svg class="bi" fill="#fff"><use xlink:href="/img/bootstrap-icons.svg#person"/></svg>
+          <span>Use anonymously</span>
+        </button>
+        {% endif %}
+
+      </div>
+
+      <p>
+        If you don’t have a GitHub account yet, please create one and then log
+        in here for further instructions.
+      </p>
+    </div>
+
+    <div hidden="true" class="not-a-member">
+      <p>
+        Congratulations! You have successfully connected this app to GitHub.
+        However you are not yet a member of the GitHub organization for this
+        class, something {{ metadata.teacher.name }} needs to set up for you.
+      </p>
+
+      <p>
+        This is your GitHub profile URL:
+      </p>
+
+      <div class="profile-url">
+        <span></span>
+        <svg class="login-icon" class="bi" fill="#333"><use xlink:href="/img/bootstrap-icons.svg#clipboard"/></svg>
+      </div>
+
+      <p>
+        Click the clipboard icon to copy it and then submit it
+        at <a href="{{ metadata.signupFormURL }}" target="_blank">this
+          form</a> so {{ metadata.teacher.pronoun }} can add you.
+      </p>
+    </div>
+
+    <div hidden="true" class="pending-member">
+      <p>
+        Congratulations! You have successfully connected this app to GitHub. And
+        it looks like you have an invitation to join the GitHub organization for
+        this class. You need to accept that invitation before you can proceed.
+        The invite should be sent to whatever email you used when you created
+        your GitHub account.
+      </p>
+    </div>
+
+    <div hidden="true" class="problem-with-repo">
+      <p>
+        I see you are logged into GitHub and a member of the
+        <i>{{ metadata.githubOrganization }}</i> GitHub organization. However
+        there seems to have been some problem finishing the setup for your
+        account. Please let {{ metadata.teacher.name }} know.
+      </p>
+    </div>
+
+    <div hidden="true" class="info">
+      {% include 'info.njk' %}
+    </div>
+
+    <div hidden="true" class="created-repo">
+      <p>You're all set! You don't need to worry about this yet but we have
+        successfully created a GitHub repository for your work:</p>
+      <p><span></span></p>
+      <p>You can get to it any time by clicking on your GitHub username at the
+        top-right of the screen.</p>
+    </div>
+  </div>

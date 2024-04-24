@@ -1,0 +1,205 @@
+---
+title: 2022-12-12 arrays and objects
+---
+
+{% extends 'code-assessment.njk' %}
+
+{% block instructions %}
+<p>
+  <svg id="close"
+       class="bi"><use xlink:href="/img/bootstrap-icons.svg#caret-down-fill"/></svg>
+  This assessment consists of <b><span id="num-questions"></span>
+    functions</b> you need to write involving manipulating arrays and objects.
+  And maybe arrays of objects. It is a <b>closed book assessment</b>. You
+  should stay on this tab until you are done and there should be no talking.
+  This assessment is about how much <i>you</i> understand. There are no
+  automatic tests but you can use the REPL to test things yourself.
+</p>
+
+<p>
+  <b>Note:</b> on this assessment you will be asked to write functions that
+  call other functions you will write as part of the assessment. If you
+  don’t know how to write one function you can still get full credit for a
+  function that is supposed to call it as long as your code calls it
+  appropriately, i.e. with correct syntax and passing the right arguments.
+</p>
+
+<p>
+  You can move through the questions with the arrows at the upper right next
+  to the <b>1 of <span class="of"></span></b> indicator so if you're not
+  sure how to write one function move on to another one and come back if you
+  have time at the end. I want to see how much you do know. <b>Note</b>: you
+  can also click on <code>thingsLikeThis</code> in these instructions and
+  the questions to copy them to the clipboard to avoid spelling mistakes.
+  (I.e. click to copy and then ⌘-v to paste wherever you want.)
+</p>
+
+<p>
+  <b>When you are done</b>, please click on your Github username above and
+  submit a GitHub pull request of the branch <code id="branch-name"></code>
+  and request me as a reviewer. Doing this correctly is part of the
+  assessment. <b>If you are unsure how to request a review, please ask for
+    help!</b>
+</p>
+{% endblock %}
+
+
+{% block questions %}
+
+<div>
+  <p>
+    Write a function named <code>makeRow</code> that takes no arguments
+    and returns a new three-element array where each element is the
+    empty string, <code>''</code>.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>makeBoard</code> that takes no
+    arguments and returns a 3x3 array. That is, it should return an
+    array containing three elements, each of which is a new array
+    containing three elements. The elements of the inner arrays should
+    all be the empty string, <code>''</code>. In other words, the inner
+    arrays are rows such as are returned by the <code>makeRow</code>
+    function you just wrote, which you are free to use here if you want.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>makeMove</code> that takes three
+    arguments: a string, specifying a mark (either <code>'X'</code>
+    or <code>'O'</code>); a number specifying a row; and a number
+    specifying a column. It should return an object with three
+    properties, <code>mark</code>, <code>row</code>,
+    and <code>column</code>, each with the value of the corresponding
+    argument.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>placeMark</code> that takes a 3x3 array
+    like the ones returned by <code>makeBoard</code> and an object like
+    the ones returned by <code>makeMove</code> and sets the element of
+    the array at the row and column specified in the move object to the
+    move's mark.
+  </p>
+
+  <p>
+    The function does not need to return any specific value but after
+    calling it the array passed as the first argument should be
+    modified. For instance, after:
+  </p>
+
+  <pre><code data-trim='' data-noescape='' class='language-javascript'>  let board = makeBoard();
+      let move = makeMove('X', 1, 1);
+      placeMark(board, move);</code></pre>
+
+  <p>
+    the expression <code>board[1][1]</code> should evaluate to <code>'X'</code>.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>allTheSame</code> that takes an array
+    of three elements and returns <code>true</code> if all three
+    elements are <code>===</code> to each other and <code>false</code>
+    otherwise. For instance, <code>allTheSame(['X', 'X', 'X'])</code>
+    should return <code>true</code>.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>extractColumn</code> that takes a 3x3
+    array like the ones returned by <code>makeBoard</code> and an index
+    from 0 to 2, inclusive, and returns a three-element array containing
+    the values in the column specified by the index, assuming the inner
+    arrays represent rows. For instance if <code>board</code> is the array:
+  </p>
+
+  <pre><code data-trim='' data-noescape='' class='language-javascript'>   [
+      ['X', '', ''],
+      ['O', '', ''],
+      ['', 'X', '']
+      ]</code></pre>
+  <p>
+    then <code>extractColumn(board, 0)</code> should return <code>['X', 'O',
+      '']</code>
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>recordMove</code> that takes two
+    arguments: an array and a move object, like the ones returned
+    by <code>makeMove</code>. It should add the given move to the end of
+    the array.
+  </p>
+
+  <p>
+    The function does not need to return any specific value but after it
+    is called the array argument should be one longer than it was before
+    the call and the last element of the array should be the object
+    passed as the second argument.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>rowForMove</code> that takes two
+    arguments: an array of move objects like the ones collected
+    in <code>recordMove</code> and a number which is an index into that
+    array. It should return the row value (a number) of the move at the
+    given index.
+  </p>
+
+  <p>
+    For example after these two lines are executed:
+  </p>
+
+
+  <pre><code data-trim='' data-noescape='' class='language-javascript'>   let moves = [];
+      recordMove(moves, makeMove('X', 1, 2));</code></pre>
+
+  <p>
+    the call <code>rowForMove(moves, 0)</code> should return <code>1</code>.
+  </p>
+
+</div>
+
+<div>
+  <p>
+    Write a function named <code>placeMoves</code> that takes two
+    arguments: a 3x3 array like the ones returned
+    by <code>makeBoard</code> and an array of moves such as might be
+    built up by repeatedly calling <code>recordMove</code>. The function
+    should call <code>placeMark</code> to place the mark for each move
+    in the array of moves in the correct position on the board array.
+  </p>
+
+  <p>
+    The function does not need to return any specific value though
+    obviously all the calls to <code>placeMark</code> will have updated
+    the board array argument. For instance after these lines are executed:
+  </p>
+
+  <pre><code data-trim='' data-noescape='' class='language-javascript'>   let moves = [];
+      let board = makeBoard();
+      recordMove(moves, makeMove('X', 1, 1));
+      recordMove(moves, makeMove('O', 0, 0));
+      recordMove(moves, makeMove('X', 0, 1));
+      placeMoves(board, moves);
+  </code></pre>
+
+  <p>
+    then the <code>board</code> should be in this state: <code>[['O',
+      'X', ''], ['', 'X', ''], ['', '', '']]</code>
+  </p>
+
+</div>
+
+{% endblock %}

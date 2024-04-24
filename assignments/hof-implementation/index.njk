@@ -1,0 +1,72 @@
+---
+title: HOF implementation
+---
+{% extends 'js-testcases.njk' %}
+
+{% block instructions %}
+<p>
+  The goal of this exercise is to write functions in the editor to the left that
+  pass test cases for the functions shown below. Whenever you are ready to run
+  the tests, hit the <svg class="bi
+  run-code"><use xlink:href="/img/bootstrap-icons.svg#play-btn-fill"/></svg>
+  button above the editor. To see the specification for a function you are
+  supposed to write, click a button in the test panel. Once you have written the
+  function with the right name, the button will indicate whether the test cases
+  are all passing (green, with a ✅) or some are failing (red, with an ❌) and
+  clicking the button will show the results of the individual test cases.
+</p>
+{% endblock %}
+
+{% block testcases %}
+
+<div data-name="filter">
+  <p>
+    A function that takes a predicate function and an array and returns a new
+    array containing only those elements of the array argument for which the
+    predicate returns true.
+  </p>
+</div>
+
+<div data-name="map">
+  <p>
+    A function that takes a one-argument function and an array and returns a new
+    array containing for each element in the array argument the value returned
+    by fn when called with that element.
+  </p>
+</div>
+
+<div data-name="reduce">
+  <p>
+    A function that takes a two-argument function, an initial value, and an
+    array and returns the value produced by repeatedly calling the function, the
+    first time the initialValue and the first element of the array, and
+    subsequently with the the value returned by the previous call to the
+    function and the next element of the array. If the array is empty it should
+    just return the initial value.
+  </p>
+</div>
+
+<div data-name="flatMap">
+  <p>
+    A function that takes a one-argument function that returns an array and an
+    array and returns a new array containing all the elements returned by the
+    function when called with each element of the argument array flattened into
+    a single array.
+  </p>
+</div>
+
+<div data-name="every">
+  <p>
+    A function that takes a predicate function and an array and returns true if,
+    and only if, the predicate return true for every element of the array.
+  </p>
+</div>
+
+<div data-name="some">
+  <p>
+    A function that takes a predicate function and an array and returns true if,
+    and only if, the predicate return true for some element of the array.
+  </p>
+</div>
+
+{% endblock %}

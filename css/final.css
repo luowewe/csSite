@@ -1,0 +1,68 @@
+@import url('code-assessment.css');
+
+body {
+  /*background: rgba(255, 32, 255, 0.7) !important;*/
+}
+
+#final-instructions {
+  font-weight: 300;
+  width: 40em;
+  height: calc(100vh * 0.6);
+  position: absolute;
+  left: calc((100vw - 40em) / 2);
+  top: 150px;
+  font-size: 16px;
+  line-height: 1.5em;
+  z-index: 1;
+  background: rgb(225, 191, 225);
+  padding: 20px;
+  border: 1px solid black;
+  overflow-y: scroll;
+}
+
+#final-instructions h1.logo {
+  text-align: center;
+  font-size: 24px;
+}
+
+#final-instructions p + p {
+  padding-top: 0.75em;
+}
+
+#final-instructions button {
+  padding: 5px 9px;
+  border: none;
+  border-radius: 12px;
+  background: #00f;
+  color: #fff;
+  margin: 0 auto;
+}
+
+#final-instructions button:hover {
+  background: rgba(0, 0, 255, 0.5);
+  color: #00f;
+}
+
+#final-instructions .ok-button {
+  text-align: center;
+}
+
+#final-instructions p.fn {
+  font-size: 80%;
+}
+
+#final-instructions sup {
+  vertical-align: 2px;
+}
+
+.logo.final {
+  font-size: 36px;
+}
+
+#help-icon {
+  fill: #333;
+}
+
+#help-icon:hover {
+  fill: #888;
+}

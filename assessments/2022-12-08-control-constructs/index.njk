@@ -1,0 +1,98 @@
+---
+title: 2022-12-08 control constructs
+---
+
+{% extends 'code-assessment.njk' %}
+
+{% block instructions %}
+<p>
+  <svg id="close"
+       class="bi"><use xlink:href="/img/bootstrap-icons.svg#caret-down-fill"/></svg>
+  This assessment consists of <b><span id="num-questions"></span>
+    functions</b> you need to write exercising your ability to use
+  Javascript’s basic control constructs. It is a <b>closed book
+    assessment</b>. You should stay on this tab until you are done and there
+  should be no talking. This assessment is about how much <i>you</i>
+  understand. There are no automatic tests but you can use the REPL to test
+  things yourself.
+</p>
+
+<p>
+  You can move through the questions with the arrows at the upper right next
+  to the <b>1 of <span class="of"></span></b> indicator so if you're not
+  sure how to write one function move on to another one and come back if you
+  have time at the end. I want to see how much you do know. <b>Note</b>: you
+  can also click on <code>thingsLikeThis</code> in these instructions and
+  the questions to copy them to the clipboard to avoid spelling mistakes.
+  (I.e. click to copy and then ⌘-v to paste wherever you want.)
+</p>
+
+<p><b>Note</b> The starter code contains a lot of functions. You do not need
+  to worry about how those functions work and don’t need to change them. Write
+  your code below them.</p>
+
+<p>
+  <b>When you are done</b>, please click on your Github username above and
+  submit a GitHub pull request of the branch <code id="branch-name"></code>
+  and request me as a reviewer. Doing this correctly is part of the
+  assessment. <b>If you are unsure how to request a review, please ask for
+    help!</b>
+</p>
+{% endblock %}
+
+
+{% block questions %}
+
+<!-- from unit-01 -->
+
+<div>
+  <p>
+    Write a function named <code>yesIfEven</code> that takes a single
+    argument which will be a number and returns the
+    string <code>'yes'</code> if the argument is even
+    and <code>'no'</code> otherwise.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>countXs</code> that takes a single
+    string argument and returns the number of <code>'x'</code>
+    characters that occur in the string.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>timesTable</code> that takes a single
+    number as its argument and emits a times table of all the products
+    from 1 × 1 to n × n. Use the <code>emit</code> function defined in
+    the starter code to actually emit the different values. It takes
+    three arguments, the two numbers being multiplied and their product,
+    and prints them out nicely; you just need to call it once for each
+    pair of arguments. N.B. that order matters so, assuming you are
+    emitting a times table that includes 2 × 3 you need to call
+    both <code>emit(2, 3, 6)</code> and <code>emit(3, 2, 6)</code>.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>containsX</code> that takes a single
+    string argument and returns a boolean that indicates whether the
+    string contains any <code>'x'</code> characters.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>sumSquares</code> that takes a single
+    number argument and returns the sum of the squares of all the
+    positive integers less than the argument. For instance given the
+    argument <code>4</code> it should return <code>14</code>, i.e.
+    1<sup>2</sup> + 2<sup>2</sup> + 3<sup>2</sup>, i.e. 1 + 4 + 9.
+  </p>
+</div>
+
+
+{% endblock %}

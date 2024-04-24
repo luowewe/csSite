@@ -1,0 +1,56 @@
+---
+layout: project
+title: 2048
+tags:
+  - projects
+  - Games
+topics:
+  - HTML UI
+  - Arrays
+  - Logic
+---
+
+<p>
+  <img class="float" src="2048.png">
+  The 2048 game. You've probably played it. If
+  not, <a href="https://play2048.co/">here's one place to play it on the
+  web</a>. Basically you have a 4x4 grid of cells that start with two cells
+  randomly filled each with tiles containing either a 2 or a 4. Then the player
+  moves by sliding all the tiles up, down, left, or right, with cells sliding
+  until they hit the side or another tile with the exception that if two tiles
+  with the same number collide they are replaced with a new tile containing the
+  sum of the two tiles. So two 2s become one 4, etc. After each move an empty
+  cell is populated with a new tile, again either a 2 or a 4.
+</p>
+
+<p>
+  The goal of the game is to get to the 2048 tile (thus the name) but it is
+  possible to go beyond that.
+</p>
+
+<p>
+  Building this game is mostly a matter of building a UI in HTML and then
+  programming the bit of logic to control how the tiles combine. That logic is
+  not completely trivial but not rocket science either.
+</p>
+
+<p>
+  To make a really nice version you'd figure out how to animate the tiles
+  actually sliding but it's also fine if they just pop into their new positions,
+  at least to start.
+</p>
+
+<p>
+  Another interesting question is how of frequently the new tiles are 2s and how
+  often 4s. Probably the easiest way to answer it is to Google; people have
+  definitely discussed it online. Or you could find the original game and play
+  it a lot and count for yourself. Or you could just tune it to whatever you
+  think makes for the best game play.
+</p>
+
+<p>
+  There are many variations such
+  as <a href="https://0x0800.github.io/2048-CUPCAKES/">this one with cupcakes
+  rather than numbers</a>. You can make your own unique 2048 style game with your
+  own images if you want.
+</p>

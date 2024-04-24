@@ -1,0 +1,21 @@
+/*
+ * Style for pages that consist mostly of text. Stuff goes here that should
+ * apply to all text pages but not to all pages. Then individual text pages can
+ * import this and add any special purpose formatting. However we should try to
+ * not have gratuitiously different formatting between different text pages so
+ * try not to go nuts with per-page customization.
+ */
+
+@import url('base.css');
+
+body {
+  background: #f2f2f2;
+}
+
+body > div {
+  width: calc(min(45em, 80vw));
+  margin: 50px auto;
+  border: 1px solid #828282;
+  background: rgba(196, 128, 196, 0.1);
+  padding: 2em;
+}

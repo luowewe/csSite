@@ -1,0 +1,89 @@
+---
+title: Recursion 2
+---
+{% extends 'js-testcases.njk' %}
+
+{% block instructions %}
+<div>
+  <p>
+    For all the functions in this assignment I want you to write a recursive
+    function. Note, that even moreso than in the first recursion problem set, many
+    of these functions are not ones that you'd naturally write recursively. This
+    is an exercise in making sure you understand how recursion works so you can
+    use it on problems where it is a natural way to express things.
+  </p>
+
+  <p>
+    As in the previous assignment, for functions the recurse on arrays, you may
+    want to use the fact that <code>s.slice(1)</code> returns an array consisting
+    of all but the first element of <code>xs</code>. E.g. <code>[2, 3, 5, 7,
+      11].slice(1)</code> evaluates to a new array <code>[3, 5, 7, 11]</code>.
+    Similarly you can recurse on strings using <code>s.substring(1)</code> to get
+    the string containing all but the first character of <code>s</code>.
+  </p>
+</div>
+{% endblock %}
+
+
+{% block testcases %}
+
+<div data-name="add">
+  <p>A function that takes two arguments and adds them. Must be recursive.</p>
+</div>
+<div data-name="multiply">
+  <p>
+    A function that takes two arguments and multiplies them. Must be recursive.
+  </p>
+</div>
+<div data-name="double">
+  <p>
+    A function that takes two arguments and doubles the first argument the
+    number of times specified by the second argument. Must be recursive.
+  </p>
+</div>
+<div data-name="triple">
+  <p>
+    A function that takes two arguments and triples the first argument the
+    number of times specified by the second argument. Must be recursive.
+  </p>
+</div>
+<div data-name="power">
+  <p>
+    A function that takes two arguments and raises the first to the power of the
+    second. Must be recursive.
+  </p>
+</div>
+<div data-name="deleteXs">
+  <p>
+    A function that takes a string argument and return a new string with all
+    'x's removed. Must be recursive.
+  </p>
+</div>
+<div data-name="countXs">
+  <p>
+    A function that takes a string argument and returns the number of 'x's in
+    the string. Must be recursive.
+  </p>
+</div>
+<div data-name="maximum">
+  <p>
+    A function that takes an array of numbers and returns the maximum value in
+    the array. If the array is empty, it should return the special value
+    <code>-Infinity</code>. Must be recursive.
+  </p>
+</div>
+<div data-name="every">
+  <p>
+    A function that takes an array and a predicate function and returns true if
+    every element of the array satisfies the predicate. Must be recursive.
+  </p>
+</div>
+<div data-name="some">
+  <p>
+    A function that takes an array and a predicate function and returns true if
+    at least one element of the array satisfies the predicate. Must be
+    recursive.
+  </p>
+</div>
+
+{% endblock %}

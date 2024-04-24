@@ -1,0 +1,66 @@
+body {
+  width: 40rem;
+  margin: 1in auto;
+  font-size: 30px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  text-align: left;
+  font-style: italic;
+  font-family: sans-serif;
+  font-size: 16px;
+  margin-bottom: 1rem;
+}
+
+
+#start {
+  text-align: center;
+}
+
+div {
+  display: flex;
+  padding: 1em;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 1px solid black;
+  width: 40rem;
+  background: #fff;
+}
+
+code.header {
+  text-align: center;
+  background: #ddd;
+  padding: 3px;
+  margin-bottom: 1em;
+}
+
+
+.highlight {
+  display: inline-block;
+  animation: highlight 1s;
+}
+
+
+@keyframes highlight {
+
+  0% {
+    background: #fff;
+    color: black;
+  }
+
+  50% {
+    background: #6df;
+    color: white;
+  }
+
+  100% {
+    background: #fff;
+    color: black;
+  }
+
+}

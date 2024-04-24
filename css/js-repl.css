@@ -1,0 +1,6 @@
+@import url('editor.css');
+@import url('collapsable-instructions.css');
+
+p + pre {
+  margin-top: 1em;
+}

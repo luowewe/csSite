@@ -1,0 +1,58 @@
+---
+title: Array functions
+---
+
+{% extends 'js-testcases.njk' %}
+
+{% block instructions %}
+<p>
+  The goal of this exercise is to write functions in the editor to the left that
+  pass test cases for the functions shown below. Whenever you are ready to run
+  the tests, hit the <svg class="bi
+  run-code"><use xlink:href="/img/bootstrap-icons.svg#play-btn-fill"/></svg>
+  button above the editor. To see the specification for a function you are
+  supposed to write, click a button in the test panel. Once you have written the
+  function with the right name, the button will indicate whether the test cases
+  are all passing (green, with a ✅) or some are failing (red, with an ❌) and
+  clicking the button will show the results of the individual test cases.
+</p>
+{% endblock %}
+
+{% block testcases %}
+
+<div data-name="countTens">
+  <p>
+    A function that takes an array of numbers and returns the number of 10s in
+    the array.
+  </p>
+</div>
+
+<div data-name="sum">
+  <p>
+    A function that takes an array of numbers and returns the sum of all the
+    numbers.
+  </p>
+</div>
+
+<div data-name="evens">
+  <p>
+    A function that takes an array of numbers and returns a new array with only
+    the even elements.
+  </p>
+</div>
+
+<div data-name="anyOverOneHundred">
+  <p>
+    A function that takes an array of numbers and returns true if any of the
+    numbers is over 100 and false otherwise.
+  </p>
+</div>
+
+<div data-name="pyramid">
+  <p>
+    A function that takes non-negative integer and returns an array containing
+    zero 0s, one 1, two 2s, three 3s, etc. up to the number.
+  </p>
+</div>
+
+{% endblock %}

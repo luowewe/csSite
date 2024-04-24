@@ -1,0 +1,131 @@
+---
+title: 2022-12-07 control constructs
+---
+
+{% extends 'code-assessment.njk' %}
+
+{% block instructions %}
+<p>
+  <svg id="close"
+       class="bi"><use xlink:href="/img/bootstrap-icons.svg#caret-down-fill"/></svg>
+  This assessment consists of <b><span id="num-questions"></span>
+    functions</b> you need to write exercising your ability to use
+  Javascript’s basic control constructs. It is a <b>closed book
+    assessment</b>. You should stay on this tab until you are done and there
+  should be no talking. This assessment is about how much <i>you</i>
+  understand. There are no automatic tests but you can use the REPL to test
+  things yourself.
+</p>
+
+<p>
+  You can move through the questions with the arrows at the upper right next
+  to the <b>1 of <span class="of"></span></b> indicator so if you're not
+  sure how to write one function move on to another one and come back if you
+  have time at the end. I want to see how much you do know. <b>Note</b>: you
+  can also click on <code>thingsLikeThis</code> in these instructions and
+  the questions to copy them to the clipboard to avoid spelling mistakes.
+  (I.e. click to copy and then ⌘-v to paste wherever you want.)
+</p>
+
+<p><b>Note</b> The starter code contains a lot of functions. You do not need
+  to worry about how those functions work and don’t need to change them. Write
+  your code below them.</p>
+
+<p>
+  <b>When you are done</b>, please click on your Github username above and
+  submit a GitHub pull request of the branch <code id="branch-name"></code>
+  and request me as a reviewer. Doing this correctly is part of the
+  assessment. <b>If you are unsure how to request a review, please ask for
+    help!</b>
+</p>
+{% endblock %}
+
+
+{% block questions %}
+
+<div>
+  <p>
+    Write a function named <code>logIfOk</code> that takes a single
+    argument that can be passed to the function <code>isOk</code>
+    provided in the starter code to get a boolean indicating whether the
+    value is “okay”. If the value is okay according to <code>isOk</code>
+    you should call the provided <code>log</code> function, passing the
+    value so it can be logged. Note: you do not need to
+    write <code>isOk</code> or <code>log</code> but you can adapt the
+    simple implementations in the starter code if you’d like to test
+    your code.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>firstOk</code> that takes a numeric
+    argument and returns the first integer greater than or equal to zero
+    and less than the argument that is okay according to
+    the <code>isOk</code> function. If none of the numbers in the range
+    are okay, it should return <code>undefined</code>.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>timeToLeet</code> that repeatedly
+    generates random numbers with the provided <code>random10k()</code>
+    function and returns the number of numbers generated that were not
+    leet, according to the provided <code>isLeet</code> function, before
+    a leet number was generated. (Thus if the very first number
+    generated is leet, it should return 0. If the 101st number generated
+    was leet, then it should return 100.)
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>classify</code> that takes an arbitrary
+    value as its single argument and calls one of the provided
+    functions <code>recordOk</code> or <code>recordNotOk</code> with the
+    value, the former if the value is okay according <code>isOk</code>
+    and the latter otherwise.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>threewayClassify</code> that takes an
+    arbitrary value as its single argument and calls one of the three
+    provided functions <code>recordOk</code>, <code>recordMeh</code>,
+    or <code>recordNotOk</code>with the value. It should
+    call <code>recordOk</code> if the value is okay according
+    to <code>isOk</code>, <code>recordMeh</code> if the value is meh
+    according to <code>isMeh</code>, and <code>recordNotOk</code>
+    otherwise.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>sumOfSquares</code> that takes a single
+    numeric argument and returns the sum of the squares of the positive
+    integers less than the argument. For
+    instance <code>sumOfSquares(10)</code> should
+    return <code>285</code>.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>pairs</code> that takes a single
+    numeric argument and calls the provided <code>pair</code> function
+    with every possible pair of numbers made up of two numbers each in
+    the range from 1 to the argument. For
+    instance, <code>pairs(3)</code> would result in calls
+    to <code>pair</code> with the pairs <code>(1, 1)</code>, <code>(1,
+      2)</code>, <code>(2, 1)</code>, and <code>(2, 2)</code>. Note that
+    order matters so <code>(1, 2)</code> and <code>(2, 1)</code> are
+    different pairs. Also note: <code>pair</code> takes two arguments so you
+    just need to pass the two numbers; you do not need to do anything
+    else to create a pair.
+  </p>
+</div>
+
+{% endblock %}

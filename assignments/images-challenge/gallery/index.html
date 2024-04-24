@@ -1,0 +1,117 @@
+---
+layout: text-page.njk
+title: Images challenge gallery
+style: gallery
+override:tags: []
+---
+
+<p>
+  Below are some images to give you a workout using loops and if statements.
+</p>
+
+<p>
+  Your goal is to write functions in
+  the <a href="/assignments/images-challenge">images-challenge</a> environment
+  that create something like each of these images. However do not simply write a
+  bunch of calls to drawing functions like <code>drawFilledCircle</code>. Your
+  functions should contain only one call to any given drawing function in the
+  body of a loop that does the rest of the work.
+</p>
+
+<p>
+  Another thing you should do (and which I will be looking for when I review
+  your code) is to develop your code incrementally. Write a simple version of
+  the function that does some part of what you need and then build from there.
+  Or if you <i>can</i> write the function all in one go on your first try, then
+  try to simplify or otherwise improve your code.
+</p>
+
+<p>
+  A couple functions that might come in handy are a few more
+  from <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math">Math</a></code>.
+  <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor">Math.floor</a></code>
+  takes a single numeric argument and returns the value rounded down to the
+  nearest whole number.
+  And <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random">Math.random</a></code>
+  takes no arguments and returns a random number (pseudo-random, technically)
+  between 0, inclusive, and 1, exclusive.
+</p>
+
+<h2>Line of circles</h2>
+
+<p>
+  The function should take a single argument that allows the caller to specify
+  the size of the circles drawn. It should then draw as many as fit across the
+  width of the canvas.
+</p>
+
+<p><img src="/img/gallery/line-of-circles.png"></p>
+
+<h2>Line of circles, alternating</h2>
+
+<p>
+  Like the previous function, this function should take a single argument that
+  allows the caller to specify the size of the circles drawn. It should then
+  draw as many as fit across the width of the canvas, alternating between two
+  colors.
+</p>
+
+<p><img src="/img/gallery/line-of-circles-alternating.png"></p>
+
+<h2>Concentric circles</h2>
+
+<p>
+  The function should take a single argument that specifies how many concentric
+  circles to draw. It should then draw the largest circle to just fit in the
+  canvas and the rest evenly spaced.
+</p>
+
+<p><img src="/img/gallery/concentric-circles.png"></p>
+
+<h2>Checker board</h2>
+
+<p>
+  The function should take a single argument, `n`, that specifies the number of
+  squares on each side of a checkeboard and should draw an n-by-n checker board.
+</p>
+
+<p><img src="/img/gallery/checkerboard.png"></p>
+
+<h2>Not really curved</h2>
+
+<p>
+  The function should take a single argument that specifies the number of lines
+  to draw.
+</p>
+
+<p><img src="/img/gallery/thingy.png"></p>
+
+<h2>Fill with circles</h2>
+
+<p>
+  The function should take a single argument that specifies the size of the
+  circles and should then fill the canvas with as many as fit.
+</p>
+
+<img src="/img/gallery/fill-with-circles.png">
+
+<h2>Fill with circles randomly filled</h2>
+
+<p>
+  The function should take two arguments: the first specifies the size of the
+  circles and the second the probability that any given circle is drawn filled
+  in. For instance this image was creted with a circle radius of 17 and a
+  probability of 0.23. You will need to use the
+  function <code>Math.random()</code> which returns a random number from 0.0 to
+  just below 1.0 each time it is called.
+</p>
+
+<img src="/img/gallery/filled-circles-random.png">
+
+<h2>Square of circles</h2>
+<p>
+  The function should take a single argument that specifies the size of the
+  circles and should then draw the square made up of circles of that size.
+</p>
+
+<img src="/img/gallery/square-of-circles.png">

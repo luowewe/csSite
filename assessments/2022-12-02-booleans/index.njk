@@ -1,0 +1,122 @@
+---
+title: 2022-12-02 booleans
+---
+
+{% extends 'code-assessment.njk' %}
+
+{% block instructions %}
+<p>
+  <svg id="close"
+       class="bi"><use xlink:href="/img/bootstrap-icons.svg#caret-down-fill"/></svg>
+  This assessment consists of <b><span id="num-questions"></span>
+    functions</b> you need to write involving primarily boolean expressions.
+  It is a <b>closed book assessment</b>. You should stay on this tab until
+  you are done and there should be no talking. This assessment is about how
+  much <i>you</i> understand. There are no automatic tests but you can use
+  the REPL to test things yourself.
+</p>
+
+<p>
+  You can move through the questions with the arrows at the upper right next
+  to the <b>1 of <span class="of"></span></b> indicator so if you're not
+  sure how to write one function move on to another one and come back if you
+  have time at the end. I want to see how much you do know. <b>Note</b>: you
+  can also click on <code>thingsLikeThis</code> in these instructions and
+  the questions to copy them to the clipboard to avoid spelling mistakes.
+  (I.e. click to copy and then ⌘-v to paste wherever you want.)
+</p>
+
+<p>
+  <b>When you are done</b>, please click on your Github username above and
+  submit a GitHub pull request of the branch <code id="branch-name"></code>
+  and request me as a reviewer. Doing this correctly is part of the
+  assessment. <b>If you are unsure how to request a review, please ask for
+    help!</b>
+</p>
+{% endblock %}
+
+
+{% block questions %}
+
+<div>
+  <p>
+    Write a function named <code>needHeavyCoat</code> that takes two
+    boolean arguments, one that is true if a person is going outside and
+    the other that is true if they are somewhere cold, and returns a
+    boolean indicating whether they need a heavy coat which they only
+    need if they are going outside somewhere cold.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>needSunscreen</code> that takes two
+    boolean arguments, one that is true if someone is going to the beach
+    and the other that is true if they are going skiing, and returns a
+    boolean indicating whether they need to wear sunscreen which they
+    need to do both at the beach and on the ski slopes.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>needMittens</code> that takes two
+    boolean arguments, one which is true if a person is going outside
+    and the other which is true if they are somewhere warm, and returns
+    a boolean indicating whether they need to wear mittens which they
+    need if they are going outside somewhere that isn’t warm.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>isVenomous</code> that returns a
+    boolean indicating whether a snake on the island of Booleana is
+    venomous based on two boolean arguments, one which is true if the
+    snake is striped and the other of which is true if the snake has a
+    blue head. All striped snakes on Booleana are venomous as are all of
+    the unstriped snakes on the island except the blue-headed Blooby
+    Snake.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>okaySpeed</code> that takes two numeric
+    arguments, one indicating the posted speed limit in miles per hour
+    and the other the speed a car is going, also in miles per hour. It
+    should return true if and only if the speed is no more than ten mph
+    below the posted limit and no more than ten mph above the posted
+    limit.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>twiceAsExpensive</code> that takes two
+    numeric arguments, each indicating the price of an item you are
+    considering buying. The function should return true if and only if
+    the first item costs more than twice as much as the second item.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>winningRecord</code> that takes three
+    numeric arguments, a team’s number of wins, losses, and ties. It
+    should return true if the team has a winning record, meaning it has
+    won more than half of the games it has played.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>isMagicNumber</code> that takes a
+    single numeric argument and returns true if the number is one of the
+    two magic numbers, <code>42</code> or <code>17</code>. (For
+    10,000,000 extra credit points, include a comment about why you
+    think 42 and 17 are magic numbers.)
+  </p>
+</div>
+
+{% endblock %}

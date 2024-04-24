@@ -1,0 +1,35 @@
+@import url('editor.css');
+
+.editor-page > .graphic {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.graphic img {
+  flex: 4;
+  border: 1px solid #ccc;
+}
+
+.graphic .errors {
+  flex: 2;
+  background: rgba(196, 128, 196, 0.05);
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+#stderr {
+  hidden: true;
+  flex: 2;
+  background: white;
+  padding: 3px;
+  /* Grabbed this font stack from down in the bowels of Monaco to try and make the REPL look like the editor. */
+  font-family: 'SF Mono', Monaco, Menlo, Consolas, 'Ubuntu Mono', 'Liberation Mono',
+    'DejaVu Sans Mono', 'Courier New', monospace;
+  font-size: 12px;
+}

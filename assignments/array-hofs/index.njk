@@ -1,0 +1,99 @@
+---
+title: Array HOFs
+---
+{% extends 'js-testcases.njk' %}
+
+{% block instructions %}
+<p>
+  For this assignment I specifically want you to use the higher-order array
+  methods we learned about yesterday: <code>filter</code>, <code>map</code>,
+  <code>reduce</code>, <code>flatMap</code>, <code>every</code>, and
+  <code>some</code>. Each of the functions you are asked to write in this
+  assignment can be written using a single expression involving one or more of
+  those methods. I.e. you should not need to write any loops or <code>if</code>
+  statements. It also means if you want you can use the shorthand function form
+  and write each of these in one line of code. If you want to write named helper
+  functions instead of passing anonymous functions, that's fine.
+</p>
+{% endblock %}
+
+{% block testcases %}
+
+<div data-name="evens">
+  <p>
+    A function that given an array of numbers returns an array of only the even
+    numbers.
+  </p>
+</div>
+
+<div data-name="odds">
+  <p>
+    A function that given an array of numbers returns an array of only the odd
+    numbers.
+  </p>
+</div>
+
+<div data-name="big">
+  <p>
+    A function that given an array of numbers returns an array of only numbers
+    greater than 100.
+  </p>
+</div>
+
+<div data-name="names">
+  <p>
+    A function that given an array of objects with a name property returns an
+    array just the names.
+  </p>
+</div>
+
+<div data-name="grades">
+  <p>
+    A function that given an array of objects with a grade property returns an
+    array just the grades.
+  </p>
+</div>
+
+<div data-name="pairs">
+  <p>
+    A function that given an array returns an array of pairs where each pair is
+    a two-element arrays containing the same item twice.
+  </p>
+</div>
+
+<div data-name="averageGrade">
+  <p>
+    A function that given a non-empty array of objects with a grade (9-12)
+    property returns the average grade.
+  </p>
+</div>
+
+<div data-name="flatpairs">
+  <p>
+    A function that given an array returns a flattened array of pairs made from
+    each element.
+  </p>
+</div>
+
+<div data-name="allEven">
+  <p>
+    A function that given an array of numbers return true if, and only if, they
+    are all even.
+  </p>
+</div>
+
+<div data-name="someEven">
+  <p>
+    A function that given an array of numbers return true if, and only if, at
+    least one is even.
+  </p>
+</div>
+
+<div data-name="lengthOfNames">
+  <p>
+    A function that given an array of strings returns a list of the lengths of
+    all the names that start with an uppercase letter.
+  </p>
+</div>
+
+{% endblock %}

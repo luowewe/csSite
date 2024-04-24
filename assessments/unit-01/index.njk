@@ -1,0 +1,269 @@
+---
+title: Unit 1 cumulative assessment
+---
+
+{% extends 'code-assessment.njk' %}
+
+{% block instructions %}
+<p>
+  <svg id="close"
+  class="bi"><use xlink:href="/img/bootstrap-icons.svg#caret-down-fill"/></svg>
+  This assessment consists of <b><span id="num-questions"></span> functions</b>
+  you need to write involving numeric, boolean, and string expressions as well
+  as some use of control constructs. It is a <b>closed book assessment</b>. You
+  should stay on this tab until you are done and there should be no talking.
+  This assessment is about how much <i>you</i> understand. There are no
+  automatic tests but you can use the REPL to test things yourself.
+</p>
+
+<p>
+  You can move through the questions with the arrows at the upper right next to
+  the <b>1 of <span class="of"></span></b> indicator so if you're not sure how
+  to write one function move on to another one and come back if you have time at
+  the end. I want to see how much you do know. <b>Note</b>: you can also click
+  on <code>thingsLikeThis</code> in these instructions and the questions to copy
+  them to the clipboard to avoid spelling mistakes.
+</p>
+
+<p>
+  Some functions that you may find useful
+  are <code>Math.abs</code>, <code>Math.floor</code>, and <code>Math.sqrt</code>
+  which all take a single numeric argument and return, respectively, the
+  absolute value of the argument, the nearest integer less than the argument,
+  and the square root of the argument. Also useful is <code>Math.min</code>
+  which takes any number of arguments and returns the minimum value,
+  e.g. <code>Math.min(33, 44)</code> returns <code>33</code>.
+</p>
+
+<p>
+  <b>When you are done</b>, please submit a GitHub pull request of the
+  branch <code id="branch-name"></code> and request me as a reviewer. Doing this
+  correctly is part of the assessment.
+</p>
+{% endblock %}
+
+
+{% block questions %}
+
+<!-- numbers -->
+
+<div>
+  <p>
+    Write a function named <code>averageWeight</code> that takes two
+    arguments, the total weight of a number of items and the number of
+    items, and returns the average weight of an item. E.g. if the total
+    weight is 1,000 and there are 20 items, the average weight is 50.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>hypotenuse</code> that takes two
+    arguments representing the lengths of the two legs of a right
+    triangle and returns the length of the hypotenuse. Recall the
+    Pythagorean theorem that tells us that c<sup>2</sup> = a<sup>2</sup>
+    + b<sup>2</sup> where <i>a</i> and <i>b</i> are the lengths of the
+    two legs of a right triangle and <i>c</i> is the length of the
+    hypotenuse.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>maxRadius</code> that takes two
+    arguments, the first being the width and the second being the height
+    of a drawing area. It should return the radius of the largest circle
+    that can be drawn in the drawing area.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>numCircles</code> that takes two
+    arguments, the radius of a circle and the width of a drawing area,
+    and returns the largest integer number of non-overlapping circles of
+    the given radius that can be drawn in a line across the drawing
+    area..
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>offset</code> that takes two arguments,
+    the width, in pixels, of a drawing area and the width of a figure
+    (guaranteed to be less than the total width, also in pixels) and
+    which returns the number of pixels from the left side of the drawing
+    to shift the figure to be horizontally centered in the drawing area.
+  </p>
+</div>
+
+<!-- booleans -->
+
+<div>
+  <p>
+    Write a function named <code>canSleepIn</code> that takes two
+    boolean arguments, the first saying whether it's a weekday and the
+    second saying whether you're on vacation, and
+    returns <code>true</code> if you are allowed to sleep in
+    and <code>false</code> otherwise. The rules are you can always sleep
+    in when you're on vacation and you can also sleep in on weekends.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>canGoToProm</code> which takes three
+    boolean arguments describing a person. The first specifies if they
+    are a senior, the second specifies if they were invited to prom by
+    a senior, and the third specifies if they are on the prom exclusion
+    list. The function should return a boolean indicating whether or not
+    the person is eligible to go to prom. The rules are seniors and
+    people invited by seniors are eligible unless they are on the
+    exclusion list.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>getsSpeedingTicket</code> that takes two
+    arguments, a number indicating the speed in miles per hour that you
+    were driving and a boolean indicating whether the cop who pulled you
+    over is grouchy. Return a boolean value indicating whether you will
+    get a ticket given that a grouchy cop will give you a ticket if you
+    are going over 65 while a non-grouchy cop will only give you a
+    ticket if you're going over 70 mph.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>moreThanTwiceAsLong</code> that takes
+    two string arguments and returns a boolean indicating whether the
+    first string contains more than twice as many characters as the
+    second string.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>aFartherThanB</code> that takes three
+    arguments, all numbers and returns a boolean indicating whether the
+    first argument is farther away (on the number line) from the third
+    argument than the second argument. I.e. if we call the arguments a,
+    b, and c, return <code>true</code> if a is farther away from c than
+    b is.
+  </p>
+</div>
+
+<!-- strings -->
+
+<div>
+  <p>
+    Write a function named <code>firstHalf</code> that takes a single
+    string argument and returns the first half of the string. (If the
+    string has an odd number of characters it doesn't matter whether or
+    not you include the extra character.) For instance the first half
+    of <code>'foobar'</code> is <code>'foo'</code> but if the argument
+    was <code>'fooquux'</code> then either <code>'foo'</code>
+    or <code>'fooq'</code> would be acceptable return values.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>secondHalf</code> that takes a single
+    string argument and returns the second half of the string. (If the
+    string has an odd number of characters it doesn't matter whether or
+    not you include the extra character.) For instance the second half
+    of <code>'foobar'</code> is <code>'bar'</code> but if the argument
+    was <code>'fooquux'</code> then either <code>'quux'</code>
+    or <code>'uux'</code> would be acceptable return values. For maximum
+    style points write this function and <code>firstHalf</code> so
+    that <code>firstHalf(s) + secondHalf(s)</code> gives you
+    back <code>s</code>.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>upDown</code> that takes a single
+    string argument and returns a string consisting of the original
+    string all in upper case concatenated (“smooshed together”) with the
+    string all in lower case. E.g. called with <code>'foo'</code> it
+    should return <code>'FOOfoo'</code>.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>everyOther</code> that takes a single
+    string argument that is at least five characters long and returns a
+    string consisting of just the first, third, and fifth characters of
+    the argument string. E.g. called with <code>'foobar'</code> it
+    should return <code>'foa'</code>.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>upDownLastCharacter</code> that takes a
+    single string argument that is at least one character long and
+    returns a string consisting of two characters, the uppercase version
+    of the last character of the argument string and the lowercase
+    version of that same character. E.g. called with <code>'foo'</code>
+    it should return <code>'Oo'</code>.
+  </p>
+</div>
+
+<!-- control constructs -->
+
+<div>
+  <p>
+    Write a function named <code>yesIfEven</code> that takes a single
+    argument which will be a number and returns the
+    string <code>'yes'</code> if the argument is even
+    and <code>'no'</code> otherwise.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>countXs</code> that takes a single
+    string argument and returns the number of <code>'x'</code>
+    characters that occur in the string.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>timesTable</code> that takes a single
+    number as its argument and emits a times table of all the products
+    from 1 × 1 to n × n. Use the <code>emit</code> function defined in
+    the starter code to actually emit the different values. It takes
+    three arguments, the two numbers being multiplied and their product,
+    and prints them out nicely; you just need to call it once for each
+    pair of arguments. N.B. that order matters so, assuming you are
+    emitting a times table that includes 2 × 3 you need to call
+    both <code>emit(2, 3, 6)</code> and <code>emit(3, 2, 6)</code>.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>containsX</code> that takes a single
+    string argument and returns a boolean that indicates whether the
+    string contains any <code>'x'</code> characters.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>sumSquares</code> that takes a single
+    number argument and returns the sum of the squares of all the
+    positive integers less than the argument. For instance given the
+    argument <code>4</code> it should return <code>14</code>, i.e.
+    1<sup>2</sup> + 2<sup>2</sup> + 3<sup>2</sup>, i.e. 1 + 4 + 9.
+  </p>
+</div>
+
+{% endblock %}

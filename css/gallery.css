@@ -1,0 +1,9 @@
+@import url('text-page.css');
+
+img {
+  border: 1px solid grey;
+  background: #eee;
+  display: block;
+  margin: 1em auto;
+
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset="utf-8">
+  <title>{{ metadata.title}}: Daily plan</title>
+  <link href='/css/daily.css' media='all' rel='stylesheet' type='text/css'>
+  <script src="/js/daily-builder.js" type="module"></script>
+</head>
+<body>
+  <template id="oneDay">
+    <div class="one-day">
+      <div class="day"></div>
+      <div>
+        <span>Do now</span>
+        <span></span>
+      </div>
+      <div>
+        <span>After</span>
+        <span></span>
+      </div>
+      <div>
+        <span>During class</span>
+        <span></span>
+      </div>
+      <div>
+        <span>Exit ticket</span>
+        <span></span>
+      </div>
+      <div>
+        <span>Extra</span>
+        <span></span>
+      </div>
+    </div>
+  </template>
+
+  <div id="container">
+    <h1 class="logo"><a href="/">{{ metadata.title }}</a></h1>
+    <div id="days"></div>
+  </div>
+</body>
+</html>

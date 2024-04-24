@@ -1,0 +1,60 @@
+@import url('base.css');
+
+body {
+  width: 55em;
+  margin: 50px auto;
+}
+
+@media screen {
+  body {
+    background-image: url(../img/jac.png);
+    background-size: 33vw;
+    background-color: rgba(255, 0, 0, 0.1);
+  }
+}
+
+#container {
+  display: inline-block;
+  background: rgba(255, 220, 255, 0.98);
+  border: thin solid black;
+  padding: 50px;
+  width: 100%;
+}
+
+#days {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+  width: 100%;
+  gap: 2em;
+}
+
+div.one-day {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+div.one-day > div {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+}
+
+div.one-day > div.day > span:first-child {
+  font-weight: 300;
+}
+
+div.day {
+    background: #ddd;
+}
+
+div.one-day > div > span:first-child {
+  flex: 1;
+  font-weight: 600;
+}
+
+div.one-day > div > span {
+  flex: 4;
+}

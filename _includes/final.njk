@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <title>{{ title }}</title>
+  <link href="/css/prism.css" media="all" rel="stylesheet" type="text/css">
+  <link href="/js/index.css" media="all" rel="stylesheet" type="text/css">
+  <link href="/css/final.css" rel="stylesheet" type="text/css">
+  <script src="/js/prism.js" defer></script>
+  <script src="/js/index.js" type="module"></script>
+  <script src="/js/final.js" type="module"></script>
+</head>
+<body>
+
+  {% set finalExam = true %}
+
+  {% include 'login-flow.njk' %}
+  <div class="pseudo-body">
+    {% include 'toolbar.njk' %}
+
+    <div class="container">
+      <div id="final-instructions">
+        <h1 class="logo">Instructions</h1>
+        {% block instructions %}
+        {% endblock %}
+      </div>
+
+      <div class="editor-page">
+        {% include 'editor.njk' %}
+
+        <h2 class="righthand-label questions">
+          <span>Questions
+            <svg id="help-icon" class="bi"
+                 fill="#000">
+                 <use xlink:href="/img/bootstrap-icons.svg#question-circle-fill"></use>
+            </svg>
+          </span>
+          <span class="menu">
+            <a href="#1">Numbers:&nbsp;1–25</a>
+            <a href="#26">Booleans:&nbsp;26–42</a>
+            <a href="#43">Strings:&nbsp;43–68</a>
+            <a href="#69">Control&nbsp;Constructs:&nbsp;69–79</a>
+            <a href="#80">Arrays:&nbsp;80–86</a>
+            <a href="#87">Objects:&nbsp;87–98</a>
+          </span>
+
+          <span>
+            <span id="previous-q">
+              <svg class="bi"><use xlink:href="/img/bootstrap-icons.svg#arrow-left"></use></svg>
+              <span id="q"></span>
+            </span>
+            of
+            <span id="next-q">
+              <span id="of"></span>
+              <svg class="bi"><use xlink:href="/img/bootstrap-icons.svg#arrow-right"></use></svg>
+            </span>
+          </span>
+        </h2>
+
+        <div class="righthand">
+          <div id="questions">
+            {% block questions %}
+            {% endblock %}
+          </div>
+          <h2>REPL</h2>
+          <div id="repl"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

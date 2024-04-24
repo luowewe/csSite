@@ -1,0 +1,39 @@
+-*- mode: outline; outline-regexp: " *- " -*-
+
+- Unit: First unit (1 week)
+
+  - Setup (2)
+
+    - Day:
+
+      - DO NOW: Namecard
+
+      - AFTER: Discuss summer break
+
+      - DURING CLASS:
+
+        - Phone policy
+
+          - Sub-policy 1
+
+          - Sub-policy 2
+
+        - What is programming?
+
+      - EXIT TICKET: Write about goals for class
+
+      - EXTRA: Super special project
+
+    - Day:
+
+      - DO NOW: Write blah blah blah
+
+      - AFTER: Turn and talk
+
+      - DURING CLASS:
+
+        - A note on hacking
+
+        - History of Javascript
+
+      - EXIT TICKET: Describe blah blah blah

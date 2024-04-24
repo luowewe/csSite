@@ -1,0 +1,177 @@
+---
+title: 2022-11-14 objects, arrays, and control constructs
+---
+
+{% extends 'code-assessment.njk' %}
+
+{% block instructions %}
+<p>
+  <svg id="close"
+       class="bi"><use xlink:href="/img/bootstrap-icons.svg#caret-down-fill"/></svg>
+  This assessment consists of <b><span id="num-questions"></span>
+    functions</b> you need to write involving primarily arrays, objects, and
+  basic control constructs. It is a <b>closed book assessment</b>. You
+  should stay on this tab until you are done and there should be no talking.
+  This assessment is about how much <i>you</i> understand. There are no
+  automatic tests but you can use the REPL to test things yourself.
+</p>
+
+<p>
+  You can move through the questions with the arrows at the upper right next
+  to the <b>1 of <span class="of"></span></b> indicator so if you're not
+  sure how to write one function move on to another one and come back if you
+  have time at the end. I want to see how much you do know. <b>Note</b>: you
+  can also click on <code>thingsLikeThis</code> in these instructions and
+  the questions to copy them to the clipboard to avoid spelling mistakes.
+  (I.e. click to copy and then ⌘-v to paste wherever you want.)
+</p>
+
+<p>
+  <b>When you are done</b>, please click on your Github username above and
+  submit a GitHub pull request of the branch <code id="branch-name"></code>
+  and request me as a reviewer. Doing this correctly is part of the
+  assessment. <b>If you are unsure how to request a review, please ask for
+    help!</b>
+</p>
+{% endblock %}
+
+
+{% block questions %}
+
+<div>
+  <p>
+    Write a function named <code>area</code> that takes a single
+    argument which will be an object with <code>width</code>
+    and <code>height</code> properties representing the dimensions of a
+    rectangle and returns the area of the rectangle as a number.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>higherPaid</code> that takes two
+    arguments, each an object representing an employee. The employee
+    objects each have a <code>salary</code> property and the function
+    should return the object representing the employee with the higher
+    salary.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>isSamePoint</code> that takes two point
+    objects as arguments, each with <code>x</code> and <code>y</code>
+    properties, and returns a boolean indicating whether the two objects
+    represent the same x, y coordinate.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>totalWithTip</code> that takes two
+    arguments, an object with a property <code>subtotal</code> and a
+    number between 0 and 1.0 representing the percentage tip, e.g. 20%
+    tip would be 0.2. Return a new object that has three
+    properties, <code>subtotal</code> with the same value as the
+    argument object, <code>tip</code> which is the tip computed from the
+    subtotal and the given percentage, and <code>total</code> which is
+    the total with the tip.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function <code>isWinner</code> that takes an object with
+    a <code>score</code> property and returns true if the score is over
+    100 and false otherwise.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function <code>updateWins</code> that takes an array of
+    objects each with a <code>score</code> property and
+    a <code>wins</code> property and updates each object by
+    incrementing <code>wins</code> by one if the object is a winner
+    according to the <code>isWinner</code> function you just wrote.
+    After updating the objects, <code>updateWins</code> should
+    return <code>undefined</code>.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function <code>bigWinners</code> that takes an array of objects each with
+    <code>score</code> and <code>wins</code> properties and returns an
+    array containing the elements of the argument array
+    whose <code>wins</code> property is over 10.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function named <code>fillTimesTable</code> that takes a
+    single <i>n</i>-by-<i>n</i> 2D array as an argument. That is, the
+    argument will be an array with <i>n</i> elements each of which is an
+    array of <i>n</i> elements. The inner arrays will initially be
+    filled with zeros. The function should replace each zero with the
+    products from 1 × 1 at <code>table[0][0]</code> and <i>n</i>
+    × <i>n</i> at <code>table[<i>n</i> - 1][<i>n</i> - 1]</code> and
+    return <code>undefined</code> (Note, <i>n</i> itself is not an
+    argument to the function.)
+  </p>
+
+  <p>
+    For instance, if called with the empty table:
+  </p>
+  <p>
+    <code>[[0 , 0, 0], [0, 0, 0], [0, 0, 0]]</code>
+  </p>
+  <p>
+    it should leave the table in this state:
+  </p>
+  <p>
+    <code>[[1, 2, 3], [2, 4, 6], [3, 6, 9]]</code>
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function <code>sums</code> that takes a single
+    number, <code>n</code> and returns an array with <code>n + 1</code>
+    numbers in it such that each element of the array is the sum of the
+    index of that element and the preceeding indices. (The zeroth
+    element should have the value 0.) For example <code>sums(5)</code>
+    should return <code>[0, 1, 3, 6, 10, 15]</code>. The third
+    item, <code>3</code> is 3 because it's at index 2 + the preceeding
+    value of 1.
+  </p>
+</div>
+
+<div>
+  <p>
+    Write a function <code>rule110</code> that takes an array of
+    arbitrary length containing only 0s and 1s as its argument and
+    returns a new array of the same length filled according to the
+    following somewhat complicated rules:
+  </p>
+
+  <p>
+    For each index, <code>i</code>, the value at <code>i</code> in the
+    new array is determined by the three values in the original array
+    at <code>i - 1</code> (the left value), at <code>i</code> (the
+    center value), and at <code>i + 1</code> (the right value).
+    When <code>i</code> is 0 use 0 for the left value and
+    when <code>i</code> is the last index in the array, use 0 for the
+    right value.
+  </p>
+
+  <p>
+    The <code>i</code>th value of the result array will be 0 in three
+    cases: when the left, center, and right values are all 0 or the two
+    cases when the left value is 1 and the center and right values are
+    the same, i.e. both 0s or both 1s. In all other cases,
+    the <code>i</code>th element in the result is 1.
+  </p>
+</div>
+{% endblock %}

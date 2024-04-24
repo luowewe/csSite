@@ -1,0 +1,53 @@
+---
+title: Number function practice
+---
+{% extends 'js-repl.njk' %}
+
+{% block instructions %}
+<p id="hidden">
+  <svg id="open" class="bi"><use xlink:href="/img/bootstrap-icons.svg#caret-right-fill"/></svg>
+  <b>Number function practice …</b>
+</p>
+
+<div id="instructions">
+  <p>
+    <svg id="close" class="bi"><use xlink:href="/img/bootstrap-icons.svg#caret-down-fill"/></svg>
+    <b>Number function practice</b>
+  </p>
+
+  <p>
+    Practice writing numerical functions by translating as many of the
+    expressions from
+    the <a href="https://intro.gigamonkeys.com/expressions/arithmetic/">Arithmetic</a>
+    and <a href="https://intro.gigamonkeys.com/expressions/geometric/">Geometric</a>
+    problem sets into functions. For instance, for the “Perimeter of a square”
+    expression from the Geometric expressions problems you might write:
+  </p>
+
+  <pre>
+    const perimeterOfSquare = (s) => {
+      return s * 4;
+    };
+  </pre>
+
+  <p>If you wanted to, you could also write it in shorthand form as:</p>
+
+
+  <pre>
+    const perimeterOfSquare = (s) => s * 4;
+  </pre>
+
+  <p>
+    This should be relatively easy given that you should already have correct
+    expressions to use; you just need to wrap them up in functions. You can also
+    clear out your code from the <a href="/assignments/number-functions/">Number
+    functions</a> problem set and try writing them again. We are going to have
+    another assessment on Friday focusing on just these kinds of functions which
+    will affect your grade on both
+    the <a href="https://intro.gigamonkeys.com/standards/#numeric-expressions">Numeric
+    expressions</a>
+    and <a href="https://intro.gigamonkeys.com/standards/#writing-basic-functions">Writing
+    basic functions</a> standards.
+  </p>
+</div>
+{% endblock %}

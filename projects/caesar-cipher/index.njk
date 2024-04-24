@@ -1,0 +1,54 @@
+---
+layout: project
+title: Caesar cipher
+tags:
+  - projects
+  - Codes and ciphers
+topics:
+  - HTML UI
+  - Command line
+  - Strings
+---
+
+<p>
+  <img class="float" src="caesar-cipher.png">
+  The Caesar cipher is a very simple cipher also known as a “shift cipher”.
+  Implementing it is a good way to exercise your facility with strings and
+  modular arithmetic. It is also a good early exercise for practicing breaking
+  down code into small functions that each do one thing well.
+</p>
+
+<p>
+  You can read all the details on the Wikipedia page but the one sentence
+  summary of the Caesar cipher is you encrypt letters by moving a certain number
+  of steps into the alphabet, wrapping around to the beginning of the alphabet
+  if you come to the end. And you decrypt by moving backwards the same number of
+  steps. So with a key of 6, you’d encrypt ‘a’ as ‘g’ (six letters after ‘a’)
+  and ‘y’ as ‘e’ (six letters after ‘y’, wrapping around from ‘z’ to ‘a’.) Note
+  that if you use a key of 13, i.e. half of the number of letters in the
+  alphabet, it doesn’t matter which direction you shift so encrypting and
+  decrypting are the same. This is sometimes called <code>rot13</code>, short
+  for rotation 13 and is sometimes used to lightly obscure things like spoilers
+  in online posts.
+</p>
+
+<p>
+  If implementing the Caesar cipher is not challenging enough, you can also
+  implement the Vigenère cipher which uses the same basic shift as the Caesar
+  cipher but with the addition of a textual key which is used to determine how
+  much to shift each letter.
+</p>
+
+<p>
+  And if you really want to go to town on ciphers, you can try to write program
+  to crack Caesar and/or Vigenère ciphers. Figuring out the best way to this
+  will probably require some research.
+</p>
+
+<h2>References</h2>
+
+<ul>
+  <li><a href="https://en.wikipedia.org/wiki/Caesar_cipher">Caesar cipher - Wikipedia</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/ROT13">ROT13 - Wikipedia</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher">Vigenère cipher - Wikipedia</a></li>
+</ul>
